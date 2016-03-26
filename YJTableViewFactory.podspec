@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
 
   s.name         = "YJTableViewFactory"
   s.version      = "1.0"
-  s.summary      = "A short description of YJTableViewFactory."
-  s.homepage     = "http://blog.csdn.net/y550918116j"
+  s.summary      = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
+  s.homepage     = "https://github.com/937447974/YJTableViewFactory"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "阳君" => "937447974@qq.com" }
 
@@ -35,8 +35,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "YJTableViewFactory/Classes/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
