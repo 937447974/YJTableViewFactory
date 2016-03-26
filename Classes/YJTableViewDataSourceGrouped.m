@@ -2,7 +2,10 @@
 //  YJTableViewDataSourceGrouped.m
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -11,13 +14,13 @@
 
 @implementation YJTableViewDataSourceGrouped
 
-- (instancetype)init
+#pragma mark - getter
+- (NSMutableArray<NSMutableArray<YJCellObject *> *> *)dataSource
 {
-    self = [super init];
-    if (self) {
-        self.dataSource = [[NSMutableArray alloc] init];
+    if (_dataSource == nil) {
+        _dataSource = [[NSMutableArray alloc] init];
     }
-    return self;
+    return _dataSource;
 }
 
 #pragma mark - UITableViewDataSource

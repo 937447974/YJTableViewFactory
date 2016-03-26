@@ -2,7 +2,10 @@
 //  YJTableViewDataSource.h
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -16,6 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YJTableViewDataSource : NSObject
 
 @property (nonatomic, weak) UITableView *tableView; ///< tableView
+
+/**
+ *  抽象的初始化接口
+ *
+ *  @param tableView UITableView
+ *
+ *  @return void
+ */
+- (instancetype)initWithTableView:(UITableView *)tableView;
 
 @end
 

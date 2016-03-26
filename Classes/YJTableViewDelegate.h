@@ -2,7 +2,10 @@
 //  YJTableViewDelegate.h
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -36,8 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YJTableViewDelegate : NSObject <UITableViewDelegate>
 
 @property (nonatomic) BOOL isCacheHeight; ///< 是否缓存高，默认YES缓存，NO不缓存
-@property (nonatomic, weak) YJTableViewDataSource *dataSource; ///< YJTableViewDataSource数据源
-@property (nonatomic, weak, nullable) id <YJTableViewDelegateProtocol> delegate;
+@property (nonatomic, weak, nullable) id <YJTableViewDelegateProtocol> delegate; ///< 解耦式使用
+
+/**
+ *  初始化
+ *
+ *  @param dataSource YJTableViewDataSource数据源
+ *
+ *  @return YJTableViewDelegate
+ */
+- (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource;
 
 /**
  *  当dataSource中的数据顺序发生变化时，可清楚缓存高
@@ -45,6 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return void
  */
 - (void)clearCacheHeight;
+
+
 
 @end
 

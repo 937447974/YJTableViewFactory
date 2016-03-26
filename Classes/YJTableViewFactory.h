@@ -9,6 +9,10 @@
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
+/**
+ * UITableViewCell相关关系。YJTableViewCell、YJTableViewCellModel、YJTableViewCellObject。
+ */
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+YJTableViewFactory.h"

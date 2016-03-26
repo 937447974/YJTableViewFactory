@@ -2,7 +2,10 @@
 //  YJTableViewDelegate.m
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -21,26 +24,19 @@
 
 @implementation YJTableViewDelegate
 
-- (instancetype)init
+- (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource
 {
     self = [super init];
     if (self) {
         _cacheHeightDict = [[NSMutableDictionary alloc] init];
         _isCacheHeight = YES;
+        if ([dataSource isKindOfClass:[YJTableViewDataSourcePlain class]]) {
+            self.dataSourcePlain = (YJTableViewDataSourcePlain *)dataSource;
+        } else if([dataSource isKindOfClass:[YJTableViewDataSourceGrouped class]]) {
+            self.dataSourceGrouped = (YJTableViewDataSourceGrouped *)dataSource;
+        }
     }
     return self;
-}
-
-#pragma mark - setter
-
-- (void)setDataSource:(YJTableViewDataSource *)dataSource
-{
-    _dataSource = dataSource;
-    if ([self.dataSource isKindOfClass:[YJTableViewDataSourcePlain class]]) {
-        self.dataSourcePlain = (YJTableViewDataSourcePlain *)dataSource;
-    } else if([self.dataSource isKindOfClass:[YJTableViewDataSourceGrouped class]]) {
-        self.dataSourceGrouped = (YJTableViewDataSourceGrouped *)dataSource;
-    }
 }
 
 #pragma mark - 清楚缓存
@@ -61,14 +57,17 @@
     if (rowHeight == 0) { //无缓存
         // 获取YJCellObject
         YJCellObject *cellObject;
+        UITableView *tableView;
         if (self.dataSourcePlain) {
             cellObject = self.dataSourcePlain.dataSource[indexPath.row];
+            tableView = self.dataSourcePlain.tableView;
         } else if (self.dataSourceGrouped) {
             cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
+            tableView = self.dataSourceGrouped.tableView;
         }
         // 获取高
         if (cellObject && [cellObject.cellClass respondsToSelector:@selector(tableView:heightForCellObject:)] ) {
-            rowHeight = [cellObject.cellClass tableView:self.dataSource.tableView heightForCellObject:cellObject];
+            rowHeight = [cellObject.cellClass tableView:tableView heightForCellObject:cellObject];
         }
     }
     // 获取失败时，使用默认高

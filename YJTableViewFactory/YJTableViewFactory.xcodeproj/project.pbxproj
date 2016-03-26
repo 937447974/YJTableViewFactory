@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8452A4D51CA6511300BFDB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4D41CA6511300BFDB57 /* main.m */; };
 		8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4D71CA6511300BFDB57 /* AppDelegate.m */; };
-		8452A4DB1CA6511300BFDB57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4DA1CA6511300BFDB57 /* ViewController.m */; };
 		8452A4DE1CA6511300BFDB57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4DC1CA6511300BFDB57 /* Main.storyboard */; };
 		8452A4E01CA6511300BFDB57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4DF1CA6511300BFDB57 /* Assets.xcassets */; };
 		8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4E11CA6511300BFDB57 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,12 @@
 		8452A5361CA683E100BFDB57 /* YJTableViewDataSourceGrouped.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5351CA683E100BFDB57 /* YJTableViewDataSourceGrouped.m */; };
 		8452A5391CA690CC00BFDB57 /* UITableViewCell+YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5381CA690CC00BFDB57 /* UITableViewCell+YJTableViewFactory.m */; };
 		8452A5411CA6976300BFDB57 /* YJTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5401CA6976300BFDB57 /* YJTableViewDelegate.m */; };
+		8452A5461CA6A48000BFDB57 /* YJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */; };
+		8452A5471CA6A48000BFDB57 /* YJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */; };
+		8452A54A1CA6A6D500BFDB57 /* YJTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */; };
+		8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */; };
+		8452A5501CA6A72700BFDB57 /* YJFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */; };
+		8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +51,6 @@
 		8452A4D41CA6511300BFDB57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8452A4D61CA6511300BFDB57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8452A4D71CA6511300BFDB57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8452A4D91CA6511300BFDB57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8452A4DA1CA6511300BFDB57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8452A4DD1CA6511300BFDB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8452A4DF1CA6511300BFDB57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8452A4E21CA6511300BFDB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +75,17 @@
 		8452A5381CA690CC00BFDB57 /* UITableViewCell+YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YJTableViewFactory.m"; sourceTree = "<group>"; };
 		8452A53F1CA6976300BFDB57 /* YJTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDelegate.h; sourceTree = "<group>"; };
 		8452A5401CA6976300BFDB57 /* YJTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDelegate.m; sourceTree = "<group>"; };
+		8452A5431CA6A48000BFDB57 /* YJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCell.h; sourceTree = "<group>"; };
+		8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCell.m; sourceTree = "<group>"; };
+		8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJTableViewCell.xib; sourceTree = "<group>"; };
+		8452A5481CA6A6D500BFDB57 /* YJTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCellModel.h; sourceTree = "<group>"; };
+		8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCellModel.m; sourceTree = "<group>"; };
+		8452A54B1CA6A70100BFDB57 /* YJTableViewCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCellObject.h; sourceTree = "<group>"; };
+		8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCellObject.m; sourceTree = "<group>"; };
+		8452A54E1CA6A72700BFDB57 /* YJFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFirstViewController.h; sourceTree = "<group>"; };
+		8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFirstViewController.m; sourceTree = "<group>"; };
+		8452A5511CA6A74500BFDB57 /* YJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSecondViewController.h; sourceTree = "<group>"; };
+		8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +193,10 @@
 		8452A5251CA6729700BFDB57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8452A4D91CA6511300BFDB57 /* ViewController.h */,
-				8452A4DA1CA6511300BFDB57 /* ViewController.m */,
+				8452A54E1CA6A72700BFDB57 /* YJFirstViewController.h */,
+				8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */,
+				8452A5511CA6A74500BFDB57 /* YJSecondViewController.h */,
+				8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -220,6 +236,9 @@
 		8452A53B1CA6957B00BFDB57 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8452A5431CA6A48000BFDB57 /* YJTableViewCell.h */,
+				8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */,
+				8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -227,6 +246,8 @@
 		8452A53C1CA6958500BFDB57 /* CellModel */ = {
 			isa = PBXGroup;
 			children = (
+				8452A5481CA6A6D500BFDB57 /* YJTableViewCellModel.h */,
+				8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */,
 			);
 			name = CellModel;
 			sourceTree = "<group>";
@@ -234,6 +255,8 @@
 		8452A53D1CA6959A00BFDB57 /* CellObject */ = {
 			isa = PBXGroup;
 			children = (
+				8452A54B1CA6A70100BFDB57 /* YJTableViewCellObject.h */,
+				8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */,
 			);
 			name = CellObject;
 			sourceTree = "<group>";
@@ -362,6 +385,7 @@
 			files = (
 				8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */,
 				8452A4E01CA6511300BFDB57 /* Assets.xcassets in Resources */,
+				8452A5471CA6A48000BFDB57 /* YJTableViewCell.xib in Resources */,
 				8452A4DE1CA6511300BFDB57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,10 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8452A4DB1CA6511300BFDB57 /* ViewController.m in Sources */,
+				8452A54A1CA6A6D500BFDB57 /* YJTableViewCellModel.m in Sources */,
+				8452A5501CA6A72700BFDB57 /* YJFirstViewController.m in Sources */,
+				8452A5461CA6A48000BFDB57 /* YJTableViewCell.m in Sources */,
 				8452A5411CA6976300BFDB57 /* YJTableViewDelegate.m in Sources */,
 				8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */,
 				8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */,
+				8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */,
+				8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */,
 				8452A5331CA6839500BFDB57 /* YJTableViewDataSourcePlain.m in Sources */,
 				8452A5291CA673A600BFDB57 /* YJCellObject.m in Sources */,
 				8452A5361CA683E100BFDB57 /* YJTableViewDataSourceGrouped.m in Sources */,

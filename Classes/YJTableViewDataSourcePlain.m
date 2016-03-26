@@ -2,7 +2,10 @@
 //  YJTableViewDataSourcePlain.m
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -11,13 +14,13 @@
 
 @implementation YJTableViewDataSourcePlain
 
-- (instancetype)init
+#pragma mark - getter
+- (NSMutableArray<YJCellObject *> *)dataSource
 {
-    self = [super init];
-    if (self) {
-        self.dataSource = [[NSMutableArray alloc] init];
+    if (_dataSource == nil) {
+        _dataSource = [[NSMutableArray alloc] init];
     }
-    return self;
+    return _dataSource;
 }
 
 #pragma mark - UITableViewDataSource
@@ -35,6 +38,7 @@
         [tableView registerNib:[UINib nibWithNibName:cellObject.cellName bundle:nil] forCellReuseIdentifier:cellObject.cellName];
         cell = [tableView dequeueReusableCellWithIdentifier:cellObject.cellName];
     }
+    cellObject.indexPath = indexPath;
     [cell reloadCellWithCellObject:cellObject];
     return cell;    
 }

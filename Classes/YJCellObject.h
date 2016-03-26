@@ -2,7 +2,10 @@
 //  YJCellObject.h
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  CSDN:http://blog.csdn.net/y550918116j
+//  GitHub:https://github.com/937447974/Blog
+//
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -25,6 +28,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) Class cellClass;          ///< YJTableViewCell对应的类
 @property (nonatomic, copy, readonly) NSString *cellName; ///< YJTableViewCell对应的类名
+
+/**
+ *  初始化YJCellObject，当不想创建子类时，可使用此方法创建对象
+ *
+ *  @param cellClass YJTableViewCell对应的类
+ *
+ *  @return void
+ */
+- (instancetype)initWithTableViewCellClass:(Class)cellClass;
 
 @end
 
