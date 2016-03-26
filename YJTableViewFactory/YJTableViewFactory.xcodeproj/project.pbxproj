@@ -15,7 +15,7 @@
 		8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4E11CA6511300BFDB57 /* LaunchScreen.storyboard */; };
 		8452A4EE1CA6511300BFDB57 /* YJTableViewFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4ED1CA6511300BFDB57 /* YJTableViewFactoryTests.m */; };
 		8452A4F91CA6511300BFDB57 /* YJTableViewFactoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4F81CA6511300BFDB57 /* YJTableViewFactoryUITests.m */; };
-		8452A5201CA65F6800BFDB57 /* YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A51F1CA65F6800BFDB57 /* YJTableViewFactory.m */; };
+		8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		8452A4F41CA6511300BFDB57 /* YJTableViewFactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJTableViewFactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452A4F81CA6511300BFDB57 /* YJTableViewFactoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJTableViewFactoryUITests.m; sourceTree = "<group>"; };
 		8452A4FA1CA6511300BFDB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8452A51E1CA65F6800BFDB57 /* YJTableViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJTableViewFactory.h; path = ../../Classes/YJTableViewFactory.h; sourceTree = "<group>"; };
-		8452A51F1CA65F6800BFDB57 /* YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJTableViewFactory.m; path = ../../Classes/YJTableViewFactory.m; sourceTree = "<group>"; };
+		8452A5221CA6678300BFDB57 /* YJTableViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewFactory.h; sourceTree = "<group>"; };
+		8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 		8452A4D21CA6511300BFDB57 /* YJTableViewFactory */ = {
 			isa = PBXGroup;
 			children = (
-				8452A5141CA65AED00BFDB57 /* Classes */,
+				8452A5211CA6678300BFDB57 /* Classes */,
 				8452A4D61CA6511300BFDB57 /* AppDelegate.h */,
 				8452A4D71CA6511300BFDB57 /* AppDelegate.m */,
 				8452A4D91CA6511300BFDB57 /* ViewController.h */,
@@ -144,13 +144,14 @@
 			path = YJTableViewFactoryUITests;
 			sourceTree = "<group>";
 		};
-		8452A5141CA65AED00BFDB57 /* Classes */ = {
+		8452A5211CA6678300BFDB57 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8452A51E1CA65F6800BFDB57 /* YJTableViewFactory.h */,
-				8452A51F1CA65F6800BFDB57 /* YJTableViewFactory.m */,
+				8452A5221CA6678300BFDB57 /* YJTableViewFactory.h */,
+				8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */,
 			);
 			name = Classes;
+			path = ../../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452A4DB1CA6511300BFDB57 /* ViewController.m in Sources */,
-				8452A5201CA65F6800BFDB57 /* YJTableViewFactory.m in Sources */,
+				8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */,
 				8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */,
 				8452A4D51CA6511300BFDB57 /* main.m in Sources */,
 			);

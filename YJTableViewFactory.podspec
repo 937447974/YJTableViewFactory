@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "1.0" }
+  s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "YJTableViewFactory/Classes/*.{h,m}"
+  s.source_files  = "YJTableViewFactory/"
 
   # Project Linking
   s.frameworks = "UIKit", "Foundation"
