@@ -6,6 +6,7 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
+# 验证命令：pod spec lint
 # 输出json命令：pod ipc spec Name.podspec >> Name.podspec.json
 
 Pod::Spec.new do |s|
