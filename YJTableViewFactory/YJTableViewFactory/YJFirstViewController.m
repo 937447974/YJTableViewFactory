@@ -11,7 +11,7 @@
 #import "YJTableViewCellModel.h"
 #import "YJTableViewCell.h"
 
-@interface YJFirstViewController () <YJTableViewDelegateProtocol>
+@interface YJFirstViewController () <YJTableViewCellProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -23,7 +23,8 @@
 
 @implementation YJFirstViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{    
     [super viewDidLoad];
     
     self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
@@ -48,11 +49,9 @@
 
 
 #pragma mark - YJTableViewDelegateProtocol
-- (void)tableViewDelegate:(YJTableViewDelegate *)delegate didSelectCellObject:(YJCellObject *)cellObject
+- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject
 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
-    
 }
-
 
 @end

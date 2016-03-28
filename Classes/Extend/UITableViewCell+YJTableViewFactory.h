@@ -14,6 +14,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol YJTableViewCellProtocol <NSObject>
+
+/**
+ *  用户点击Cell
+ *
+ *  @param cellObject 用户点击的cell
+ *
+ *  @return void
+ */
+- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject;
+
+@end
+
+
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
 

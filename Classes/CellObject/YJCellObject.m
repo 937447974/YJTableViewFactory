@@ -32,8 +32,7 @@
             NSLog(@"Cell非法命名。如使用JMCell，请以JMCellObject命名");
         }
     }
-    return self;
-    
+    return self;    
 }
 
 - (instancetype)initWithTableViewCellClass:(Class)cellClass
