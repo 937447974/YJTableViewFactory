@@ -34,8 +34,8 @@ typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
 
 @property (nonatomic, strong, nullable) NSIndexPath *indexPath; ///< cell所处位置，无须添加，自动填充
 
-@property (nonatomic, readonly) Class cellClass;          ///< YJTableViewCell对应的类
-@property (nonatomic, copy, readonly) NSString *cellName; ///< YJTableViewCell对应的类名
+@property (nonatomic, readonly) Class cellClass;          ///< UITableViewCell对应的类
+@property (nonatomic, copy, readonly) NSString *cellName; ///< UITableViewCell对应的类名
 
 /**
  *  初始化YJCellObject，当不想创建子类时，可使用此方法创建对象
