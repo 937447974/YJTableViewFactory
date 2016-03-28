@@ -39,6 +39,23 @@
     return self;
 }
 
+#pragma mark - setter
+
+- (void)setCacheHeightStrategy:(YJTableViewCacheHeight)cacheHeightStrategy
+{
+    _cacheHeightStrategy = cacheHeightStrategy;
+    switch (_cacheHeightStrategy) {
+        case YJTableViewCacheHeightDefault:    ///< 根据相同的UITableViewCell类缓存高度
+            self.dataSourcePlain.cacheCellStrategy = YJTableViewCacheCellDefault;
+            self.dataSourceGrouped.cacheCellStrategy = YJTableViewCacheCellDefault;
+            break;
+        case YJTableViewCacheHeightIndexPath: ///< 根据NSIndexPath对应的位置缓存高度:
+            self.dataSourcePlain.cacheCellStrategy = YJTableViewCacheCellIndexPath;
+            self.dataSourceGrouped.cacheCellStrategy = YJTableViewCacheCellIndexPath;
+            break;
+    }
+}
+
 #pragma mark - 清楚缓存
 - (void)clearAllCacheHeight
 {

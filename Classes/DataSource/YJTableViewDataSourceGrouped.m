@@ -36,6 +36,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YJCellObject *cellObject = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    cellObject.indexPath = indexPath;
     return [self dequeueReusableCellWithCellObject:cellObject];
 }
 
