@@ -8,13 +8,14 @@
 
 #import "YJSecondViewController.h"
 #import "YJTableViewFactory.h"
+#import "YJTableViewCell.h"
 
 @interface YJSecondViewController () <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // 需要强引用
-@property (nonatomic, strong) YJTableViewDataSourcePlain *dataSourcePlain;
+@property (nonatomic, strong) YJTableViewDataSourceGrouped *dataSourceGrouped;
 @property (nonatomic, strong) YJTableViewDelegate *delegate;
 
 @end
@@ -24,26 +25,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
-    self.delegate = [[YJTableViewDelegate alloc] initWithDataSource:self.dataSourcePlain];
-    self.tableView.dataSource = self.dataSourcePlain;
+    self.dataSourceGrouped = [[YJTableViewDataSourceGrouped alloc] initWithTableView:self.tableView];
+    self.delegate = [[YJTableViewDelegate alloc] initWithDataSource:self.dataSourceGrouped];
+    self.tableView.dataSource = self.dataSourceGrouped;
     self.tableView.delegate = self;
+    
+    // 测试数据
+    for (int i=0; i<20; i++) {
+        // 封装模型
+        YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
+        cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
+        // 封装CellObject
+        YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
+        cellObject.cellModel = cellModel;
+        // 填充数据源
+        [self.dataSourceGrouped.dataSource addObject:cellObject];
+    }
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.delegate tableView:tableView heightForRowAtIndexPath:indexPath];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

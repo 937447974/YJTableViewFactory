@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "YJCellObject.h"
+#import "UITableViewCell+YJTableViewFactory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,6 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return void
  */
 - (instancetype)initWithTableView:(UITableView *)tableView;
+
+/**
+ *  根据cellObject创建UITableViewCell
+ *
+ *  @param cellObject YJCellObject
+ *
+ *  @return UITableViewCell
+ */
+- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject;
 
 @end
 

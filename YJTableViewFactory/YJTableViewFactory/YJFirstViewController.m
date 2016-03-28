@@ -8,7 +8,6 @@
 
 #import "YJFirstViewController.h"
 #import "YJTableViewFactory.h"
-#import "YJTableViewCellModel.h"
 #import "YJTableViewCell.h"
 
 @interface YJFirstViewController () <YJTableViewCellProtocol>

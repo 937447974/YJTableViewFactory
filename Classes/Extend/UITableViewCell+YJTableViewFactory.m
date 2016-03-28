@@ -15,13 +15,18 @@
 
 + (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject
 {
-    NSArray<UITableView *> *array = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
-    if (array.count) {
-        return CGRectGetHeight(array.firstObject.frame);
-    } else {
-        NSLog(@"请使用xib创建cell");
+    if (cellObject.createCell == YJTableViewCellCreateClass) {
+        NSLog(@"自动获取高度时，UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+        return tableView.rowHeight; // 默认高
     }
-    return tableView.rowHeight; // 默认高
+    // soryboard方式创建cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class)];
+    if (cell) {
+        return CGRectGetHeight(cell.frame);
+    }
+    // xib创建cell
+    NSArray<UITableView *> *array = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
+    return CGRectGetHeight(array.firstObject.frame);
 }
 
 - (void)reloadCellWithCellObject:(YJCellObject *)cellObject

@@ -18,11 +18,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/** 创建cell的方式*/
+typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
+    YJTableViewCellCreateDefault,   ///< 默认使用xib创建cell，推荐此方式
+    YJTableViewCellCreateSoryboard, ///< 使用soryboard创建cell时，请使用类名作为标识符。
+    YJTableViewCellCreateClass      ///< 使用Class创建cell,即使用[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:className]，可自行修改实现    
+};
+
 /** Cell对象*/
 @interface YJCellObject : NSObject
 
-@property (nonatomic) id<YJCellModelProtocol> cellModel;  ///< cell对应的VM
-@property (nonatomic, strong, nullable) id userInfo;      ///< 携带的数据
+@property (nonatomic) id<YJCellModelProtocol> cellModel; ///< cell对应的VM
+@property (nonatomic) YJTableViewCellCreate createCell;  ///< 创建cell的方式
+@property (nonatomic, strong, nullable) id userInfo;     ///< 携带的数据
 
 @property (nonatomic, strong, nullable) NSIndexPath *indexPath; ///< cell所处位置，无须添加，自动填充
 
