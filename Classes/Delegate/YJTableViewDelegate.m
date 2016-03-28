@@ -128,7 +128,9 @@
 #pragma mark 获取NSIndexPath对应的缓存key
 - (NSString *)getKeyFromIndexPath:(NSIndexPath *)indexPath
 {
-    return [NSString stringWithFormat:@"%d-%d", (int)indexPath.section, (int)indexPath.row];
+    long section = indexPath.section;
+    long row = indexPath.row;
+    return [NSString stringWithFormat:@"%ld-%ld", section, row];
 }
 
 #pragma mark - UITableViewDelegate
