@@ -6,6 +6,8 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
+# 输出json命令：pod ipc spec Name.podspec >> Name.podspec.json
+
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata
@@ -23,7 +25,7 @@ Pod::Spec.new do |s|
 
   # ――― Platform Specifics
   s.platform = :ios
-  s.ios.deployment_target = "6.0"
+  s.ios.deployment_target = "7.0"
 
   # ――― Source Location
   s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
