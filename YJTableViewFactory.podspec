@@ -6,8 +6,8 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-# 验证命令：pod spec lint
-# 输出json命令：pod ipc spec Name.podspec >> Name.podspec.json
+# 验证命令：pod spec lint或 pod spec lint --allow-warnings
+# 输出json命令：pod ipc spec YJTableViewFactory.podspec >> YJTableViewFactory.podspec.json
 
 Pod::Spec.new do |s|
 
