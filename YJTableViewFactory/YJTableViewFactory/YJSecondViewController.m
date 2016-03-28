@@ -31,15 +31,19 @@
     self.tableView.delegate = self;
     
     // 测试数据
-    for (int i=0; i<20; i++) {
-        // 封装模型
-        YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
-        cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
-        // 封装CellObject
-        YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
-        cellObject.cellModel = cellModel;
-        // 填充数据源
-        [self.dataSourceGrouped.dataSource addObject:cellObject];
+    for (int i=0; i<3; i++) {
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:20];
+        for (int j=0; j<20; i++) {
+            // 封装模型
+            YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
+            cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
+            // 封装CellObject
+            YJTableViewCellObject *cellObject = [[YJTableViewCellObject alloc] init];
+            cellObject.cellModel = cellModel;
+            // 填充数据源
+            [array addObject:cellObject];
+        }
+        [self.dataSourceGrouped.dataSource addObject:array];
     }
     
 }

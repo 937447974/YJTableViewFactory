@@ -30,7 +30,7 @@
                             <constraint firstItem="xkQ-q2-lkr" firstAttribute="top" secondItem="zoh-5K-pkZ" secondAttribute="bottom" id="vXd-W0-JNf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="5yU-ao-cee"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="tab_base" id="5yU-ao-cee"/>
                     <connections>
                         <outlet property="tableView" destination="zoh-5K-pkZ" id="yQW-D7-GMR"/>
                     </connections>
@@ -64,7 +64,7 @@
                             <constraint firstItem="a66-6r-7sI" firstAttribute="leading" secondItem="Fxv-X7-jgE" secondAttribute="leading" id="fr6-7d-geK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Wt8-cw-ux2"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="tab_base" id="Wt8-cw-ux2"/>
                     <connections>
                         <outlet property="tableView" destination="a66-6r-7sI" id="7nw-lP-tAG"/>
                     </connections>
@@ -93,4 +93,7 @@
             <point key="canvasLocation" x="-875.5" y="439.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_base" width="36" height="36"/>
+    </resources>
 </document>
