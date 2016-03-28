@@ -8,6 +8,8 @@
 
 # 验证命令：pod spec lint或 pod spec lint --allow-warnings
 # 输出json命令：pod ipc spec YJTableViewFactory.podspec >> YJTableViewFactory.podspec.json
+# 注册pod权限：pod trunk register 937447974@qq.com '阳君' --description='china beijing'
+# 发包：pod trunk push YJTableViewFactory.podspec --allow-warnings
 
 Pod::Spec.new do |s|
 
