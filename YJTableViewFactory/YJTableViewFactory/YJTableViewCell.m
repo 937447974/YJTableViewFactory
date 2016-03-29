@@ -15,10 +15,12 @@
     // Initialization code
 }
 
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject
-{
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(id<YJTableViewCellProtocol>)cellProtocol{
+    
     YJTableViewCellModel *celModel = cellObject.cellModel;
     self.textLabel.text = celModel.userName;
+    self.detailTextLabel.text = [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
+    
 }
 
 @end
