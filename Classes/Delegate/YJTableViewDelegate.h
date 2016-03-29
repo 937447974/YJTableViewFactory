@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 @interface YJTableViewDelegate : NSObject <UITableViewDelegate>
 
 @property (nonatomic) BOOL isCacheHeight;                                    ///< 是否缓存高，默认YES缓存，NO不缓存
-@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy;            ///< 缓存高的策略
+@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy;            ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
 @property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> delegate; ///< 解耦式使用,点击cell
 
 /**
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource;
 
 /**
- *  清楚所有缓存高
+ *  清除所有缓存高
  *
  *  @return void
  */
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (void)clearCacheHeightWithCellClass:(Class)cellClass;
 
 /**
- *  根据NSIndexPath位置清楚缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
+ *  根据NSIndexPath位置清除缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
  *
  *  @param indexPath NSIndexPath
  *
@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (void)clearCacheHeightWithIndexPath:(NSIndexPath *)indexPath;
 
 /**
- *  根据NSIndexPath集合对应的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
+ *  根据NSIndexPath集合清除对应的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
  *
  *  @param indexPaths NSIndexPath集合
  *
@@ -76,7 +76,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (void)clearCacheHeightWithIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
 
 /**
- *  清楚[startIndexPath,endIndexPath]的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
+ *  清除[startIndexPath,endIndexPath]的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
  *
  *  @param cellClass UITableViewCell类
  *

@@ -16,7 +16,6 @@
 
 // 需要强引用
 @property (nonatomic, strong) YJTableViewDataSourcePlain *dataSourcePlain;
-@property (nonatomic, strong) YJTableViewDelegate *delegate;
 
 @end
 
@@ -27,10 +26,7 @@
     [super viewDidLoad];
     
     self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
-    self.delegate = [[YJTableViewDelegate alloc] initWithDataSource:self.dataSourcePlain];
-    self.delegate.delegate = self;
-    self.tableView.dataSource = self.dataSourcePlain;
-    self.tableView.delegate = self.delegate;
+    self.dataSourcePlain.tableViewDelegate.delegate = self;
     
     // 测试数据
     for (int i=0; i<20; i++) {

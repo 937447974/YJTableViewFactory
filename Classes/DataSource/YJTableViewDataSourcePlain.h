@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** UITableViewStylePlain样式使用*/
-@interface YJTableViewDataSourcePlain : YJTableViewDataSource <UITableViewDataSource>
+@interface YJTableViewDataSourcePlain : YJTableViewDataSource
 
 @property (nonatomic, strong) NSMutableArray<YJCellObject *> *dataSource; ///< 数据源
 

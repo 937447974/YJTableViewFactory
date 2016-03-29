@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** UITableViewStyleGrouped样式*/
-@interface YJTableViewDataSourceGrouped : YJTableViewDataSource <UITableViewDataSource>
+@interface YJTableViewDataSourceGrouped : YJTableViewDataSource
 
 @property (nonatomic, strong) NSMutableArray<NSMutableArray<YJCellObject *> *> *dataSource; ///< 数据源
 

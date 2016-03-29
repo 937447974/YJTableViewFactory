@@ -20,24 +20,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 缓存Cell的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
+    
     YJTableViewCacheCellDefault,  ///< 根据相同的UITableViewCell类名缓存Cell
     YJTableViewCacheCellIndexPath ///< 根据NSIndexPath对应的位置缓存Cell
+    
 };
 
+
 /** UITableViewDataSource抽象接口*/
-@interface YJTableViewDataSource : NSObject
+@interface YJTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, weak) UITableView *tableView; ///< tableView
-@property (nonatomic, strong) YJTableViewDelegate *tableViewDelegate; ///<
-
-@property (nonatomic) YJTableViewCacheCell cacheCellStrategy; ///< 缓存Cell的策略。无须赋值，YJTableViewDelegate会根据cacheHeightStrategy自动赋值
+@property (nonatomic) YJTableViewCacheCell cacheCellStrategy;                   ///< 缓存Cell的策略
+@property (nonatomic, weak) UITableView *tableView;                             ///< tableView
+@property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate; ///< YJTableViewDelegate,无须辅助，自动化创建
 
 /**
- *  抽象的初始化接口
+ *  抽象的初始化接口,会自动填充设置tableView.dataSource = self;tableView.delegate = self.tableViewDelegate;
  *
  *  @param tableView UITableView
  *
- *  @return void
+ *  @return YJTableViewDataSourceGrouped 或 YJTableViewDataSourcePlain
  */
 - (instancetype)initWithTableView:(UITableView *)tableView;
 
