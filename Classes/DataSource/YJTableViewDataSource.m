@@ -10,20 +10,22 @@
 //
 
 #import "YJTableViewDataSource.h"
+#import "YJTableViewDelegate.h"
 
 @implementation YJTableViewDataSource
 
-- (instancetype)initWithTableView:(UITableView *)tableView
-{
+- (instancetype)initWithTableView:(UITableView *)tableView {
+    
     self = [super init];
     if (self) {
         self.tableView = tableView;
     }
     return self;
+    
 }
 
-- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject
-{
+- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject{
+    
     NSString *identifier = self.cacheCellStrategy == YJTableViewCacheCellDefault ? cellObject.cellName : [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
@@ -44,6 +46,7 @@
     }
     [cell reloadCellWithCellObject:cellObject];
     return cell;
+    
 }
 
 @end

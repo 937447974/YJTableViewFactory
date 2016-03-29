@@ -11,17 +11,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "YJTableViewDataSourcePlain.h"
-#import "YJTableViewDataSourceGrouped.h"
-#import "YJCellObject.h"
 #import "UITableViewCell+YJTableViewFactory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class YJTableViewDataSource;
+
 /** 缓存高的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
+    
     YJTableViewCacheHeightDefault,    ///< 根据相同的UITableViewCell类缓存高度
     YJTableViewCacheHeightIndexPath ///< 根据NSIndexPath对应的位置缓存高度
+    
 };
 
 /** UITableViewDelegate抽象接口*/

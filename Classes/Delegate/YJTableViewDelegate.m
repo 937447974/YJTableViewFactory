@@ -11,10 +11,14 @@
 
 #import "YJTableViewDelegate.h"
 #import "UITableViewCell+YJTableViewFactory.h"
+#import "YJTableViewDataSourcePlain.h"
+#import "YJTableViewDataSourceGrouped.h"
+#import "YJCellObject.h"
 
-@interface YJTableViewDelegate ()
-{
+@interface YJTableViewDelegate () {
+    
     NSMutableDictionary<NSString *, NSNumber *> *_cacheHeightDict; ///< 缓存高
+    
 }
 
 @property (nonatomic, weak) YJTableViewDataSourcePlain *dataSourcePlain;
@@ -24,8 +28,8 @@
 
 @implementation YJTableViewDelegate
 
-- (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource
-{
+- (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource {
+    
     self = [super init];
     if (self) {
         _cacheHeightDict = [[NSMutableDictionary alloc] init];
@@ -37,12 +41,13 @@
         }
     }
     return self;
+    
 }
 
 #pragma mark - setter
 
-- (void)setCacheHeightStrategy:(YJTableViewCacheHeight)cacheHeightStrategy
-{
+- (void)setCacheHeightStrategy:(YJTableViewCacheHeight)cacheHeightStrategy {
+    
     _cacheHeightStrategy = cacheHeightStrategy;
     switch (_cacheHeightStrategy) {
         case YJTableViewCacheHeightDefault:    ///< 根据相同的UITableViewCell类缓存高度
@@ -54,18 +59,20 @@
             self.dataSourceGrouped.cacheCellStrategy = YJTableViewCacheCellIndexPath;
             break;
     }
+    
 }
 
 #pragma mark - 清楚缓存
-- (void)clearAllCacheHeight
-{
+- (void)clearAllCacheHeight {
+    
     if ([self validateCacheHeight]) {
        [_cacheHeightDict removeAllObjects];
     }
+    
 }
 
-- (void)clearCacheHeightWithCellClass:(Class)cellClass
-{
+- (void)clearCacheHeightWithCellClass:(Class)cellClass {
+    
     if (![self validateCacheHeight]) {
         return;
     }
@@ -74,26 +81,29 @@
         return;
     }
     [_cacheHeightDict removeObjectForKey:NSStringFromClass(cellClass)];
+    
 }
 
-- (void)clearCacheHeightWithIndexPath:(NSIndexPath *)indexPath
-{
+- (void)clearCacheHeightWithIndexPath:(NSIndexPath *)indexPath {
+    
     if ([self validateCacheHeightWithIndexPath]) {
         [_cacheHeightDict removeObjectForKey:[self getKeyFromIndexPath:indexPath]];
     }
+    
 }
 
-- (void)clearCacheHeightWithIndexPaths:(NSArray<NSIndexPath *> *)indexPaths
-{
+- (void)clearCacheHeightWithIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    
     if ([self validateCacheHeightWithIndexPath]) {
         for (NSIndexPath *indexPath in indexPaths) {
             [_cacheHeightDict removeObjectForKey:[self getKeyFromIndexPath:indexPath]];
         }
     }
+    
 }
 
-- (void)clearCacheHeightWithFromIndexPath:(NSIndexPath *)startIndexPath toIndexPath:(NSIndexPath *)endIndexPath
-{
+- (void)clearCacheHeightWithFromIndexPath:(NSIndexPath *)startIndexPath toIndexPath:(NSIndexPath *)endIndexPath {
+    
     if (startIndexPath.section>endIndexPath.section) {
         return;
     }
@@ -118,20 +128,22 @@
             }
         }
     }
+    
 }
 
 #pragma mark - 校验是否开启缓存高
-- (BOOL)validateCacheHeight
-{
+- (BOOL)validateCacheHeight {
+    
     if (!self.isCacheHeight) {
         NSLog(@"请开启缓存高");
     }
     return self.isCacheHeight;
+    
 }
 
 #pragma mark 校验是否使用YJTableViewCacheHeightIndexPath缓存高策略
-- (BOOL)validateCacheHeightWithIndexPath
-{
+- (BOOL)validateCacheHeightWithIndexPath {
+    
     if (![self validateCacheHeight]) {
         return NO;
     }
@@ -140,17 +152,19 @@
         return NO;
     }
     return YES;
+
 }
 
 #pragma mark 获取NSIndexPath对应的缓存key
-- (NSString *)getKeyFromIndexPath:(NSIndexPath *)indexPath
-{
+- (NSString *)getKeyFromIndexPath:(NSIndexPath *)indexPath {
+    
     return [NSString stringWithFormat:@"%@-%@", @(indexPath.section), @(indexPath.row)];
+
 }
 
 #pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     CGFloat rowHeight = 0;
     // 存放缓存高的key
     NSString *key = [self getKeyFromIndexPath:indexPath];
@@ -180,10 +194,11 @@
         [_cacheHeightDict setObject:[NSNumber numberWithFloat:rowHeight] forKey:key];
     }
     return rowHeight;
+    
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     YJCellObject *cellObject;
     if (self.dataSourcePlain) {
         cellObject = self.dataSourcePlain.dataSource[indexPath.row];
@@ -193,6 +208,7 @@
     if (cellObject) {
         [self.delegate tableViewDidSelectCellWithCellObject:cellObject];
     }
+    
 }
 
 @end

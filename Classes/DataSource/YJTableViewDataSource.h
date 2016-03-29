@@ -16,6 +16,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class YJTableViewDelegate;
+
 /** 缓存Cell的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
     YJTableViewCacheCellDefault,  ///< 根据相同的UITableViewCell类名缓存Cell
@@ -26,6 +28,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
 @interface YJTableViewDataSource : NSObject
 
 @property (nonatomic, weak) UITableView *tableView; ///< tableView
+@property (nonatomic, strong) YJTableViewDelegate *tableViewDelegate; ///<
 
 @property (nonatomic) YJTableViewCacheCell cacheCellStrategy; ///< 缓存Cell的策略。无须赋值，YJTableViewDelegate会根据cacheHeightStrategy自动赋值
 

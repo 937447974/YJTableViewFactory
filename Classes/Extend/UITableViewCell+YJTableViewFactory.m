@@ -13,8 +13,8 @@
 
 @implementation UITableViewCell (YJTableViewFactory)
 
-+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject
-{
++ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject {
+    
     if (cellObject.createCell == YJTableViewCellCreateClass) {
         NSLog(@"自动获取高度时，UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
         return tableView.rowHeight; // 默认高
@@ -27,11 +27,13 @@
     // xib创建cell
     NSArray<UITableView *> *array = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
     return CGRectGetHeight(array.firstObject.frame);
+    
 }
 
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject
-{
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject {
+    
     NSLog(@"UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+    
 }
 
 @end
