@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
 
 @property (nonatomic) YJTableViewCacheCell cacheCellStrategy;                   ///< 缓存Cell的策略
 @property (nonatomic, weak) UITableView *tableView;                             ///< tableView
-@property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate; ///< YJTableViewDelegate,无须辅助，自动化创建
+@property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate; ///< YJTableViewDelegate,无须赋值，自动化创建
 
 /**
  *  抽象的初始化接口,会自动填充设置tableView.dataSource = self;tableView.delegate = self.tableViewDelegate;

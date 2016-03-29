@@ -21,8 +21,8 @@
 
 @implementation YJFirstViewController
 
-- (void)viewDidLoad
-{    
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
@@ -43,9 +43,10 @@
 }
 
 #pragma mark - YJTableViewDelegateProtocol
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject
-{
+- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(UITableViewCell *)cell {
+    
     NSLog(@"%@", NSStringFromSelector(_cmd));
+    
 }
 
 @end

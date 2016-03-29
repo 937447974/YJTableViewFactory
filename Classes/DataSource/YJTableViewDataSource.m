@@ -65,7 +65,7 @@
                 break;
         }
     }
-    [cell reloadCellWithCellObject:cellObject];
+    [cell reloadCellWithCellObject:cellObject cellProtocol:self.tableViewDelegate.delegate];
     return cell;
     
 }

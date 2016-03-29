@@ -19,11 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  用户点击Cell
  *
- *  @param cellObject 用户点击的cell
+ *  @param cellObject    用户点击的cell数据
+ *  @param tableViewCell 用户点击的Cell
  *
  *  @return void
  */
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject;
+- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
 
 @end
 
@@ -44,10 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  根据模型刷新Cell
  *
  *  @param cellObject cell封装的对象
+ *  @param cellProtocol YJTableViewCellProtocol
  *
  *  @return void
  */
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject;
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol;
 
 @end
 

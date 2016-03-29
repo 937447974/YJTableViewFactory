@@ -188,7 +188,7 @@
         cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
     }
     if (cellObject) {
-        [self.delegate tableViewDidSelectCellWithCellObject:cellObject];
+        [self.delegate tableViewDidSelectCellWithCellObject:cellObject tableViewCell:nil];
     }
     
 }
