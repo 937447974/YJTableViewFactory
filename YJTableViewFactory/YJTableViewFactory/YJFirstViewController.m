@@ -42,7 +42,6 @@
     
 }
 
-
 #pragma mark - YJTableViewDelegateProtocol
 - (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject
 {

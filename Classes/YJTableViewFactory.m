@@ -11,7 +11,6 @@
 
 #import "YJTableViewFactory.h"
 
-
 @implementation YJTableViewFactory
 
 @end
