@@ -478,7 +478,7 @@ YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次�
 
 相关详细代码可查看demo，这里为大家展示一个极简的UIViewController。
 
-```
+```objc
 //
 //  YJFirstViewController.m
 //  YJTableViewFactory
