@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata
   s.name     = "YJTableViewFactory"
-  s.version  = "1.1.0"
+  s.version  = "1.1.1"
   s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
   s.homepage = "https://github.com/937447974/YJTableViewFactory"
 
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
 
   # ――― Source Code
-  s.source_files  = "Classes/*.{h,m}", "Classes/*/*.{h,m}"
+  s.source_files  = "Classes/*.{h,m}", "Classes/*/*.{h,m}", "README.md"
 
   # ――― Project Linking
   s.frameworks = "UIKit", "Foundation"
