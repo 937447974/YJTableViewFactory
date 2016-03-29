@@ -30,7 +30,7 @@
     
 }
 
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject {
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol {
     
     NSLog(@"UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
     
