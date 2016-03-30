@@ -33,7 +33,7 @@ YJTableViewFactory就是一个非常牛逼的开源库，它能使我们的开�
 
 ##<a id="1.1">1.1 YJTableViewFactory的优点
 
-YJTableViewFactory具有多重有点：
+YJTableViewFactory具有多重优点：
 
 1. 减压UIViewController，使其代码尽可能的精简，可阅读性更高。UIViewController不在关心UITableView的相关显示，缓存。UIViewController与UITableViewCell完全隔离。
 2. 自动register注册UITableViewCell，自动显示UITableViewCell，自动缓存UITableViewCell。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存cell。
