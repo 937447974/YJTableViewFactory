@@ -85,10 +85,19 @@ pod 'YJTableViewFactory'
 #import "YJCellObject.h"
 #import "YJTableViewDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+/** 获取类名，兼容OC和Swift*/
+NSString *YJStringFromClass(Class aClass);
+
 @interface YJTableViewFactory : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END
 ```
+
+这里有个方法`NSString *YJStringFromClass(Class aClass)`兼容swift或oc，获取相同的类名。
 
 ##<a id="2.2">2.2 UITableViewCell扩展
 
@@ -559,6 +568,7 @@ QQ：937447974
 | ---- | ---- |
 | 2016-03-29 | 1.1.0 相关功能开发完毕，正式上线运行 |
 | 2016-03-29 | 1.1.1 添加相关说明文档 |
+| 2016-03-30 | 1.1.2 支持swift开发 |
 
 ##Copyright
 

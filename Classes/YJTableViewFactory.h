@@ -21,6 +21,13 @@
 #import "YJCellObject.h"
 #import "YJTableViewDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+/** 获取类名，兼容OC和Swift*/
+NSString *YJStringFromClass(Class aClass);
+
 @interface YJTableViewFactory : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END

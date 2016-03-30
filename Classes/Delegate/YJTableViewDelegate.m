@@ -9,11 +9,7 @@
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
-#import "YJTableViewDelegate.h"
-#import "UITableViewCell+YJTableViewFactory.h"
-#import "YJTableViewDataSourcePlain.h"
-#import "YJTableViewDataSourceGrouped.h"
-#import "YJCellObject.h"
+#import "YJTableViewFactory.h"
 
 @interface YJTableViewDelegate () {
     
@@ -62,7 +58,7 @@
         NSLog(@"请设置YJTableViewCacheHeightDefault缓存高策略");
         return;
     }
-    [_cacheHeightDict removeObjectForKey:NSStringFromClass(cellClass)];
+    [_cacheHeightDict removeObjectForKey:YJStringFromClass(cellClass)];
     
 }
 

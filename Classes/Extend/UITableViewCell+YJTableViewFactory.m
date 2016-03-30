@@ -10,29 +10,30 @@
 //
 
 #import "UITableViewCell+YJTableViewFactory.h"
+#import "YJTableViewFactory.h"
 
 @implementation UITableViewCell (YJTableViewFactory)
 
 + (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject {
     
     if (cellObject.createCell == YJTableViewCellCreateClass) {
-        NSLog(@"自动获取高度时，UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+        NSLog(@"自动获取高度时，UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
         return tableView.rowHeight; // 默认高
     }
     // soryboard方式创建cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class)];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YJStringFromClass(self.class)];
     if (cell) {
         return CGRectGetHeight(cell.frame);
     }
     // xib创建cell
-    NSArray<UITableView *> *array = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
+    NSArray<UITableView *> *array = [[NSBundle mainBundle] loadNibNamed:YJStringFromClass(self.class) owner:nil options:nil];
     return CGRectGetHeight(array.firstObject.frame);
     
 }
 
 - (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol {
     
-    NSLog(@"UITableViewCell子类%@请实现方法：%@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+    NSLog(@"UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
     
 }
 
