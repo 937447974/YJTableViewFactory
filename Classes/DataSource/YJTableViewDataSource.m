@@ -61,7 +61,7 @@
                 NSLog(@"Soryboard中请使用%@设置cell的Identifier属性", cellObject.cellName);
                 break;
             case YJTableViewCellCreateClass:
-                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+                 cell = [[cellObject.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
                 break;
         }
     }
