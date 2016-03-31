@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata
   s.name     = "YJTableViewFactory"
-  s.version  = "1.2.0"
+  s.version  = "1.2.1"
   s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
   s.homepage = "https://github.com/937447974/YJTableViewFactory"
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   # ――― Platform Specifics
   s.platform = :ios
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "6.0"
 
   # ――― Source Location
   s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
