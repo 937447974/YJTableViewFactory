@@ -25,7 +25,7 @@
 
 #<a id="1">1 YJTableViewFactory
 
-YJTableViewFactory就是一个关于UITableView的开源库，它能使我们的开发工作变得越来越简单。它能使我们的项目架构的可维护性越来越高。
+YJTableViewFactory是一个关于UITableView的开源库，它能使我们的开发工作变得越来越简单。它能使我们的项目架构的可维护性越来越高。
 
 ##<a id="1.1">1.1 YJTableViewFactory的优点
 
