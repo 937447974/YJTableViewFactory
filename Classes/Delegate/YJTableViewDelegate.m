@@ -183,10 +183,12 @@
     } else if (self.dataSourceGrouped) {
         cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
     }
-    if (cellObject) {
-        [self.delegate tableViewDidSelectCellWithCellObject:cellObject tableViewCell:nil];
+    if (self.cellDelegate) {
+        [self.cellDelegate tableViewDidSelectCellWithCellObject:cellObject tableViewCell:nil];
+    } else if (self.cellBlock) {
+        self.cellBlock(cellObject, Nil);
     }
-    
+ 
 }
 
 @end

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class YJTableViewDataSource;
 
+
 /** 缓存高的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
     
@@ -25,12 +26,15 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
     
 };
 
+
 /** UITableViewDelegate抽象接口*/
 @interface YJTableViewDelegate : NSObject <UITableViewDelegate>
 
-@property (nonatomic) BOOL isCacheHeight;                                    ///< 是否缓存高，默认YES缓存，NO不缓存
-@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy;            ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
-@property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> delegate; ///< 解耦式使用,点击cell
+@property (nonatomic) BOOL isCacheHeight;                         ///< 是否缓存高，默认YES缓存，NO不缓存
+@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy; ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
+
+@property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> cellDelegate; ///< 点击cell的代理
+@property (nonatomic, copy, nullable) YJTableViewCellBlock cellBlock;            ///< 点击cell的block
 
 /**
  *  初始化
