@@ -10,9 +10,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YJCellObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class YJCellObject, YJTableViewDelegate;
+
 
 @protocol YJTableViewCellProtocol <NSObject>
 
@@ -44,12 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  根据模型刷新Cell
  *
- *  @param cellObject cell封装的对象
- *  @param cellProtocol YJTableViewCellProtocol
+ *  @param cellObject        cell封装的对象
+ *  @param tableViewDelegate YJTableViewDelegate
  *
  *  @return void
  */
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol;
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate;
 
 @end
 
