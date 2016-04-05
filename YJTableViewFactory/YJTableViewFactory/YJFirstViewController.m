@@ -72,6 +72,7 @@
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
     }
+    
 }
 
 #pragma mark - 通过协议监听点击dell
