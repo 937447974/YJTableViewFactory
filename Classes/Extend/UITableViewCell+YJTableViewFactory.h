@@ -40,6 +40,11 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
 
+/* 推荐使用存储数据
+@property (nonatomic, weak) YJCellObject *cellObject;
+@property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
+*/
+
 /**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
  *

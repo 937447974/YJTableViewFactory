@@ -25,23 +25,21 @@
 
 #<a id="1">1 YJTableViewFactory
 
-没有最牛逼，只有更牛逼！
-
-YJTableViewFactory就是一个非常牛逼的开源库，它能使我们的开发工作变得越来越简单。它能使我们的项目越来越具有可维护性。
-
-不要不相信，看完就知道它有多牛逼！！！
+YJTableViewFactory就是一个关于UITableView的开源库，它能使我们的开发工作变得越来越简单。它能使我们的项目架构的可维护性越来越高。
 
 ##<a id="1.1">1.1 YJTableViewFactory的优点
 
 YJTableViewFactory具有多重优点：
 
-1. 减压UIViewController，使其代码尽可能的精简，可阅读性更高。UIViewController不在关心UITableView的相关显示，缓存。UIViewController与UITableViewCell完全隔离。
-2. 自动register注册UITableViewCell，自动显示UITableViewCell，自动缓存UITableViewCell。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存cell。
-3. 自带存储数据源，支持UITableViewStylePlain和UITableViewStyleGrouped显示的数据源。
-4. 自动将数据从UIViewController传输到UITableViewCell，支持任意数据类型的传输，如项目中常用的CellModel、Dictionary字典。
-5. 自动计算cell显示的高度或手动计算cell显示的高度，并缓存高度。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存高度。
-6. 支持多种创建UITableViewCell的方式，如纯代码、xib和storyboard。无须改变你写代码的习惯。
-7. 支持市面上百分之百的架构，无须修改原有框架结构。你可以把它作为插件，也可以把它作为TableView的控制中心使用。
+1. 支持iOS6.0和Swift开发。
+2. 支持市面上百分之百的架构，无须修改原有框架结构。你可以把它作为插件，也可以把它作为TableView的控制中心使用。
+3. 减压UIViewController，使其代码尽可能的精简，可阅读性更高。UIViewController不在关心UITableViewCell的相关显示，缓存。UIViewController与UITableViewCell完全隔离。
+4. 自带存储数据源，支持UITableViewStylePlain和UITableViewStyleGrouped显示的数据源。
+5. 自动将数据从UIViewController传输到UITableViewCell，支持任意数据类型的传输，如项目中常用的CellModel、Dictionary字典。
+6. 自动register注册UITableViewCell，自动显示UITableViewCell，自动缓存UITableViewCell。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存cell。
+7. 自动计算cell显示的高度或手动计算cell显示的高度，并缓存高度。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存高度。
+8. 支持多种点击cell的监听方式，可使用protocol或block。
+9. 支持多种创建UITableViewCell的方式，如纯代码、xib和storyboard。无须改变你写代码的习惯。
 
 ##<a id="1.2">1.2 YJTableViewFactory的缺点
 
@@ -116,10 +114,17 @@ NS_ASSUME_NONNULL_END
 //
 
 #import <UIKit/UIKit.h>
-#import "YJCellObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class YJCellObject, YJTableViewDelegate;
+
+
+/** 点击cell的block*/
+typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
+
+
+/** 点击cell的协议*/
 @protocol YJTableViewCellProtocol <NSObject>
 
 /**
@@ -135,8 +140,14 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
+
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
+
+/* 推荐使用存储数据
+@property (nonatomic, weak) YJCellObject *cellObject;
+@property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
+*/
 
 /**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
@@ -150,24 +161,24 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  根据模型刷新Cell
  *
- *  @param cellObject cell封装的对象
- *  @param cellProtocol YJTableViewCellProtocol
+ *  @param cellObject        cell封装的对象
+ *  @param tableViewDelegate YJTableViewDelegate
  *
  *  @return void
  */
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol;
+- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate;
 
 @end
 
 NS_ASSUME_NONNULL_END
 ```
 
-YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。
+YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。同时我们也可以是使用YJTableViewCellBlock监听点击cell。
 
 
 `+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject`是一个自动计算高的方法，只支持xib创建cell的模式。如果想定制高度，可实现此方法。
 
-`- (void)reloadCellWithCellObject:(YJCellObject *)cellObject cellProtocol:(nullable id<YJTableViewCellProtocol>)cellProtocol`在UITableViewCell将要显示的时候，框架会自动调用此方法通知Cell。
+`- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate`在UITableViewCell将要显示的时候，框架会自动调用此方法通知Cell。
 
 ##<a id="2.3">2.3 UITableViewCell封装
 
@@ -229,6 +240,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
 @end
 
 NS_ASSUME_NONNULL_END
+
 ```
 
 YJCellObject为UITableViewCell关于模型的封装。
@@ -407,6 +419,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class YJTableViewDataSource;
 
+
 /** 缓存高的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
     
@@ -415,12 +428,15 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
     
 };
 
+
 /** UITableViewDelegate抽象接口*/
 @interface YJTableViewDelegate : NSObject <UITableViewDelegate>
 
-@property (nonatomic) BOOL isCacheHeight;                                    ///< 是否缓存高，默认YES缓存，NO不缓存
-@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy;            ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
-@property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> delegate; ///< 解耦式使用,点击cell
+@property (nonatomic) BOOL isCacheHeight;                         ///< 是否缓存高，默认YES缓存，NO不缓存
+@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy; ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
+
+@property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> cellDelegate; ///< 点击cell的代理
+@property (nonatomic, copy, nullable) YJTableViewCellBlock cellBlock;            ///< 点击cell的block
 
 /**
  *  初始化
@@ -477,9 +493,12 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 @end
 
 NS_ASSUME_NONNULL_END
+
 ```
 
 YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次赋值。这里会自动赋值缓存cell高度的策略，也可定制缓存高的策略。
+
+cellDelegate和cellBlock主要用户监听点击cell。
 
 还有大量清除缓存高的方法，让cell的高度缓存更灵活。
 
@@ -497,7 +516,6 @@ YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次�
 //
 
 #import "YJFirstViewController.h"
-#import "YJTableViewFactory.h"
 #import "YJTableViewCell.h"
 
 @interface YJFirstViewController () <YJTableViewCellProtocol>
@@ -515,8 +533,15 @@ YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次�
     
     [super viewDidLoad];
     
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
-    self.dataSourcePlain.tableViewDelegate.delegate = self;
+    [self test1];
+//    [self test2];
+//    [self test3];
+//    [self test4];
+    
+}
+
+#pragma mark - 测试数据
+- (void)initTestData {
     
     // 测试数据
     for (int i=0; i<20; i++) {
@@ -532,10 +557,56 @@ YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次�
     
 }
 
-#pragma mark - YJTableViewDelegateProtocol
+#pragma mark - 使用默认的YJCellObject
+- (void)test1 {
+    
+    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
+    [self initTestData];
+   
+}
+
+#pragma mark - 使用自定义的YJTableViewCellObject
+- (void)test2 {
+    
+    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
+    
+    // 测试数据
+    for (int i=0; i<20; i++) {
+        // 封装模型
+        YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
+        cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
+        // 封装CellObject
+        YJTableViewCellObject *cellObject = [[YJTableViewCellObject alloc] init];
+        cellObject.cellModel = cellModel;
+        // 填充数据源
+        [self.dataSourcePlain.dataSource addObject:cellObject];
+    }
+}
+
+#pragma mark - 通过协议监听点击dell
+- (void)test3 {
+    
+    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
+    self.dataSourcePlain.tableViewDelegate.cellDelegate = self;
+    [self initTestData];
+    
+}
+
+#pragma mark YJTableViewDelegateProtocol
 - (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(UITableViewCell *)cell {
     
     NSLog(@"%@", NSStringFromSelector(_cmd));
+    
+}
+
+#pragma mark - 通过block监听点击dell
+- (void)test4 {
+    
+    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
+    self.dataSourcePlain.tableViewDelegate.cellBlock = ^(YJCellObject *cellObject, UITableViewCell *tableViewCell) {
+        NSLog(@"%@", cellObject.indexPath);
+    };
+    [self initTestData];
     
 }
 
@@ -571,6 +642,7 @@ QQ：937447974
 | 2016-03-30 | 1.2.0 支持swift开发 |
 | 2016-03-31 | 1.2.1 支持iOS6开发 |
 | 2016-03-31 | 1.2.2 修复class模式下无法创建cell的问题 |
+| 2016-04-05 | 1.3.0 更新协议UITableViewCell (YJTableViewFactory)可传输YJTableViewDelegate、增加YJTableViewCellBlock可替代YJTableViewCellProtocol使用 |
 
 ##Copyright
 
