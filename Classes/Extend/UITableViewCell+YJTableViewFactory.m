@@ -22,7 +22,7 @@
 
 + (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel {
     
-    YJCellObject *cellObject = [self cellObject];
+    YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:self.class];
     cellObject.cellModel = cellModel;
     return cellObject;
     
