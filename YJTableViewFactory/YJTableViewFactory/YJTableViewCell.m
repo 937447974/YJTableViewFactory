@@ -15,12 +15,6 @@
     // Initialization code
 }
 
-+ (id)cellObject {
-    
-    return [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
-    
-}
-
 - (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
     
     YJTableViewCellModel *celModel = cellObject.cellModel;

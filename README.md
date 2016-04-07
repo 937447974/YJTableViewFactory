@@ -114,10 +114,11 @@ NS_ASSUME_NONNULL_END
 //
 
 #import <UIKit/UIKit.h>
+#import "YJCellObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class YJCellObject, YJTableViewDelegate;
+@class YJTableViewDelegate;
 
 
 /** 点击cell的block*/
@@ -144,17 +145,26 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
 
-/* 推荐使用存储数据
+/*推荐存储数据的属性
 @property (nonatomic, weak) YJCellObject *cellObject;
 @property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
 */
 
 /**
- *  获取YJCellObject或其子类。
+ *  获取YJCellObject,子类重写可获取YJCellObject子类。
  *
  *  @return YJCellObject
  */
 + (id)cellObject;
+
+/**
+ *  获取YJCellObject并自动填充模型。
+ *
+ *  @param cellModel 对应的Cell模型
+ *
+ *  @return YJCellObject
+ */
++ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;
 
 /**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
@@ -556,8 +566,7 @@ cellDelegate和cellBlock主要用户监听点击cell。
         YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
         cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
         // 封装CellObject
-        YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
-        cellObject.cellModel = cellModel;
+        YJCellObject *cellObject = [YJTableViewCell cellObjectWithCellModel:cellModel];
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
     }
@@ -588,6 +597,7 @@ cellDelegate和cellBlock主要用户监听点击cell。
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
     }
+    
 }
 
 #pragma mark - 通过协议监听点击dell
@@ -651,6 +661,7 @@ QQ：937447974
 | 2016-03-31 | 1.2.2 修复class模式下无法创建cell的问题 |
 | 2016-04-05 | 1.3.0 更新协议UITableViewCell (YJTableViewFactory)可传输YJTableViewDelegate、增加YJTableViewCellBlock可替代YJTableViewCellProtocol使用 |
 | 2016-04-07 | 1.3.1 UITableViewCell+YJTableViewFactory 增加生成YJCellObject的方法`+ (id)cellObject`，外部无需初始化YJCellObject |
+| 2016-04-07 | 1.3.2 UITableViewCell+YJTableViewFactory 增加方法`+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;`，自动生成YJCellObject的同时并填充模型。|
 
 ##Copyright
 

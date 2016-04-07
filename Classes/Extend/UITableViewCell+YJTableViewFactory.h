@@ -10,10 +10,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YJCellObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class YJCellObject, YJTableViewDelegate;
+@class YJTableViewDelegate;
 
 
 /** 点击cell的block*/
@@ -40,17 +41,26 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
 
-/* 推荐使用存储数据
+/*推荐存储数据的属性
 @property (nonatomic, weak) YJCellObject *cellObject;
 @property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
 */
 
 /**
- *  获取YJCellObject或其子类。
+ *  获取YJCellObject,子类重写可获取YJCellObject子类。
  *
  *  @return YJCellObject
  */
 + (id)cellObject;
+
+/**
+ *  获取YJCellObject并自动填充模型。
+ *
+ *  @param cellModel 对应的Cell模型
+ *
+ *  @return YJCellObject
+ */
++ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;
 
 /**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高

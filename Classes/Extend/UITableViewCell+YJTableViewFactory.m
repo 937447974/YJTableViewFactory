@@ -16,8 +16,15 @@
 
 + (id)cellObject {
     
-    NSLog(@"UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
-    return [[YJCellObject alloc] initWithTableViewCellClass:[UITableViewCell class]];
+    return [[YJCellObject alloc] initWithTableViewCellClass:self.class];
+    
+}
+
++ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel {
+    
+    YJCellObject *cellObject = [self cellObject];
+    cellObject.cellModel = cellModel;
+    return cellObject;
     
 }
 
@@ -37,7 +44,6 @@
     return CGRectGetHeight(array.firstObject.frame);
     
 }
-
 
 - (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
     
