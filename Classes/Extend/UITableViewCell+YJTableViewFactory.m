@@ -14,6 +14,13 @@
 
 @implementation UITableViewCell (YJTableViewFactory)
 
++ (id)cellObject {
+    
+    NSLog(@"UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
+    return [[YJCellObject alloc] initWithTableViewCellClass:[UITableViewCell class]];
+    
+}
+
 + (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject {
     
     if (cellObject.createCell == YJTableViewCellCreateClass) {

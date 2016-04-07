@@ -150,6 +150,13 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 */
 
 /**
+ *  获取YJCellObject或其子类。
+ *
+ *  @return YJCellObject
+ */
++ (id)cellObject;
+
+/**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
  *
  *  @param cellObject cell封装的对象
@@ -643,6 +650,7 @@ QQ：937447974
 | 2016-03-31 | 1.2.1 支持iOS6开发 |
 | 2016-03-31 | 1.2.2 修复class模式下无法创建cell的问题 |
 | 2016-04-05 | 1.3.0 更新协议UITableViewCell (YJTableViewFactory)可传输YJTableViewDelegate、增加YJTableViewCellBlock可替代YJTableViewCellProtocol使用 |
+| 2016-04-07 | 1.3.1 UITableViewCell+YJTableViewFactory 增加生成YJCellObject的方法`+ (id)cellObject`，外部无需初始化YJCellObject |
 
 ##Copyright
 

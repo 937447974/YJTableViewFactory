@@ -46,6 +46,13 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 */
 
 /**
+ *  获取YJCellObject或其子类。
+ *
+ *  @return YJCellObject
+ */
++ (id)cellObject;
+
+/**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
  *
  *  @param cellObject cell封装的对象

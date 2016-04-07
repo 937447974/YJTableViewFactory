@@ -40,7 +40,7 @@
         YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
         cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
         // 封装CellObject
-        YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
+        YJCellObject *cellObject = [YJTableViewCell cellObject];
         cellObject.cellModel = cellModel;
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
