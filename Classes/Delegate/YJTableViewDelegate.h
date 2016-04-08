@@ -46,6 +46,16 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource;
 
 /**
+ *  UITableViewCell向VC发送数据
+ *
+ *  @param cellObject    用户点击的cell数据
+ *  @param tableViewCell 用户点击的Cell
+ *
+ *  @return void
+ */
+- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
+
+/**
  *  清除所有缓存高
  *
  *  @return void

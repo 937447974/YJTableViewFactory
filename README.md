@@ -472,6 +472,16 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 - (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource;
 
 /**
+ *  UITableViewCell向VC发送数据
+ *
+ *  @param cellObject    用户点击的cell数据
+ *  @param tableViewCell 用户点击的Cell
+ *
+ *  @return void
+ */
+- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
+
+/**
  *  清除所有缓存高
  *
  *  @return void
@@ -669,7 +679,7 @@ QQ：937447974
 | 2016-04-05 | 1.3.0 更新协议UITableViewCell (YJTableViewFactory)可传输YJTableViewDelegate、增加YJTableViewCellBlock可替代YJTableViewCellProtocol使用 |
 | 2016-04-07 | 1.3.1 UITableViewCell+YJTableViewFactory 增加生成YJCellObject的方法`+ (id)cellObject`，外部无需初始化YJCellObject |
 | 2016-04-07 | 1.3.2 UITableViewCell+YJTableViewFactory 增加方法`+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;`，自动生成YJCellObject的同时并填充模型。|
-| 2016-04-08 | 更新pod导入方式 |
+| 2016-04-08 | 1.3.3 更新pod导入方式,YJTableViewDelegate增加UITableViewCell向VC发送数据的通用方法`- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;` |
 
 ##Copyright
 

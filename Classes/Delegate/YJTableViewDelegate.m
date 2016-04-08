@@ -24,6 +24,7 @@
 
 @implementation YJTableViewDelegate
 
+#pragma mark - init
 - (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource {
     
     self = [super init];
@@ -37,6 +38,17 @@
         }
     }
     return self;
+    
+}
+
+#pragma mark - UITableViewCell向VC发送数据
+- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(UITableViewCell *)cell {
+    
+    if (self.cellBlock) { // block回调
+        self.cellBlock(cellObject, cell);
+    } else if (self.cellDelegate) { // 协议回调
+        [self.cellDelegate tableViewDidSelectCellWithCellObject:cellObject tableViewCell:cell];
+    }
     
 }
 
@@ -183,11 +195,7 @@
     } else if (self.dataSourceGrouped) {
         cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
     }
-    if (self.cellDelegate) {
-        [self.cellDelegate tableViewDidSelectCellWithCellObject:cellObject tableViewCell:nil];
-    } else if (self.cellBlock) {
-        self.cellBlock(cellObject, Nil);
-    }
+    [self sendVCWithCellObject:cellObject tableViewCell:nil];
  
 }
 

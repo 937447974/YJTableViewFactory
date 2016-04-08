@@ -24,10 +24,10 @@
     
     [super viewDidLoad];
     
-    [self test1];
+//    [self test1];
 //    [self test2];
 //    [self test3];
-//    [self test4];
+    [self test4];
     
 }
 
