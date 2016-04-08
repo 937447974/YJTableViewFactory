@@ -53,6 +53,13 @@ YJTableViewFactory具有多重优点：
 pod 'YJTableViewFactory'
 ```
 
+或
+
+```pod
+pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFactory.git'
+```
+
+
 #<a id="2">2 相关API
 
 ##<a id="2.1">2.1 核心YJTableViewFactory
@@ -662,6 +669,7 @@ QQ：937447974
 | 2016-04-05 | 1.3.0 更新协议UITableViewCell (YJTableViewFactory)可传输YJTableViewDelegate、增加YJTableViewCellBlock可替代YJTableViewCellProtocol使用 |
 | 2016-04-07 | 1.3.1 UITableViewCell+YJTableViewFactory 增加生成YJCellObject的方法`+ (id)cellObject`，外部无需初始化YJCellObject |
 | 2016-04-07 | 1.3.2 UITableViewCell+YJTableViewFactory 增加方法`+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;`，自动生成YJCellObject的同时并填充模型。|
+| 2016-04-08 | 更新pod导入方式 |
 
 ##Copyright
 
