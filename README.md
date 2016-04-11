@@ -62,140 +62,15 @@ pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFacto
 
 #<a id="2">2 相关API
 
-##<a id="2.1">2.1 核心YJTableViewFactory
+##<a id="2.1">2.1 核心[YJTableViewFactory](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/YJTableViewFactory.h)
 
 开发过程中只需导入YJTableViewFactory即可。
 
-```objc
-//
-//  YJTableViewFactory.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
-
-/**
- * UITableViewCell相关关系。YJTableViewCell、YJTableViewCellModel、YJTableViewCellObject。
- */
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "UITableViewCell+YJTableViewFactory.h"
-#import "YJTableViewDataSourcePlain.h"
-#import "YJTableViewDataSourceGrouped.h"
-#import "YJCellObject.h"
-#import "YJTableViewDelegate.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** 获取类名，兼容OC和Swift*/
-NSString *YJStringFromClass(Class aClass);
-
-@interface YJTableViewFactory : NSObject
-
-@end
-
-NS_ASSUME_NONNULL_END
-```
-
 这里有个方法`NSString *YJStringFromClass(Class aClass)`兼容swift或oc，获取相同的类名。
 
-##<a id="2.2">2.2 UITableViewCell扩展
+##<a id="2.2">2.2 [UITableViewCell扩展](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Extend/UITableViewCell%2BYJTableViewFactory.h)
 
 使用扩展的方式实现UITableViewCell，这样不用修改项目中已有基类。
-
-```objc
-//
-//  UITableViewCell+YJTableViewFactory.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-#import "YJCellObject.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class YJTableViewDelegate;
-
-
-/** 点击cell的block*/
-typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
-
-
-/** 点击cell的协议*/
-@protocol YJTableViewCellProtocol <NSObject>
-
-/**
- *  用户点击Cell
- *
- *  @param cellObject    用户点击的cell数据
- *  @param tableViewCell 用户点击的Cell
- *
- *  @return void
- */
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
-
-@end
-
-
-
-/** UITableViewCell扩展*/
-@interface UITableViewCell (YJTableViewFactory)
-
-/*推荐存储数据的属性
-@property (nonatomic, weak) YJCellObject *cellObject;
-@property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
-*/
-
-/**
- *  获取YJCellObject,子类重写可获取YJCellObject子类。
- *
- *  @return YJCellObject
- */
-+ (id)cellObject;
-
-/**
- *  获取YJCellObject并自动填充模型。
- *
- *  @param cellModel 对应的Cell模型
- *
- *  @return YJCellObject
- */
-+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;
-
-/**
- *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
- *
- *  @param cellObject cell封装的对象
- *
- *  @return CGFloat
- */
-+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject;
-
-/**
- *  根据模型刷新Cell
- *
- *  @param cellObject        cell封装的对象
- *  @param tableViewDelegate YJTableViewDelegate
- *
- *  @return void
- */
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate;
-
-@end
-
-NS_ASSUME_NONNULL_END
-```
 
 YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。同时我们也可以是使用YJTableViewCellBlock监听点击cell。
 
@@ -206,66 +81,7 @@ YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UIT
 
 ##<a id="2.3">2.3 UITableViewCell封装
 
-###<a id="2.3.1">2.3.1 YJCellObject
-
-```objc
-//
-//  YJCellObject.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** cell模型协议*/
-@protocol YJCellModelProtocol <NSObject>
-
-@end
-
-
-/** 创建cell的方式*/
-typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
-    
-    YJTableViewCellCreateDefault,   ///< 默认使用xib创建cell，推荐此方式
-    YJTableViewCellCreateSoryboard, ///< 使用soryboard创建cell时，请使用类名作为标识符。
-    YJTableViewCellCreateClass      ///< 使用Class创建cell,即使用[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:className]，可自行修改实现
-    
-};
-
-
-/** Cell对象*/
-@interface YJCellObject : NSObject
-
-@property (nonatomic) id<YJCellModelProtocol> cellModel; ///< cell对应的VM
-@property (nonatomic) YJTableViewCellCreate createCell;  ///< 创建cell的方式
-@property (nonatomic, strong, nullable) id userInfo;     ///< 携带的数据
-
-@property (nonatomic, strong, nullable) NSIndexPath *indexPath; ///< cell所处位置，无须添加，自动填充
-
-@property (nonatomic, readonly) Class cellClass;          ///< UITableViewCell对应的类
-@property (nonatomic, copy, readonly) NSString *cellName; ///< UITableViewCell对应的类名
-
-/**
- *  初始化YJCellObject，当不想创建子类时，可使用此方法创建对象
- *
- *  @param cellClass YJTableViewCell对应的类
- *
- *  @return void
- */
-- (instancetype)initWithTableViewCellClass:(Class)cellClass;
-
-@end
-
-NS_ASSUME_NONNULL_END
-
-```
+###<a id="2.3.1">2.3.1 [YJCellObject](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/CellObject/YJCellObject.h)
 
 YJCellObject为UITableViewCell关于模型的封装。
 
@@ -293,67 +109,7 @@ YJTableViewCellObject *cellObject = [[YJTableViewCellObject alloc] init];
 
 ##<a id="2.4">2.4 UITableViewDataSource封装
 
-###<a id="2.4.1">2.4.1 YJTableViewDataSource
-
-```objc
-//
-//  YJTableViewDataSource.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "YJCellObject.h"
-#import "UITableViewCell+YJTableViewFactory.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class YJTableViewDelegate;
-
-/** 缓存Cell的策略*/
-typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
-    
-    YJTableViewCacheCellDefault,  ///< 根据相同的UITableViewCell类名缓存Cell
-    YJTableViewCacheCellIndexPath ///< 根据NSIndexPath对应的位置缓存Cell
-    
-};
-
-
-/** UITableViewDataSource抽象接口*/
-@interface YJTableViewDataSource : NSObject <UITableViewDataSource>
-
-@property (nonatomic) YJTableViewCacheCell cacheCellStrategy;                   ///< 缓存Cell的策略
-@property (nonatomic, weak) UITableView *tableView;                             ///< tableView
-@property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate; ///< YJTableViewDelegate,无须赋值，自动化创建
-
-/**
- *  抽象的初始化接口,会自动填充设置tableView.dataSource = self;tableView.delegate = self.tableViewDelegate;
- *
- *  @param tableView UITableView
- *
- *  @return YJTableViewDataSourceGrouped 或 YJTableViewDataSourcePlain
- */
-- (instancetype)initWithTableView:(UITableView *)tableView;
-
-/**
- *  根据cellObject创建UITableViewCell
- *
- *  @param cellObject YJCellObject
- *
- *  @return UITableViewCell
- */
-- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject;
-
-@end
-
-NS_ASSUME_NONNULL_END
-```
+###<a id="2.4.1">2.4.1 [YJTableViewDataSource](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSource.h)
 
 YJTableViewDataSource是一个抽象接口，我们开发过程中不使用这个类，而是使用它的子类YJTableViewDataSourcePlain和YJTableViewDataSourceGrouped。
 
@@ -361,174 +117,17 @@ YJTableViewDataSource是一个抽象接口，我们开发过程中不使用这�
 
 这里可通过cacheCellStrategy修改缓存策略，通过tableViewDelegate修改其内部相关配置。
 
-###<a id="2.4.2">2.4.2 YJTableViewDataSourcePlain
+###<a id="2.4.2">2.4.2 [YJTableViewDataSourcePlain](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSourcePlain.h)
 
 YJTableViewDataSourcePlain支持UITableViewStylePlain的显示样式，自带数据源dataSource。
 
-```objc
-//
-//  YJTableViewDataSourcePlain.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
 
-#import "YJTableViewDataSource.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** UITableViewStylePlain样式使用*/
-@interface YJTableViewDataSourcePlain : YJTableViewDataSource
-
-@property (nonatomic, strong) NSMutableArray<YJCellObject *> *dataSource; ///< 数据源
-
-@end
-
-NS_ASSUME_NONNULL_END
-```
-
-###<a id="2.4.3">2.4.3 YJTableViewDataSourceGrouped
+###<a id="2.4.3">2.4.3 [YJTableViewDataSourceGrouped](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSourceGrouped.h)
 
 YJTableViewDataSourceGrouped支持UITableViewStyleGrouped的显示样式，自带数据源dataSource。
 
-```objc
-//
-//  YJTableViewDataSourceGrouped.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
 
-#import "YJTableViewDataSource.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** UITableViewStyleGrouped样式*/
-@interface YJTableViewDataSourceGrouped : YJTableViewDataSource
-
-@property (nonatomic, strong) NSMutableArray<NSMutableArray<YJCellObject *> *> *dataSource; ///< 数据源
-
-@end
-
-NS_ASSUME_NONNULL_END
-```
-
-##<a id="2.5">2.5 UITableViewDelegate封装
-
-```objc
-//
-//  YJTableViewDelegate.h
-//  YJTableViewFactory
-//
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
-//
-//  Created by 阳君 on 16/3/26.
-//  Copyright © 2016年 YJFactory. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "UITableViewCell+YJTableViewFactory.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class YJTableViewDataSource;
-
-
-/** 缓存高的策略*/
-typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
-    
-    YJTableViewCacheHeightDefault,  ///< 根据相同的UITableViewCell类缓存高度
-    YJTableViewCacheHeightIndexPath ///< 根据NSIndexPath对应的位置缓存高度
-    
-};
-
-
-/** UITableViewDelegate抽象接口*/
-@interface YJTableViewDelegate : NSObject <UITableViewDelegate>
-
-@property (nonatomic) BOOL isCacheHeight;                         ///< 是否缓存高，默认YES缓存，NO不缓存
-@property (nonatomic) YJTableViewCacheHeight cacheHeightStrategy; ///< 缓存高的策略。无须赋值，YJTableViewDataSource抽象接口会根据cacheCellStrategy自动赋值
-
-@property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> cellDelegate; ///< 点击cell的代理
-@property (nonatomic, copy, nullable) YJTableViewCellBlock cellBlock;            ///< 点击cell的block
-
-/**
- *  初始化
- *
- *  @param dataSource YJTableViewDataSource数据源
- *
- *  @return YJTableViewDelegate
- */
-- (instancetype)initWithDataSource:(YJTableViewDataSource *)dataSource;
-
-/**
- *  UITableViewCell向VC发送数据
- *
- *  @param cellObject    用户点击的cell数据
- *  @param tableViewCell 用户点击的Cell
- *
- *  @return void
- */
-- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
-
-/**
- *  清除所有缓存高
- *
- *  @return void
- */
-- (void)clearAllCacheHeight;
-
-/**
- *  根据cell的类清楚缓存高，cacheHeightStrategy = YJTableViewCacheHeightDefault
- *
- *  @param cellClass UITableViewCell类
- *
- *  @return void
- */
-- (void)clearCacheHeightWithCellClass:(Class)cellClass;
-
-/**
- *  根据NSIndexPath位置清除缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
- *
- *  @param indexPath NSIndexPath
- *
- *  @return void
- */
-- (void)clearCacheHeightWithIndexPath:(NSIndexPath *)indexPath;
-
-/**
- *  根据NSIndexPath集合清除对应的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
- *
- *  @param indexPaths NSIndexPath集合
- *
- *  @return void
- */
-- (void)clearCacheHeightWithIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
-
-/**
- *  清除[startIndexPath,endIndexPath]的缓存高，cacheHeightStrategy = YJTableViewCacheHeightIndexPath
- *
- *  @param cellClass UITableViewCell类
- *
- *  @return void
- */
-- (void)clearCacheHeightWithFromIndexPath:(NSIndexPath *)startIndexPath toIndexPath:(NSIndexPath *)endIndexPath;
-
-@end
-
-NS_ASSUME_NONNULL_END
-
-```
+##<a id="2.5">2.5 [UITableViewDelegate封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Delegate/YJTableViewDelegate.h)
 
 YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次赋值。这里会自动赋值缓存cell高度的策略，也可定制缓存高的策略。
 
