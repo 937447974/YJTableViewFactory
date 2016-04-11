@@ -680,6 +680,7 @@ QQ：937447974
 | 2016-04-07 | 1.3.1 UITableViewCell+YJTableViewFactory 增加生成YJCellObject的方法`+ (id)cellObject`，外部无需初始化YJCellObject |
 | 2016-04-07 | 1.3.2 UITableViewCell+YJTableViewFactory 增加方法`+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;`，自动生成YJCellObject的同时并填充模型。|
 | 2016-04-08 | 1.3.3 更新pod导入方式,YJTableViewDelegate增加UITableViewCell向VC发送数据的通用方法`- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;` |
+| 2016-04-11 | 1.3.4 pod导入YJTableViewFactory时，会导入文件夹 |
 
 ##Copyright
 
