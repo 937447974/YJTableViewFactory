@@ -35,6 +35,7 @@ Pod::Spec.new do |s|
 
     # ――― Source Code
     s.source_files  = "Classes/*.{h,m}", "Classes/**/*.{h,m}", "README.md"
+    s.public_header_files = "Classes/*.h"
 
     # ――― Project Linking
     s.frameworks = "UIKit", "Foundation"
