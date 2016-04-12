@@ -34,10 +34,13 @@
     _cacheCellStrategy = cacheCellStrategy;
     switch (cacheCellStrategy) {
         case YJTableViewCacheCellDefault:  ///< 根据相同的UITableViewCell类名缓存Cell
-            self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheCellDefault;
+            self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheHeightDefault;
             break;
         case YJTableViewCacheCellIndexPath: ///< 根据NSIndexPath对应的位置缓存Cell
-            self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheCellIndexPath;
+            self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheHeightIndexPath;
+            break;
+        case YJTableViewCacheCellClassAndIndexPath:
+            self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheHeightClassAndIndexPath;
             break;
     }
     
@@ -51,10 +54,10 @@
         case YJTableViewCacheCellDefault:
             identifier = cellObject.cellName;
             break;
-        case YJTableViewCacheCellDefault:
+        case YJTableViewCacheCellIndexPath:
             identifier = [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
             break;
-        case YJTableViewCacheCellDefault:
+        case YJTableViewCacheCellClassAndIndexPath:
             identifier = [NSString stringWithFormat:@"%@(%ld-%ld)", cellObject.cellName, cellObject.indexPath.section, cellObject.indexPath.row];
             break;
     }

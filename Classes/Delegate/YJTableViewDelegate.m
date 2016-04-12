@@ -145,33 +145,45 @@
 
 }
 
-#pragma mark 获取NSIndexPath对应的缓存key
+#pragma mark - 获取NSIndexPath对应的缓存key
 - (NSString *)getKeyFromIndexPath:(NSIndexPath *)indexPath {
     
     return [NSString stringWithFormat:@"%@-%@", @(indexPath.section), @(indexPath.row)];
 
 }
 
+#pragma mark 获取cellObject对应的缓存key
+- (NSString *)getKeyFromCellObject:(YJCellObject *)cellObject {
+    
+    switch (self.cacheHeightStrategy) {
+        case YJTableViewCacheHeightDefault: // 根据相同的UITableViewCell类缓存高度
+            return cellObject.cellName;
+        case YJTableViewCacheHeightIndexPath: // 根据NSIndexPath对应的位置缓存高度
+            return [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
+        case YJTableViewCacheHeightClassAndIndexPath: // 根据类名和NSIndexPath双重绑定缓存高度
+            return [NSString stringWithFormat:@"%@(%ld-%ld)", cellObject.cellName, cellObject.indexPath.section, cellObject.indexPath.row];
+    }
+    
+}
+
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // 获取YJCellObject
+    YJCellObject *cellObject;
+    if (self.dataSourcePlain) {
+        cellObject = self.dataSourcePlain.dataSource[indexPath.row];
+    } else if (self.dataSourceGrouped) {
+        cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
+    }
+    
     CGFloat rowHeight = 0;
     // 存放缓存高的key
-    NSString *key = [self getKeyFromIndexPath:indexPath];
+    NSString *key = [self getKeyFromCellObject:cellObject];
     if (self.isCacheHeight) {
         rowHeight = [_cacheHeightDict objectForKey:key].floatValue;
     }
     if (rowHeight == 0) { //无缓存
-        // 获取YJCellObject
-        YJCellObject *cellObject;
-        UITableView *tableView;
-        if (self.dataSourcePlain) {
-            cellObject = self.dataSourcePlain.dataSource[indexPath.row];
-            tableView = self.dataSourcePlain.tableView;
-        } else if (self.dataSourceGrouped) {
-            cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
-            tableView = self.dataSourceGrouped.tableView;
-        }
         // 获取高
         if (cellObject && [cellObject.cellClass respondsToSelector:@selector(tableView:heightForCellObject:)] ) {
             rowHeight = [cellObject.cellClass tableView:tableView heightForCellObject:cellObject];
