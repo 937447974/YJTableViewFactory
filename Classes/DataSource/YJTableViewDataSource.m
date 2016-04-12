@@ -43,14 +43,25 @@
     
 }
 
-
 #pragma mark - 根据YJCellObject生成UITableViewCell
 - (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject{
     
-    NSString *identifier = self.cacheCellStrategy == YJTableViewCacheCellDefault ? cellObject.cellName : [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
+    NSString *identifier = @"identifier";
+    switch (self.cacheCellStrategy) {
+        case YJTableViewCacheCellDefault:
+            identifier = cellObject.cellName;
+            break;
+        case YJTableViewCacheCellDefault:
+            identifier = [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
+            break;
+        case YJTableViewCacheCellDefault:
+            identifier = [NSString stringWithFormat:@"%@(%ld-%ld)", cellObject.cellName, cellObject.indexPath.section, cellObject.indexPath.row];
+            break;
+    }
+    // 读取缓存
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        // 未找到时，重新注入，再寻找
+    // 未找到时，重新注入，再寻找
+    if (cell == nil) {        
         switch (cellObject.createCell) {
             case YJTableViewCellCreateDefault:
                 [self.tableView registerNib:[UINib nibWithNibName:cellObject.cellName bundle:nil] forCellReuseIdentifier:identifier];

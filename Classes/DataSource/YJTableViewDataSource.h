@@ -21,8 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 缓存Cell的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
     
-    YJTableViewCacheCellDefault,  ///< 根据相同的UITableViewCell类名缓存Cell
-    YJTableViewCacheCellIndexPath ///< 根据NSIndexPath对应的位置缓存Cell
+    YJTableViewCacheCellDefault,          ///< 根据相同的UITableViewCell类名缓存Cell
+    YJTableViewCacheCellIndexPath,        ///< 根据NSIndexPath对应的位置缓存Cell
+    YJTableViewCacheCellClassAndIndexPath ///< 根据类名和NSIndexPath双重绑定缓存Cell
     
 };
 
