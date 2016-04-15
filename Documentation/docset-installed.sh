@@ -18,19 +18,8 @@ if [[ $? != 0 ]] ; then
 	# 复制文件
 	cp -a -f ${docset_path} ${docset_dest_path}
 
-    # 是否需要重启Xcode
-	if read -t 5 -n 1 -p '\nYJTableViewFactory Documentation安装完毕,是否重启Xcode:(y/n):' input; then
-		if [[ $input == "y" ]]; then
-			echo "\n正在重启Xcode..."
-			osascript -e 'tell app "Xcode" to quit'
-			open /Applications/Xcode.app
-		fi
-	else
-		echo '请重启Xcode后在Help -> Documentation And API Reference中查看YJTableViewFactory Documentation'
-	fi
-
     # 在通知中心显示提示
-    osascript -e 'display notification "在XCode -> Help -> Documentation And API Reference中查看文档" with title "YJTableViewFactory开发文档已安装"'
+    osascript -e 'display notification "请重启Xcode后在Help -> Documentation And API Reference中查看文档" with title "YJTableViewFactory开发文档已安装"'
 
 fi
 
