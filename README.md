@@ -59,8 +59,11 @@ pod 'YJTableViewFactory'
 pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFactory.git'
 ```
 
-
 #<a id="2">2 相关API
+
+pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关文档，如图所示。
+
+![](https://raw.githubusercontent.com/937447974/Blog/master/Resources/2016041501.png)
 
 ##<a id="2.1">2.1 核心[YJTableViewFactory](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/YJTableViewFactory.h)
 
@@ -71,9 +74,6 @@ pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFacto
 ##<a id="2.2">2.2 [UITableViewCell扩展](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Extend/UITableViewCell%2BYJTableViewFactory.h)
 
 使用扩展的方式实现UITableViewCell，这样不用修改项目中已有基类。
-
-YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。同时我们也可以是使用YJTableViewCellBlock监听点击cell。
-
 
 `+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject`是一个自动计算高的方法，只支持xib创建cell的模式。如果想定制高度，可实现此方法。
 
@@ -128,6 +128,8 @@ YJTableViewDataSourceGrouped支持UITableViewStyleGrouped的显示样式，自�
 
 
 ##<a id="2.5">2.5 [UITableViewDelegate封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Delegate/YJTableViewDelegate.h)
+
+YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。同时我们也可以是使用YJTableViewCellBlock监听点击cell。
 
 YJTableViewDelegate已填充到YJTableViewDataSource抽象接口，无须再次赋值。这里会自动赋值缓存cell高度的策略，也可定制缓存高的策略。
 
@@ -281,6 +283,7 @@ QQ：937447974
 | 2016-04-08 | 1.3.3 更新pod导入方式,YJTableViewDelegate增加UITableViewCell向VC发送数据的通用方法`- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;` |
 | 2016-04-11 | 1.3.4 pod导入YJTableViewFactory时，会导入文件夹,测试失效 |
 | 2016-04-12 | 1.4 YJTableViewDataSource中cacheCellStrategy支持高级需求位置类名双重绑定缓存cell |
+| 2016-04-15 | 2.0 YJTableViewFactory重大升级：1.架构调整，YJTableViewCellProtocol和YJTableViewCellBlock从UITableViewCell+YJTableViewFactory.h移动到YJTableViewDelegate.h；2.pod导入后，会在项目中生成相关文件夹，便于查看；3.pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关开发文档。|
 
 ##Copyright
 
