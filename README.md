@@ -50,14 +50,20 @@ YJTableViewFactory具有多重优点：
 导入YJTableViewFactory可使用pod导入，相关命令：
 
 ```pod
+platform :ios, '6.0'
 pod 'YJTableViewFactory'
 ```
 
 或
 
 ```pod
+platform :ios, '6.0'
 pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFactory.git'
 ```
+
+pod导入后即可在项目中看见相关文件。
+
+![](https://raw.githubusercontent.com/937447974/Blog/master/Resources/2016041502.png)
 
 #<a id="2">2 相关API
 
