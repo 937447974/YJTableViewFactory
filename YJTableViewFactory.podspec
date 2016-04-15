@@ -8,14 +8,14 @@
 
 # 注册pod权限：pod trunk register 937447974@qq.com '阳君' --description='china beijing'
 # 验证podspec命令：pod spec lint或 pod spec lint --allow-warnings
-# 文档发包:appledoc -c "阳君" --company-id "com.YJFactory.YJTableViewFactory" -p YJTableViewFactory -v 1.5.0 -o ./Documentation ./Classes
+# 文档发包:appledoc -c "阳君" --company-id "com.YJFactory" -p YJTableViewFactory -v 2.0 -o ./Documentation ./Classes
 # pod发包：pod trunk push YJTableViewFactory.podspec --allow-warnings
 
 Pod::Spec.new do |s|
 
     # ―――  Spec Metadata
     s.name     = "YJTableViewFactory"
-    s.version  = "1.5.0"
+    s.version  = "2.0"
     s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
     s.homepage = "https://github.com/937447974/YJTableViewFactory"
 
