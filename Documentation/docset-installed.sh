@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #路径声明
-docset_name = com.YJFactory.YJTableViewFactory.docset
-docset_path = Documentation/${docset_name}
-docset_dest_dir = ~/Library/Developer/Shared/Documentation/DocSets
-docset_dest_path = ${docset_dest_dir}/${docset_name}
+docset_name=com.YJFactory.YJTableViewFactory.docset
+docset_path=Documentation/${docset_name}
+docset_dest_dir=~/Library/Developer/Shared/Documentation/DocSets
+docset_dest_path=${docset_dest_dir}/${docset_name}
 
 #对比已有的文档，如果有不同则用最新的覆盖已有的
 diff --recursive ${docset_path} ${docset_dest_path} > /dev/null
