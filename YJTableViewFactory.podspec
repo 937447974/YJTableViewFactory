@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
     # ――― Author Metadata
     s.author   = { "阳君" => "937447974@qq.com" }
 
-
     # ――― Platform Specifics
     s.platform = :ios
     s.ios.deployment_target = "6.0"
@@ -34,13 +33,32 @@ Pod::Spec.new do |s|
     s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
 
     # ――― Source Code
-    s.source_files  = "Classes/*.{h,m}", "Classes/**/*.{h,m}", "README.md"
-#s.public_header_files = "Classes/*.h"
+    s.source_files  = "Classes/*.{h,m}", "README.md"
+    s.default_subspec = 'Core'
 
     # ――― Project Linking
     s.frameworks = "UIKit", "Foundation"
 
     # ――― Project Settings
     s.requires_arc = true
+
+    # ——— Documentation And API Reference
+    s.preserve_paths = 'Documentation/*.*'
+    s.prepare_command = 'sh Documentation/docset-installed.sh'
+
+    # ——— Subspecs
+    s.subspec 'Core' do |core|
+        core.source_files = 'Classes/DataSource/*.{h,m}', 'Classes/Delegate/*.{h,m}', 'Classes/Extend/*.{h,m}'
+        core.dependency 'YJTableViewFactory/CellObject'
+    end
+
+    s.subspec 'CellObject' do |co|
+        co.source_files = 'Classes/CellObject/*.{h,m}'
+        co.dependency 'YJTableViewFactory/Utils'
+    end
+
+    s.subspec 'Utils' do |u|
+        u.source_files = 'Classes/Utils/*.{h,m}'
+    end
 
 end
