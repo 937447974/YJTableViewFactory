@@ -18,5 +18,5 @@ if [[ $? != 0 ]] ; then
 	cp -a -f ${docset_path} ${docset_dest_path}
 	
 	#在通知中心显示提示
-	osascript -e 'display notification "重启XCode后,在Help -> Document And API Reference中查看文档" with title "YJTableViewFactory开发文档已安装！"'
+	osascript -e 'display notification "重启XCode后,在Help -> Documentation And API Reference中查看文档" with title "YJTableViewFactory开发文档已安装！"'
 fi
