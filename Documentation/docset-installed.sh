@@ -21,7 +21,7 @@ if [[ $? != 0 ]] ; then
     # 是否需要重启Xcode
 	if read -t 5 -n 1 -p '\nYJTableViewFactory Documentation安装完毕,是否重启Xcode:(y/n):' input; then
 		if [[ $input == "y" ]]; then
-			echo "\n重启Xcode..."
+			echo "\n正在重启Xcode..."
 			osascript -e 'tell app "Xcode" to quit'
 			open /Applications/Xcode.app
 		fi
