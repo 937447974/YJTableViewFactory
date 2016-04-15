@@ -16,28 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class YJTableViewDelegate;
 
-
-/** 点击cell的block*/
-typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
-
-
-/** 点击cell的协议*/
-@protocol YJTableViewCellProtocol <NSObject>
-
-/**
- *  用户点击Cell
- *
- *  @param cellObject    用户点击的cell数据
- *  @param tableViewCell 用户点击的Cell
- *
- *  @return void
- */
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
-
-@end
-
-
-
 /** UITableViewCell扩展*/
 @interface UITableViewCell (YJTableViewFactory)
 

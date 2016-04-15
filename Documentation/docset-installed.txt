@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/admin/Library/Developer/Shared/Documentation/DocSets/com.YJFactory.YJTableViewFactory.YJTableViewFactory.docset
+Time: 2016-04-15 02:17:30 +0000

@@ -11,7 +11,7 @@
 
 #import "YJCellObject.h"
 #import <objc/runtime.h>
-#import "YJTableViewFactory.h"
+#import "YJTableViewUtils.h"
 
 @interface YJCellObject ()
 

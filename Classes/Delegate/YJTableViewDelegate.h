@@ -11,11 +11,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "UITableViewCell+YJTableViewFactory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class YJTableViewDataSource;
+@class YJCellObject, YJTableViewDataSource;
 
 
 /** 缓存高的策略*/
@@ -26,6 +25,26 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
     YJTableViewCacheHeightClassAndIndexPath ///< 根据类名和NSIndexPath双重绑定缓存高度
     
 };
+
+
+/** 点击cell的block*/
+typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
+
+
+/** 点击cell的协议*/
+@protocol YJTableViewCellProtocol <NSObject>
+
+/**
+ *  用户点击Cell
+ *
+ *  @param cellObject    用户点击的cell数据
+ *  @param tableViewCell 用户点击的Cell
+ *
+ *  @return void
+ */
+- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
+
+@end
 
 
 /** UITableViewDelegate抽象接口*/

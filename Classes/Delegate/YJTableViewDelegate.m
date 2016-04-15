@@ -9,7 +9,11 @@
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
-#import "YJTableViewFactory.h"
+#import "YJTableViewDelegate.h"
+#import "YJTableViewDataSourcePlain.h"
+#import "YJTableViewDataSourceGrouped.h"
+#import "YJTableViewUtils.h"
+#import "YJCellObject.h"
 
 @interface YJTableViewDelegate () {
     

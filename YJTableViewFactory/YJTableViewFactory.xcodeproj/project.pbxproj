@@ -21,6 +21,7 @@
 		8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */; };
 		8452A5501CA6A72700BFDB57 /* YJFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */; };
 		8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */; };
+		8459F6E01CC0887F00A10B79 /* YJTableViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459F6DF1CC0887F00A10B79 /* YJTableViewUtils.m */; };
 		847DBEAC1CA8E45C0006B71B /* YJCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBE9E1CA8E45C0006B71B /* YJCellObject.m */; };
 		847DBEAD1CA8E45C0006B71B /* YJTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA11CA8E45C0006B71B /* YJTableViewDataSource.m */; };
 		847DBEAE1CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA31CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m */; };
@@ -74,6 +75,8 @@
 		8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFirstViewController.m; sourceTree = "<group>"; };
 		8452A5511CA6A74500BFDB57 /* YJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSecondViewController.h; sourceTree = "<group>"; };
 		8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSecondViewController.m; sourceTree = "<group>"; };
+		8459F6DE1CC0887F00A10B79 /* YJTableViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewUtils.h; sourceTree = "<group>"; };
+		8459F6DF1CC0887F00A10B79 /* YJTableViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewUtils.m; sourceTree = "<group>"; };
 		847DBE9D1CA8E45C0006B71B /* YJCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCellObject.h; sourceTree = "<group>"; };
 		847DBE9E1CA8E45C0006B71B /* YJCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCellObject.m; sourceTree = "<group>"; };
 		847DBEA01CA8E45C0006B71B /* YJTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDataSource.h; sourceTree = "<group>"; };
@@ -136,12 +139,10 @@
 		8452A4D21CA6511300BFDB57 /* YJTableViewFactory */ = {
 			isa = PBXGroup;
 			children = (
-				8452A53D1CA6959A00BFDB57 /* CellObject */,
-				8452A53C1CA6958500BFDB57 /* CellModel */,
-				8452A53B1CA6957B00BFDB57 /* Cell */,
 				8452A4D61CA6511300BFDB57 /* AppDelegate.h */,
 				8452A4D71CA6511300BFDB57 /* AppDelegate.m */,
 				8452A5251CA6729700BFDB57 /* ViewController */,
+				8452A53B1CA6957B00BFDB57 /* Cell */,
 				8452A5211CA6678300BFDB57 /* Classes */,
 				8452A5261CA672AE00BFDB57 /* Recources */,
 				8452A4D31CA6511300BFDB57 /* Supporting Files */,
@@ -179,6 +180,7 @@
 		8452A5211CA6678300BFDB57 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8459F6DD1CC0885700A10B79 /* Utils */,
 				847DBE9C1CA8E45C0006B71B /* CellObject */,
 				847DBE9F1CA8E45C0006B71B /* DataSource */,
 				847DBEA61CA8E45C0006B71B /* Delegate */,
@@ -214,6 +216,8 @@
 		8452A53B1CA6957B00BFDB57 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8452A53C1CA6958500BFDB57 /* CellModel */,
+				8452A53D1CA6959A00BFDB57 /* CellObject */,
 				8452A5431CA6A48000BFDB57 /* YJTableViewCell.h */,
 				8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */,
 				8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */,
@@ -237,6 +241,15 @@
 				8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */,
 			);
 			name = CellObject;
+			sourceTree = "<group>";
+		};
+		8459F6DD1CC0885700A10B79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8459F6DE1CC0887F00A10B79 /* YJTableViewUtils.h */,
+				8459F6DF1CC0887F00A10B79 /* YJTableViewUtils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		847DBE9C1CA8E45C0006B71B /* CellObject */ = {
@@ -422,6 +435,7 @@
 				847DBEAC1CA8E45C0006B71B /* YJCellObject.m in Sources */,
 				8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */,
 				8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */,
+				8459F6E01CC0887F00A10B79 /* YJTableViewUtils.m in Sources */,
 				8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */,
 				8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */,
 				8452A4D51CA6511300BFDB57 /* main.m in Sources */,

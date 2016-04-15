@@ -7,7 +7,6 @@
 //
 
 #import "YJSecondViewController.h"
-#import "YJTableViewFactory.h"
 #import "YJTableViewCell.h"
 
 @interface YJSecondViewController () <UITableViewDelegate>

@@ -10,7 +10,8 @@
 //
 
 #import "UITableViewCell+YJTableViewFactory.h"
-#import "YJTableViewFactory.h"
+#import "YJTableViewUtils.h"
+#import "YJTableViewDelegate.h"
 
 @implementation UITableViewCell (YJTableViewFactory)
 

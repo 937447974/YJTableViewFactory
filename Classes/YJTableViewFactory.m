@@ -11,15 +11,6 @@
 
 #import "YJTableViewFactory.h"
 
-#pragma mark 获取类名
-NSString *YJStringFromClass(Class aClass) {
-    
-    NSString *className = NSStringFromClass(aClass);
-    NSArray<NSString *> *array = [className componentsSeparatedByString:@"."];
-    return array.lastObject;
-    
-}
-
 @implementation YJTableViewFactory
 
 @end

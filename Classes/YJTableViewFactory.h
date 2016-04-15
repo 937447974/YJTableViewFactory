@@ -23,9 +23,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** 获取类名，兼容OC和Swift*/
-NSString *YJStringFromClass(Class aClass);
-
+/** 导入核心类*/
 @interface YJTableViewFactory : NSObject
 
 @end
