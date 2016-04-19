@@ -290,6 +290,7 @@ QQ：937447974
 | 2016-04-11 | 1.3.4 pod导入YJTableViewFactory时，会导入文件夹,测试失效 |
 | 2016-04-12 | 1.4 YJTableViewDataSource中cacheCellStrategy支持高级需求位置类名双重绑定缓存cell |
 | 2016-04-15 | 2.0 YJTableViewFactory重大升级：1.架构调整，YJTableViewCellProtocol和YJTableViewCellBlock从UITableViewCell+YJTableViewFactory.h移动到YJTableViewDelegate.h；2.pod导入后，会在项目中生成相关文件夹，便于查看；3.pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关开发文档。|
+| 2016-04-19 | 2.0.1 修复YJTableViewCacheHeightClassAndIndexPath引起的缓存高问题 |
 
 ##Copyright
 

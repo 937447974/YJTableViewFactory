@@ -180,10 +180,11 @@
     } else if (self.dataSourceGrouped) {
         cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
     }
-    
-    CGFloat rowHeight = 0;
+    cellObject.indexPath = indexPath;
     // 存放缓存高的key
     NSString *key = [self getKeyFromCellObject:cellObject];
+    
+    CGFloat rowHeight = 0;
     if (self.isCacheHeight) {
         rowHeight = [_cacheHeightDict objectForKey:key].floatValue;
     }
