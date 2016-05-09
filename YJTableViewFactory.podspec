@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
 
     # ――― Source Code
-    s.source_files  = "Classes/*.{h,m}", "README.md"
+    s.source_files  = "Classes/*.{h,m}"
     s.default_subspec = 'Core'
 
     # ――― Project Linking
