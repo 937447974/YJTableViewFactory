@@ -2,8 +2,8 @@
 //  YJTableViewDataSource.h
 //  YJTableViewFactory
 //
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
+//  HomePage:https://github.com/937447974/YJTableViewFactory
+//  YJ技术支持群:557445088
 //
 //  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
@@ -52,6 +52,15 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
  *  @return UITableViewCell
  */
 - (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject;
+
+/**
+ *  根据NSIndexPath位置获取YJCellObject
+ *
+ *  @param indexPath 位置
+ *
+ *  @return void
+ */
+- (YJCellObject *)cellObjectWithIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

@@ -2,8 +2,8 @@
 //  YJTableViewDelegate.m
 //  YJTableViewFactory
 //
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
+//  HomePage:https://github.com/937447974/YJTableViewFactory
+//  YJ技术支持群:557445088
 //
 //  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
@@ -21,10 +21,7 @@
     
 }
 
-@property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, weak) YJTableViewDataSource *dataSource;
-@property (nonatomic, weak) YJTableViewDataSourcePlain *dataSourcePlain;
-@property (nonatomic, weak) YJTableViewDataSourceGrouped *dataSourceGrouped;
 
 @end
 
@@ -37,13 +34,7 @@
     if (self) {
         _cacheHeightDict = [[NSMutableDictionary alloc] init];
         _isCacheHeight = YES;
-        self.tableView = dataSource.tableView;
         self.dataSource = dataSource;
-        if ([dataSource isKindOfClass:[YJTableViewDataSourcePlain class]]) {
-            self.dataSourcePlain = (YJTableViewDataSourcePlain *)dataSource;
-        } else if([dataSource isKindOfClass:[YJTableViewDataSourceGrouped class]]) {
-            self.dataSourceGrouped = (YJTableViewDataSourceGrouped *)dataSource;
-        }
     }
     return self;
     
@@ -102,15 +93,15 @@
 
 - (void)clearCacheHeightWithFromIndexPath:(NSIndexPath *)startIndexPath toIndexPath:(NSIndexPath *)endIndexPath {
     
-    if (startIndexPath.section>endIndexPath.section) {
+    if (startIndexPath.section > endIndexPath.section) {
         return;
     }
     // 数据转换
     NSArray<NSArray<YJCellObject *> *> *dataSource;
-    if (self.dataSourcePlain) {
-        dataSource = [NSArray arrayWithObject:self.dataSourcePlain.dataSource];
-    } else if (self.dataSourceGrouped) {
-        dataSource = self.dataSourceGrouped.dataSource;
+    if ([self.dataSource isKindOfClass:[YJTableViewDataSourcePlain class]]) {
+        dataSource = [NSArray arrayWithObject:((YJTableViewDataSourcePlain *)self.dataSource).dataSource];
+    } else if ([self.dataSource isKindOfClass:[YJTableViewDataSourceGrouped class]]) {
+        dataSource = ((YJTableViewDataSourceGrouped *)self.dataSource).dataSource;
     }
     // 清理缓存
     NSArray *rows;
@@ -178,12 +169,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 获取YJCellObject
-    YJCellObject *cellObject;
-    if (self.dataSourcePlain) {
-        cellObject = self.dataSourcePlain.dataSource[indexPath.row];
-    } else if (self.dataSourceGrouped) {
-        cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
-    }
+    YJCellObject *cellObject = [self.dataSource cellObjectWithIndexPath:indexPath];
     cellObject.indexPath = indexPath;
     // 存放缓存高的key
     NSString *key = [self getKeyFromCellObject:cellObject];
@@ -210,27 +196,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    YJCellObject *cellObject;
-    if (self.dataSourcePlain) {
-        cellObject = self.dataSourcePlain.dataSource[indexPath.row];
-    } else if (self.dataSourceGrouped) {
-        cellObject = self.dataSourceGrouped.dataSource[indexPath.section][indexPath.row];
-    }
+    YJCellObject *cellObject = [self.dataSource cellObjectWithIndexPath:indexPath];
     [self sendVCWithCellObject:cellObject tableViewCell:nil];
  
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    NSLog(@"%@", NSStringFromCGPoint(scrollView.contentOffset));
-    NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:ip];
-    CGRect rect = [self.tableView rectForRowAtIndexPath:ip];
-    NSLog(@"%@,%@",cell,NSStringFromCGRect(rect));
-    cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:ip];
-     NSLog(@"%@",cell);
-    
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    
+//    NSLog(@"%@", NSStringFromCGPoint(scrollView.contentOffset));
+//    NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
+//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:ip];
+//    CGRect rect = [self.tableView rectForRowAtIndexPath:ip];
+//    NSLog(@"%@,%@",cell,NSStringFromCGRect(rect));
+//    cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:ip];
+//     NSLog(@"%@",cell);
+//    
+//}
 
 @end

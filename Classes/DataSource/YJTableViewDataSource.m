@@ -2,8 +2,8 @@
 //  YJTableViewDataSource.m
 //  YJTableViewFactory
 //
-//  CSDN:http://blog.csdn.net/y550918116j
-//  GitHub:https://github.com/937447974/Blog
+//  HomePage:https://github.com/937447974/YJTableViewFactory
+//  YJ技术支持群:557445088
 //
 //  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
@@ -14,6 +14,7 @@
 
 @implementation YJTableViewDataSource
 
+#pragma mark - init
 - (instancetype)initWithTableView:(UITableView *)tableView {
     
     self = [super init];
@@ -47,6 +48,11 @@
 }
 
 #pragma mark - 根据YJCellObject生成UITableViewCell
+- (YJCellObject *)cellObjectWithIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"请不要使用YJTableViewDataSource抽象接口，请使用其子类YJTableViewDataSourceGrouped或YJTableViewDataSourcePlain");
+    return [[YJCellObject alloc] init];
+}
+
 - (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject{
     
     NSString *identifier = @"identifier";
@@ -86,16 +92,14 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     NSLog(@"请不要使用YJTableViewDataSource抽象接口，请使用其子类YJTableViewDataSourceGrouped或YJTableViewDataSourcePlain");
     return 0;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifier"];
-    
+    YJCellObject *cellObject = [self cellObjectWithIndexPath:indexPath];
+    cellObject.indexPath = indexPath;
+    return [self dequeueReusableCellWithCellObject:cellObject];
 }
 
 @end
