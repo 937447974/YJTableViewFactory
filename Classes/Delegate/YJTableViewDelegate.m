@@ -21,6 +21,8 @@
     
 }
 
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) YJTableViewDataSource *dataSource;
 @property (nonatomic, weak) YJTableViewDataSourcePlain *dataSourcePlain;
 @property (nonatomic, weak) YJTableViewDataSourceGrouped *dataSourceGrouped;
 
@@ -35,6 +37,8 @@
     if (self) {
         _cacheHeightDict = [[NSMutableDictionary alloc] init];
         _isCacheHeight = YES;
+        self.tableView = dataSource.tableView;
+        self.dataSource = dataSource;
         if ([dataSource isKindOfClass:[YJTableViewDataSourcePlain class]]) {
             self.dataSourcePlain = (YJTableViewDataSourcePlain *)dataSource;
         } else if([dataSource isKindOfClass:[YJTableViewDataSourceGrouped class]]) {
@@ -214,6 +218,19 @@
     }
     [self sendVCWithCellObject:cellObject tableViewCell:nil];
  
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    NSLog(@"%@", NSStringFromCGPoint(scrollView.contentOffset));
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:ip];
+    CGRect rect = [self.tableView rectForRowAtIndexPath:ip];
+    NSLog(@"%@,%@",cell,NSStringFromCGRect(rect));
+    cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:ip];
+     NSLog(@"%@",cell);
+    
 }
 
 @end
