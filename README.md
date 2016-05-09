@@ -268,6 +268,8 @@ cellDelegate和cellBlock主要用户监听点击cell。
 
 QQ：937447974
 
+YJ技术支持群：557445088
+
 职位：聚美优品iOS攻城师
 
 如果你觉得这个框架很赞，请点击右上角的Star按钮；如果你对我的框架感兴趣，并想持续获得本人最新的框架源文件，欢迎点击右上角的Fork按钮。
@@ -291,6 +293,7 @@ QQ：937447974
 | 2016-04-12 | 1.4 YJTableViewDataSource中cacheCellStrategy支持高级需求位置类名双重绑定缓存cell |
 | 2016-04-15 | 2.0 YJTableViewFactory重大升级：1.架构调整，YJTableViewCellProtocol和YJTableViewCellBlock从UITableViewCell+YJTableViewFactory.h移动到YJTableViewDelegate.h；2.pod导入后，会在项目中生成相关文件夹，便于查看；3.pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关开发文档。|
 | 2016-04-19 | 2.0.1 修复YJTableViewCacheHeightClassAndIndexPath引起的缓存高问题 |
+| 2016-05-09 | 2.0.2 架构优化，减少代码量 |
 
 ##Copyright
 
