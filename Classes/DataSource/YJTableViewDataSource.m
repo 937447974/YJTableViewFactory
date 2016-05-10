@@ -53,7 +53,7 @@
     return [[YJCellObject alloc] init];
 }
 
-- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject{
+- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject {
     
     NSString *identifier = @"identifier";
     switch (self.cacheCellStrategy) {

@@ -202,16 +202,35 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    
-//    NSLog(@"%@", NSStringFromCGPoint(scrollView.contentOffset));
-//    NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
-//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:ip];
-//    CGRect rect = [self.tableView rectForRowAtIndexPath:ip];
-//    NSLog(@"%@,%@",cell,NSStringFromCGRect(rect));
-//    cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:ip];
-//     NSLog(@"%@",cell);
-//    
-//}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:1 inSection:0];
+    static UITableViewCell *cell;
+    CGRect rect = [self.dataSource.tableView rectForRowAtIndexPath:ip];
+    if (cell == nil) {
+        cell = [self.dataSource tableView:self.dataSource.tableView cellForRowAtIndexPath:ip];
+        [self.dataSource.tableView.superview addSubview:cell];
+        [cell setNeedsUpdateConstraints];
+    }
+    [cell snapshotViewAfterScreenUpdates:YES];
+    CGRect cr = cell.frame;
+    cr.size = rect.size;
+    CGPoint contentOffset = scrollView.contentOffset;
+    NSLog(@"%@", NSStringFromCGPoint(contentOffset));
+    if (contentOffset.y > rect.origin.y + rect.size.height) {
+        cr.origin.y = self.dataSource.tableView.frame.origin.y;
+        cell.frame = cr;
+        NSLog(@"持续显示");
+    } else if (contentOffset.y > rect.origin.y) {
+        NSLog(@"显示动画中");
+        cr.origin.y = rect.origin.y - contentOffset.y+self.dataSource.tableView.frame.origin.y;
+        cell.frame = cr;
+    } else {
+        [cell removeFromSuperview];
+        cell = nil;
+    }
+//    NSLog(@"%@",NSStringFromCGRect(rect));
+//    NSLog(@"%@",[self.dataSource tableView:self.dataSource.tableView cellForRowAtIndexPath:ip]);
+    
+}
 
 @end
