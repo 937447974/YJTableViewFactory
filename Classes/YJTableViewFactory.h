@@ -21,12 +21,3 @@
 #import "YJCellObject.h"
 #import "YJTableViewDelegate.h"
 #import "YJSuspensionCellView.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/** 导入核心类*/
-@interface YJTableViewFactory : NSObject
-
-@end
-
-NS_ASSUME_NONNULL_END
