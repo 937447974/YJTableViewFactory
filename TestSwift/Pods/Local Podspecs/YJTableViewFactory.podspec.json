@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/937447974/YJTableViewFactory.git",
-    "tag": "v2.0.2"
+    "branch": "master"
   },
   "source_files": "Classes/*.{h,m}",
   "default_subspecs": "Core",

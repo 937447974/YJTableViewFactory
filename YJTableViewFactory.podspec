@@ -33,10 +33,10 @@ Pod::Spec.new do |s|
     s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :branch => "master" }
 
     # ――― Source Code
-    s.source_files  = "Classes/*.{h,m}"
-    s.default_subspec = 'Core'
     s.dependency 'YJCocoa'
     s.prefix_header_contents = '#import "YJCocoa.h"'
+    s.source_files  = "Classes/*.{h,m}"
+    s.default_subspec = 'Core'
 
     # ――― Project Linking
     s.frameworks = "UIKit", "Foundation"
