@@ -12,4 +12,6 @@
 
 @interface YJTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end

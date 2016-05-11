@@ -203,6 +203,11 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    static NSString *c ;
+    if (!c) {
+        c = @"11";
+        self.dataSource.tableView 
+    }
     NSIndexPath *ip = [NSIndexPath indexPathForRow:1 inSection:0];
     static UITableViewCell *cell;
     CGRect rect = [self.dataSource.tableView rectForRowAtIndexPath:ip];
@@ -211,11 +216,11 @@
         [self.dataSource.tableView.superview addSubview:cell];
         [cell setNeedsUpdateConstraints];
     }
-    [cell snapshotViewAfterScreenUpdates:YES];
     CGRect cr = cell.frame;
     cr.size = rect.size;
     CGPoint contentOffset = scrollView.contentOffset;
     NSLog(@"%@", NSStringFromCGPoint(contentOffset));
+    NSLog(@"%@", NSStringFromCGRect([self.dataSource.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
     if (contentOffset.y > rect.origin.y + rect.size.height) {
         cr.origin.y = self.dataSource.tableView.frame.origin.y;
         cell.frame = cr;

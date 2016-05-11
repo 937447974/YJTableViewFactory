@@ -18,8 +18,7 @@
 - (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
     
     YJTableViewCellModel *celModel = cellObject.cellModel;
-    self.textLabel.text = celModel.userName;
-    self.detailTextLabel.text = [NSString stringWithFormat:@"%ld-%ld", cellObject.indexPath.section, cellObject.indexPath.row];
+    self.label.text = celModel.userName;
     
 }
 

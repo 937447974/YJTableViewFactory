@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m2s-2D-08H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m2s-2D-08H">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -37,9 +37,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCx-S5-tVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314.5" y="829.5"/>
+            <point key="canvasLocation" x="-618.5" y="813.5"/>
         </scene>
-        <!--Item 1-->
+        <!--Item-->
+        <scene sceneID="Cbp-ow-IPL">
+            <objects>
+                <navigationController id="S5O-hU-gcr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="tab_base" id="yAK-vt-asE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rQX-bc-PQH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zi8-if-4jI" kind="relationship" relationship="rootViewController" id="7A0-y2-2Fe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSe-9a-LAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618.5" y="25.5"/>
+        </scene>
+        <!--First View Controller-->
         <scene sceneID="wIA-IV-0ma">
             <objects>
                 <viewController id="zi8-if-4jI" customClass="YJFirstViewController" sceneMemberID="viewController">
@@ -52,26 +69,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a66-6r-7sI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="a66-6r-7sI" firstAttribute="top" secondItem="tY3-f7-8ld" secondAttribute="bottom" id="1BJ-wz-ZNJ"/>
-                            <constraint firstItem="XPK-3O-EMd" firstAttribute="top" secondItem="a66-6r-7sI" secondAttribute="bottom" id="2Eb-6C-CUD"/>
-                            <constraint firstAttribute="trailing" secondItem="a66-6r-7sI" secondAttribute="trailing" id="Sm1-0v-2lh"/>
-                            <constraint firstItem="a66-6r-7sI" firstAttribute="leading" secondItem="Fxv-X7-jgE" secondAttribute="leading" id="fr6-7d-geK"/>
+                            <constraint firstItem="a66-6r-7sI" firstAttribute="top" secondItem="Fxv-X7-jgE" secondAttribute="top" id="3Qs-Je-eQc"/>
+                            <constraint firstAttribute="trailing" secondItem="a66-6r-7sI" secondAttribute="trailing" id="HYF-vo-arq"/>
+                            <constraint firstItem="a66-6r-7sI" firstAttribute="leading" secondItem="Fxv-X7-jgE" secondAttribute="leading" id="aUf-Ef-Vvh"/>
+                            <constraint firstAttribute="bottom" secondItem="a66-6r-7sI" secondAttribute="bottom" id="rwS-hQ-57P"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="tab_base" id="Wt8-cw-ux2"/>
+                    <navigationItem key="navigationItem" id="CcY-ZT-rx7"/>
                     <connections>
                         <outlet property="tableView" destination="a66-6r-7sI" id="7nw-lP-tAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ww-hf-lIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314.5" y="42.5"/>
+            <point key="canvasLocation" x="-104.5" y="25.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SLm-2C-8al">
@@ -84,13 +101,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zi8-if-4jI" kind="relationship" relationship="viewControllers" id="Xwx-ut-zTG"/>
+                        <segue destination="S5O-hU-gcr" kind="relationship" relationship="viewControllers" id="iKz-7M-Xs2"/>
                         <segue destination="gWx-qb-0Jp" kind="relationship" relationship="viewControllers" id="o9v-fg-DIz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abb-Xt-qYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-875.5" y="439.5"/>
+            <point key="canvasLocation" x="-1162.5" y="391.5"/>
         </scene>
     </scenes>
     <resources>

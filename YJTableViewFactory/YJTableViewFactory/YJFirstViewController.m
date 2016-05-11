@@ -28,11 +28,6 @@
 //    [self test2];
 //    [self test3];
     [self test4];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.dataSourcePlain scrollToCellObject:self.dataSourcePlain.dataSource.lastObject animated:YES];
-//        [self.dataSourcePlain scrollToIndexPath:[NSIndexPath indexPathForRow:50 inSection:0]   animated:YES];
-        [self.dataSourcePlain.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:100 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    });
     
 }
 
