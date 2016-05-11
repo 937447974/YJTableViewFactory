@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "6.0"
 
     # ――― Source Location
-    s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
+    s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :branch => "master" }
 
     # ――― Source Code
     s.source_files  = "Classes/*.{h,m}"
