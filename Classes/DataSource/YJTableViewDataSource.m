@@ -96,9 +96,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YJCellObject *cellObject = [self cellObjectWithIndexPath:indexPath];
     cellObject.indexPath = indexPath;
-    if (cellObject.suspension || cellObject.suspensionThroughout) { // 添加到悬浮cell层
-        [self.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
-    }
+    __weak YJTableViewDataSource *weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        if (cellObject.suspension || cellObject.suspensionThroughout) { // 添加到悬浮cell层
+            [weakSelf.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
+        }
+    });
     return [self dequeueReusableCellWithCellObject:cellObject];
 }
 

@@ -38,7 +38,8 @@
 }
 
 @property (nonatomic, weak) UITableView *tableView; ///< UITableView
-@property (nonatomic, strong) NSMutableArray<NSIndexPath *> *indexPaths; ///< 悬浮的cell位置
+@property (nonatomic, strong) NSMutableArray<NSIndexPath *> *indexPaths; ///< 悬浮的Cell位置
+@property (nonatomic, strong) NSMutableArray<UIView *> *suspensionCells;  ///< 悬浮的Cell队列
 
 @end
 
@@ -46,7 +47,6 @@
 
 #pragma mark - init
 - (instancetype)initWithFrame:(CGRect)frame {
-    frame.size.height = 0;
     self = [super initWithFrame:frame];
     if (self) {
         _baseY = -1;
@@ -79,6 +79,13 @@
         _indexPaths = [NSMutableArray array];
     }
     return _indexPaths;
+}
+
+- (NSMutableArray<UIView *> *)suspensionCells {
+    if (!_suspensionCells) {
+        _suspensionCells = [NSMutableArray array];
+    }
+    return _suspensionCells;
 }
 
 - (void)setContentOffsetY:(CGFloat)contentOffsetY {
@@ -122,7 +129,5 @@
     //    NSLog(@"%@",[self.dataSource tableView:self.dataSource.tableView cellForRowAtIndexPath:ip]);
     */
 }
-
-
 
 @end
