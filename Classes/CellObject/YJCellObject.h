@@ -36,6 +36,9 @@ typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
 @property (nonatomic) YJTableViewCellCreate createCell;  ///< 创建cell的方式
 @property (nonatomic, strong, nullable) id userInfo;     ///< 携带的数据
 
+@property (nonatomic) BOOL suspension;           ///< 是否悬浮
+@property (nonatomic) BOOL suspensionThroughout; ///< 是否始终悬浮
+
 @property (nonatomic, strong, nullable) NSIndexPath *indexPath; ///< cell所处位置，无须添加，自动填充
 
 @property (nonatomic, readonly) Class cellClass;          ///< UITableViewCell对应的类

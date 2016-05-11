@@ -26,12 +26,10 @@
         self.tableView.delegate = self.tableViewDelegate;
     }
     return self;
-    
 }
 
 #pragma mark - setter
 - (void)setCacheCellStrategy:(YJTableViewCacheCell)cacheCellStrategy {
-    
     _cacheCellStrategy = cacheCellStrategy;
     switch (cacheCellStrategy) {
         case YJTableViewCacheCellDefault:  ///< 根据相同的UITableViewCell类名缓存Cell
@@ -44,7 +42,6 @@
             self.tableViewDelegate.cacheHeightStrategy = YJTableViewCacheHeightClassAndIndexPath;
             break;
     }
-    
 }
 
 #pragma mark - 根据YJCellObject生成UITableViewCell
@@ -99,6 +96,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YJCellObject *cellObject = [self cellObjectWithIndexPath:indexPath];
     cellObject.indexPath = indexPath;
+    if (cellObject.suspension || cellObject.suspensionThroughout) { // 添加到悬浮cell层
+        [self.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
+    }
     return [self dequeueReusableCellWithCellObject:cellObject];
 }
 

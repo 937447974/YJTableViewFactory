@@ -9,8 +9,8 @@
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "YJSuspensionCellView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,11 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 缓存高的策略*/
 typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
-    
     YJTableViewCacheHeightDefault,          ///< 根据相同的UITableViewCell类缓存高度
     YJTableViewCacheHeightIndexPath,        ///< 根据NSIndexPath对应的位置缓存高度
     YJTableViewCacheHeightClassAndIndexPath ///< 根据类名和NSIndexPath双重绑定缓存高度
-    
 };
 
 
@@ -55,6 +53,9 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
 
 @property (nonatomic, weak, nullable) id <YJTableViewCellProtocol> cellDelegate; ///< 点击cell的代理
 @property (nonatomic, copy, nullable) YJTableViewCellBlock cellBlock;            ///< 点击cell的block
+@property (nonatomic, weak, readonly) YJTableViewDataSource *dataSource; ///< YJTableViewDataSource
+
+@property (nonatomic, strong) YJSuspensionCellView *suspensionCellView; ///< 悬浮的cell层
 
 /**
  *  初始化

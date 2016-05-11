@@ -16,13 +16,9 @@
 #import "YJCellObject.h"
 
 @interface YJTableViewDelegate () {
-    
     NSMutableDictionary<NSString *, NSNumber *> *_cacheHeightDict; ///< 缓存高
-    
+    YJSuspensionCellView *_suspensionCellView;
 }
-
-@property (nonatomic, weak) YJTableViewDataSource *dataSource;
-
 @end
 
 @implementation YJTableViewDelegate
@@ -34,10 +30,24 @@
     if (self) {
         _cacheHeightDict = [[NSMutableDictionary alloc] init];
         _isCacheHeight = YES;
-        self.dataSource = dataSource;
+        _dataSource = dataSource;
     }
     return self;
     
+}
+
+#pragma mark - getter and setter
+- (YJSuspensionCellView *)suspensionCellView {
+    if (!_suspensionCellView) {
+        self.suspensionCellView = [[YJSuspensionCellView alloc] initWithFrame:CGRectMake(0, 0, self.dataSource.tableView.frame.size.width, 0)];
+        [self.dataSource.tableView.superview addSubview:_suspensionCellView];
+    }
+    return _suspensionCellView;
+}
+
+- (void)setSuspensionCellView:(YJSuspensionCellView *)suspensionCellView {
+    _suspensionCellView = suspensionCellView;
+    _suspensionCellView.tableViewDelegate = self;
 }
 
 #pragma mark - UITableViewCell向VC发送数据
@@ -203,39 +213,7 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    static NSString *c ;
-    if (!c) {
-        c = @"11";
-        self.dataSource.tableView 
-    }
-    NSIndexPath *ip = [NSIndexPath indexPathForRow:1 inSection:0];
-    static UITableViewCell *cell;
-    CGRect rect = [self.dataSource.tableView rectForRowAtIndexPath:ip];
-    if (cell == nil) {
-        cell = [self.dataSource tableView:self.dataSource.tableView cellForRowAtIndexPath:ip];
-        [self.dataSource.tableView.superview addSubview:cell];
-        [cell setNeedsUpdateConstraints];
-    }
-    CGRect cr = cell.frame;
-    cr.size = rect.size;
-    CGPoint contentOffset = scrollView.contentOffset;
-    NSLog(@"%@", NSStringFromCGPoint(contentOffset));
-    NSLog(@"%@", NSStringFromCGRect([self.dataSource.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
-    if (contentOffset.y > rect.origin.y + rect.size.height) {
-        cr.origin.y = self.dataSource.tableView.frame.origin.y;
-        cell.frame = cr;
-        NSLog(@"持续显示");
-    } else if (contentOffset.y > rect.origin.y) {
-        NSLog(@"显示动画中");
-        cr.origin.y = rect.origin.y - contentOffset.y+self.dataSource.tableView.frame.origin.y;
-        cell.frame = cr;
-    } else {
-        [cell removeFromSuperview];
-        cell = nil;
-    }
-//    NSLog(@"%@",NSStringFromCGRect(rect));
-//    NSLog(@"%@",[self.dataSource tableView:self.dataSource.tableView cellForRowAtIndexPath:ip]);
-    
+    self.suspensionCellView.contentOffsetY = self.dataSource.tableView.contentOffset.y;
 }
 
 @end
