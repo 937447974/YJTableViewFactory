@@ -1,0 +1,24 @@
+PODS:
+  - YJCocoa (1.0):
+    - YJCocoa/Foundation (= 1.0)
+    - YJCocoa/System (= 1.0)
+  - YJCocoa/Foundation (1.0)
+  - YJCocoa/System (1.0)
+
+DEPENDENCIES:
+  - YJCocoa (from `https://github.com/937447974/YJCocoa.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  YJCocoa:
+    :branch: master
+    :git: https://github.com/937447974/YJCocoa.git
+
+CHECKOUT OPTIONS:
+  YJCocoa:
+    :commit: 02527571b3d6d3ce440f2d26110ac284870914bd
+    :git: https://github.com/937447974/YJCocoa.git
+
+SPEC CHECKSUMS:
+  YJCocoa: c997d0f554516fe8b9d7250ded8d2df2aec8a537
+
+COCOAPODS: 0.39.0

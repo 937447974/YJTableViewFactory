@@ -35,6 +35,8 @@ Pod::Spec.new do |s|
     # ――― Source Code
     s.source_files  = "Classes/*.{h,m}"
     s.default_subspec = 'Core'
+    s.dependency 'YJCocoa'
+    s.prefix_header_contents = '#import "YJCocoa.h"'
 
     # ――― Project Linking
     s.frameworks = "UIKit", "Foundation"
