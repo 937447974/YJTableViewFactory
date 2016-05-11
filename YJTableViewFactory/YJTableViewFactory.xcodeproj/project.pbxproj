@@ -1,1842 +1,779 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>080A1F927ABA20A4ED1A1B31</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3AE84C865B8D109C6C06CE03</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>433140C3BD0C74E3FE231121</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FAC0EA2F14ED9B86DD3C63BE</string>
-				<string>D15F1B84DAA4D4791C125838</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>55F15DDD8D147DA1CDB427F2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D6C0D8FC27475C9B6C221013</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>715D9C9FFF4DCCC366A25DEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D6C0D8FC27475C9B6C221013</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4C71CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4D21CA6511300BFDB57</string>
-				<string>8452A4EC1CA6511300BFDB57</string>
-				<string>8452A4F71CA6511300BFDB57</string>
-				<string>8452A4D11CA6511300BFDB57</string>
-				<string>433140C3BD0C74E3FE231121</string>
-				<string>55F15DDD8D147DA1CDB427F2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4C81CA6511300BFDB57</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>YJ</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>YJFactory</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>8452A4CF1CA6511300BFDB57</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>8452A4E81CA6511300BFDB57</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>8452A4CF1CA6511300BFDB57</string>
-					</dict>
-					<key>8452A4F31CA6511300BFDB57</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>8452A4CF1CA6511300BFDB57</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>8452A4CB1CA6511300BFDB57</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>8452A4C71CA6511300BFDB57</string>
-			<key>productRefGroup</key>
-			<string>8452A4D11CA6511300BFDB57</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>8452A4CF1CA6511300BFDB57</string>
-				<string>8452A4E81CA6511300BFDB57</string>
-				<string>8452A4F31CA6511300BFDB57</string>
-			</array>
-		</dict>
-		<key>8452A4CB1CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8452A4FB1CA6511300BFDB57</string>
-				<string>8452A4FC1CA6511300BFDB57</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8452A4CC1CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>847DBEAF1CA8E45C0006B71B</string>
-				<string>847DBEAE1CA8E45C0006B71B</string>
-				<string>8452A54A1CA6A6D500BFDB57</string>
-				<string>847DBEB01CA8E45C0006B71B</string>
-				<string>8452A5501CA6A72700BFDB57</string>
-				<string>8452A5461CA6A48000BFDB57</string>
-				<string>847DBEAD1CA8E45C0006B71B</string>
-				<string>847DBEB11CA8E45C0006B71B</string>
-				<string>847DBEAC1CA8E45C0006B71B</string>
-				<string>8452A5241CA6678300BFDB57</string>
-				<string>8452A4D81CA6511300BFDB57</string>
-				<string>8459F6E01CC0887F00A10B79</string>
-				<string>8452A5531CA6A74500BFDB57</string>
-				<string>8452A54D1CA6A70100BFDB57</string>
-				<string>8452A4D51CA6511300BFDB57</string>
-				<string>8473F2F91CE2FE2C00D99E7D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4CD1CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>715D9C9FFF4DCCC366A25DEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4CE1CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8452A4E31CA6511300BFDB57</string>
-				<string>8452A4E01CA6511300BFDB57</string>
-				<string>8452A5471CA6A48000BFDB57</string>
-				<string>8452A4DE1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4CF1CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8452A4FD1CA6511300BFDB57</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E960180A198851DD68921148</string>
-				<string>8452A4CC1CA6511300BFDB57</string>
-				<string>8452A4CD1CA6511300BFDB57</string>
-				<string>8452A4CE1CA6511300BFDB57</string>
-				<string>3AE84C865B8D109C6C06CE03</string>
-				<string>080A1F927ABA20A4ED1A1B31</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>YJTableViewFactory</string>
-			<key>productName</key>
-			<string>YJTableViewFactory</string>
-			<key>productReference</key>
-			<string>8452A4D01CA6511300BFDB57</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>8452A4D01CA6511300BFDB57</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>YJTableViewFactory.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8452A4D11CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4D01CA6511300BFDB57</string>
-				<string>8452A4E91CA6511300BFDB57</string>
-				<string>8452A4F41CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D21CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4D61CA6511300BFDB57</string>
-				<string>8452A4D71CA6511300BFDB57</string>
-				<string>8452A5251CA6729700BFDB57</string>
-				<string>8452A53B1CA6957B00BFDB57</string>
-				<string>8452A5211CA6678300BFDB57</string>
-				<string>8452A5261CA672AE00BFDB57</string>
-				<string>8452A4D31CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>YJTableViewFactory</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D31CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4E41CA6511300BFDB57</string>
-				<string>8452A4D41CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D41CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D51CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4D41CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4D61CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D71CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4D81CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4D71CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4DC1CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4DD1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4DD1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4DE1CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4DC1CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4DF1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4E01CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4DF1CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4E11CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4E21CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4E21CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4E31CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4E11CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4E41CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4E51CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8452A4EE1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4E61CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4E71CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4E81CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8452A5001CA6511300BFDB57</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8452A4E51CA6511300BFDB57</string>
-				<string>8452A4E61CA6511300BFDB57</string>
-				<string>8452A4E71CA6511300BFDB57</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>8452A4EB1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>YJTableViewFactoryTests</string>
-			<key>productName</key>
-			<string>YJTableViewFactoryTests</string>
-			<key>productReference</key>
-			<string>8452A4E91CA6511300BFDB57</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>8452A4E91CA6511300BFDB57</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>YJTableViewFactoryTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8452A4EA1CA6511300BFDB57</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>8452A4C81CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8452A4CF1CA6511300BFDB57</string>
-			<key>remoteInfo</key>
-			<string>YJTableViewFactory</string>
-		</dict>
-		<key>8452A4EB1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>8452A4CF1CA6511300BFDB57</string>
-			<key>targetProxy</key>
-			<string>8452A4EA1CA6511300BFDB57</string>
-		</dict>
-		<key>8452A4EC1CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4ED1CA6511300BFDB57</string>
-				<string>8452A4EF1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>YJTableViewFactoryTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4ED1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewFactoryTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4EE1CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4ED1CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4EF1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4F01CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8452A4F91CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4F11CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4F21CA6511300BFDB57</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8452A4F31CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8452A5031CA6511300BFDB57</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8452A4F01CA6511300BFDB57</string>
-				<string>8452A4F11CA6511300BFDB57</string>
-				<string>8452A4F21CA6511300BFDB57</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>8452A4F61CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>YJTableViewFactoryUITests</string>
-			<key>productName</key>
-			<string>YJTableViewFactoryUITests</string>
-			<key>productReference</key>
-			<string>8452A4F41CA6511300BFDB57</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>8452A4F41CA6511300BFDB57</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>YJTableViewFactoryUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8452A4F51CA6511300BFDB57</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>8452A4C81CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8452A4CF1CA6511300BFDB57</string>
-			<key>remoteInfo</key>
-			<string>YJTableViewFactory</string>
-		</dict>
-		<key>8452A4F61CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>8452A4CF1CA6511300BFDB57</string>
-			<key>targetProxy</key>
-			<string>8452A4F51CA6511300BFDB57</string>
-		</dict>
-		<key>8452A4F71CA6511300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4F81CA6511300BFDB57</string>
-				<string>8452A4FA1CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>YJTableViewFactoryUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4F81CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewFactoryUITests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4F91CA6511300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A4F81CA6511300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A4FA1CA6511300BFDB57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A4FB1CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8452A4FC1CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8452A4FD1CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8452A4FE1CA6511300BFDB57</string>
-				<string>8452A4FF1CA6511300BFDB57</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8452A4FE1CA6511300BFDB57</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FAC0EA2F14ED9B86DD3C63BE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactory/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactory</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8452A4FF1CA6511300BFDB57</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D15F1B84DAA4D4791C125838</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactory/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactory</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8452A5001CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8452A5011CA6511300BFDB57</string>
-				<string>8452A5021CA6511300BFDB57</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8452A5011CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactoryTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactoryTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/YJTableViewFactory.app/YJTableViewFactory</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8452A5021CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactoryTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactoryTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/YJTableViewFactory.app/YJTableViewFactory</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8452A5031CA6511300BFDB57</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8452A5041CA6511300BFDB57</string>
-				<string>8452A5051CA6511300BFDB57</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8452A5041CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactoryUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactoryUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>YJTableViewFactory</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8452A5051CA6511300BFDB57</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>YJTableViewFactoryUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.YJFactory.YJTableViewFactoryUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>YJTableViewFactory</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8452A5211CA6678300BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>847DBE9C1CA8E45C0006B71B</string>
-				<string>847DBE9F1CA8E45C0006B71B</string>
-				<string>847DBEA61CA8E45C0006B71B</string>
-				<string>847DBEA91CA8E45C0006B71B</string>
-				<string>8473F2F61CE2FDF400D99E7D</string>
-				<string>8459F6DD1CC0885700A10B79</string>
-				<string>8452A5221CA6678300BFDB57</string>
-				<string>8452A5231CA6678300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>../../Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5221CA6678300BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5231CA6678300BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewFactory.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5241CA6678300BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A5231CA6678300BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A5251CA6729700BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A54E1CA6A72700BFDB57</string>
-				<string>8452A54F1CA6A72700BFDB57</string>
-				<string>8452A5511CA6A74500BFDB57</string>
-				<string>8452A5521CA6A74500BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ViewController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5261CA672AE00BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A4DF1CA6511300BFDB57</string>
-				<string>8452A4DC1CA6511300BFDB57</string>
-				<string>8452A4E11CA6511300BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Recources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A53B1CA6957B00BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A53C1CA6958500BFDB57</string>
-				<string>8452A53D1CA6959A00BFDB57</string>
-				<string>8452A5431CA6A48000BFDB57</string>
-				<string>8452A5441CA6A48000BFDB57</string>
-				<string>8452A5451CA6A48000BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Cell</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A53C1CA6958500BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A5481CA6A6D500BFDB57</string>
-				<string>8452A5491CA6A6D500BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CellModel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A53D1CA6959A00BFDB57</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8452A54B1CA6A70100BFDB57</string>
-				<string>8452A54C1CA6A70100BFDB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CellObject</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5431CA6A48000BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5441CA6A48000BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5451CA6A48000BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>YJTableViewCell.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5461CA6A48000BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A5441CA6A48000BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A5471CA6A48000BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A5451CA6A48000BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A5481CA6A6D500BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewCellModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5491CA6A6D500BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewCellModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A54A1CA6A6D500BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A5491CA6A6D500BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A54B1CA6A70100BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewCellObject.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A54C1CA6A70100BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewCellObject.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A54D1CA6A70100BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A54C1CA6A70100BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A54E1CA6A72700BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJFirstViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A54F1CA6A72700BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJFirstViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5501CA6A72700BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A54F1CA6A72700BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8452A5511CA6A74500BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJSecondViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5521CA6A74500BFDB57</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJSecondViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8452A5531CA6A74500BFDB57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8452A5521CA6A74500BFDB57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8459F6DD1CC0885700A10B79</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8459F6DE1CC0887F00A10B79</string>
-				<string>8459F6DF1CC0887F00A10B79</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Utils</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8459F6DE1CC0887F00A10B79</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewUtils.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8459F6DF1CC0887F00A10B79</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewUtils.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8459F6E01CC0887F00A10B79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8459F6DF1CC0887F00A10B79</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8473F2F61CE2FDF400D99E7D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8473F2F71CE2FE2C00D99E7D</string>
-				<string>8473F2F81CE2FE2C00D99E7D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Suspension</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8473F2F71CE2FE2C00D99E7D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJSuspensionCellView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8473F2F81CE2FE2C00D99E7D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJSuspensionCellView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8473F2F91CE2FE2C00D99E7D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8473F2F81CE2FE2C00D99E7D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBE9C1CA8E45C0006B71B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>847DBE9D1CA8E45C0006B71B</string>
-				<string>847DBE9E1CA8E45C0006B71B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>CellObject</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBE9D1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJCellObject.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBE9E1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJCellObject.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBE9F1CA8E45C0006B71B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>847DBEA01CA8E45C0006B71B</string>
-				<string>847DBEA11CA8E45C0006B71B</string>
-				<string>847DBEA21CA8E45C0006B71B</string>
-				<string>847DBEA31CA8E45C0006B71B</string>
-				<string>847DBEA41CA8E45C0006B71B</string>
-				<string>847DBEA51CA8E45C0006B71B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>DataSource</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA01CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewDataSource.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA11CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewDataSource.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA21CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewDataSourceGrouped.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA31CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewDataSourceGrouped.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA41CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewDataSourcePlain.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA51CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewDataSourcePlain.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA61CA8E45C0006B71B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>847DBEA71CA8E45C0006B71B</string>
-				<string>847DBEA81CA8E45C0006B71B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Delegate</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA71CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>YJTableViewDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA81CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>YJTableViewDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEA91CA8E45C0006B71B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>847DBEAA1CA8E45C0006B71B</string>
-				<string>847DBEAB1CA8E45C0006B71B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Extend</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEAA1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>UITableViewCell+YJTableViewFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEAB1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>UITableViewCell+YJTableViewFactory.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>847DBEAC1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBE9E1CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBEAD1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBEA11CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBEAE1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBEA31CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBEAF1CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBEA51CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBEB01CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBEA81CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>847DBEB11CA8E45C0006B71B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>847DBEAB1CA8E45C0006B71B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D15F1B84DAA4D4791C125838</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D6C0D8FC27475C9B6C221013</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E960180A198851DD68921148</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>FAC0EA2F14ED9B86DD3C63BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>8452A4C81CA6511300BFDB57</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		715D9C9FFF4DCCC366A25DEA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C0D8FC27475C9B6C221013 /* libPods.a */; };
+		8452A4D51CA6511300BFDB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4D41CA6511300BFDB57 /* main.m */; };
+		8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4D71CA6511300BFDB57 /* AppDelegate.m */; };
+		8452A4DE1CA6511300BFDB57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4DC1CA6511300BFDB57 /* Main.storyboard */; };
+		8452A4E01CA6511300BFDB57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4DF1CA6511300BFDB57 /* Assets.xcassets */; };
+		8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A4E11CA6511300BFDB57 /* LaunchScreen.storyboard */; };
+		8452A4EE1CA6511300BFDB57 /* YJTableViewFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4ED1CA6511300BFDB57 /* YJTableViewFactoryTests.m */; };
+		8452A4F91CA6511300BFDB57 /* YJTableViewFactoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A4F81CA6511300BFDB57 /* YJTableViewFactoryUITests.m */; };
+		8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */; };
+		8452A5461CA6A48000BFDB57 /* YJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */; };
+		8452A5471CA6A48000BFDB57 /* YJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */; };
+		8452A54A1CA6A6D500BFDB57 /* YJTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */; };
+		8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */; };
+		8452A5501CA6A72700BFDB57 /* YJFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */; };
+		8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */; };
+		8473F2F91CE2FE2C00D99E7D /* YJSuspensionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473F2F81CE2FE2C00D99E7D /* YJSuspensionCellView.m */; };
+		847DBEAC1CA8E45C0006B71B /* YJCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBE9E1CA8E45C0006B71B /* YJCellObject.m */; };
+		847DBEAD1CA8E45C0006B71B /* YJTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA11CA8E45C0006B71B /* YJTableViewDataSource.m */; };
+		847DBEAE1CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA31CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m */; };
+		847DBEAF1CA8E45C0006B71B /* YJTableViewDataSourcePlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA51CA8E45C0006B71B /* YJTableViewDataSourcePlain.m */; };
+		847DBEB01CA8E45C0006B71B /* YJTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA81CA8E45C0006B71B /* YJTableViewDelegate.m */; };
+		847DBEB11CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEAB1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8452A4EA1CA6511300BFDB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8452A4C81CA6511300BFDB57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8452A4CF1CA6511300BFDB57;
+			remoteInfo = YJTableViewFactory;
+		};
+		8452A4F51CA6511300BFDB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8452A4C81CA6511300BFDB57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8452A4CF1CA6511300BFDB57;
+			remoteInfo = YJTableViewFactory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8452A4D01CA6511300BFDB57 /* YJTableViewFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJTableViewFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8452A4D41CA6511300BFDB57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8452A4D61CA6511300BFDB57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8452A4D71CA6511300BFDB57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8452A4DD1CA6511300BFDB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8452A4DF1CA6511300BFDB57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8452A4E21CA6511300BFDB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8452A4E41CA6511300BFDB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8452A4E91CA6511300BFDB57 /* YJTableViewFactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJTableViewFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8452A4ED1CA6511300BFDB57 /* YJTableViewFactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJTableViewFactoryTests.m; sourceTree = "<group>"; };
+		8452A4EF1CA6511300BFDB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8452A4F41CA6511300BFDB57 /* YJTableViewFactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJTableViewFactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8452A4F81CA6511300BFDB57 /* YJTableViewFactoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJTableViewFactoryUITests.m; sourceTree = "<group>"; };
+		8452A4FA1CA6511300BFDB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8452A5221CA6678300BFDB57 /* YJTableViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewFactory.h; sourceTree = "<group>"; };
+		8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewFactory.m; sourceTree = "<group>"; };
+		8452A5431CA6A48000BFDB57 /* YJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCell.h; sourceTree = "<group>"; };
+		8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCell.m; sourceTree = "<group>"; };
+		8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJTableViewCell.xib; sourceTree = "<group>"; };
+		8452A5481CA6A6D500BFDB57 /* YJTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCellModel.h; sourceTree = "<group>"; };
+		8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCellModel.m; sourceTree = "<group>"; };
+		8452A54B1CA6A70100BFDB57 /* YJTableViewCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewCellObject.h; sourceTree = "<group>"; };
+		8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewCellObject.m; sourceTree = "<group>"; };
+		8452A54E1CA6A72700BFDB57 /* YJFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFirstViewController.h; sourceTree = "<group>"; };
+		8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFirstViewController.m; sourceTree = "<group>"; };
+		8452A5511CA6A74500BFDB57 /* YJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSecondViewController.h; sourceTree = "<group>"; };
+		8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSecondViewController.m; sourceTree = "<group>"; };
+		8473F2F71CE2FE2C00D99E7D /* YJSuspensionCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSuspensionCellView.h; sourceTree = "<group>"; };
+		8473F2F81CE2FE2C00D99E7D /* YJSuspensionCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSuspensionCellView.m; sourceTree = "<group>"; };
+		8473F35E1CE349EE00D99E7D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		847DBE9D1CA8E45C0006B71B /* YJCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCellObject.h; sourceTree = "<group>"; };
+		847DBE9E1CA8E45C0006B71B /* YJCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCellObject.m; sourceTree = "<group>"; };
+		847DBEA01CA8E45C0006B71B /* YJTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDataSource.h; sourceTree = "<group>"; };
+		847DBEA11CA8E45C0006B71B /* YJTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDataSource.m; sourceTree = "<group>"; };
+		847DBEA21CA8E45C0006B71B /* YJTableViewDataSourceGrouped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDataSourceGrouped.h; sourceTree = "<group>"; };
+		847DBEA31CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDataSourceGrouped.m; sourceTree = "<group>"; };
+		847DBEA41CA8E45C0006B71B /* YJTableViewDataSourcePlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDataSourcePlain.h; sourceTree = "<group>"; };
+		847DBEA51CA8E45C0006B71B /* YJTableViewDataSourcePlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDataSourcePlain.m; sourceTree = "<group>"; };
+		847DBEA71CA8E45C0006B71B /* YJTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTableViewDelegate.h; sourceTree = "<group>"; };
+		847DBEA81CA8E45C0006B71B /* YJTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDelegate.m; sourceTree = "<group>"; };
+		847DBEAA1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YJTableViewFactory.h"; sourceTree = "<group>"; };
+		847DBEAB1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YJTableViewFactory.m"; sourceTree = "<group>"; };
+		D15F1B84DAA4D4791C125838 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D6C0D8FC27475C9B6C221013 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC0EA2F14ED9B86DD3C63BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8452A4CD1CA6511300BFDB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715D9C9FFF4DCCC366A25DEA /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4E61CA6511300BFDB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4F11CA6511300BFDB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433140C3BD0C74E3FE231121 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0EA2F14ED9B86DD3C63BE /* Pods.debug.xcconfig */,
+				D15F1B84DAA4D4791C125838 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		55F15DDD8D147DA1CDB427F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C0D8FC27475C9B6C221013 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8452A4C71CA6511300BFDB57 = {
+			isa = PBXGroup;
+			children = (
+				8452A4D21CA6511300BFDB57 /* YJTableViewFactory */,
+				8452A4EC1CA6511300BFDB57 /* YJTableViewFactoryTests */,
+				8452A4F71CA6511300BFDB57 /* YJTableViewFactoryUITests */,
+				8452A4D11CA6511300BFDB57 /* Products */,
+				433140C3BD0C74E3FE231121 /* Pods */,
+				55F15DDD8D147DA1CDB427F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8452A4D11CA6511300BFDB57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4D01CA6511300BFDB57 /* YJTableViewFactory.app */,
+				8452A4E91CA6511300BFDB57 /* YJTableViewFactoryTests.xctest */,
+				8452A4F41CA6511300BFDB57 /* YJTableViewFactoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8452A4D21CA6511300BFDB57 /* YJTableViewFactory */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4D61CA6511300BFDB57 /* AppDelegate.h */,
+				8452A4D71CA6511300BFDB57 /* AppDelegate.m */,
+				8452A5251CA6729700BFDB57 /* ViewController */,
+				8452A53B1CA6957B00BFDB57 /* Cell */,
+				8452A5211CA6678300BFDB57 /* Classes */,
+				8452A5261CA672AE00BFDB57 /* Recources */,
+				8452A4D31CA6511300BFDB57 /* Supporting Files */,
+			);
+			path = YJTableViewFactory;
+			sourceTree = "<group>";
+		};
+		8452A4D31CA6511300BFDB57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4E41CA6511300BFDB57 /* Info.plist */,
+				8452A4D41CA6511300BFDB57 /* main.m */,
+				8473F35E1CE349EE00D99E7D /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8452A4EC1CA6511300BFDB57 /* YJTableViewFactoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4ED1CA6511300BFDB57 /* YJTableViewFactoryTests.m */,
+				8452A4EF1CA6511300BFDB57 /* Info.plist */,
+			);
+			path = YJTableViewFactoryTests;
+			sourceTree = "<group>";
+		};
+		8452A4F71CA6511300BFDB57 /* YJTableViewFactoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4F81CA6511300BFDB57 /* YJTableViewFactoryUITests.m */,
+				8452A4FA1CA6511300BFDB57 /* Info.plist */,
+			);
+			path = YJTableViewFactoryUITests;
+			sourceTree = "<group>";
+		};
+		8452A5211CA6678300BFDB57 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				847DBE9C1CA8E45C0006B71B /* CellObject */,
+				847DBE9F1CA8E45C0006B71B /* DataSource */,
+				847DBEA61CA8E45C0006B71B /* Delegate */,
+				847DBEA91CA8E45C0006B71B /* Extend */,
+				8473F2F61CE2FDF400D99E7D /* Suspension */,
+				8452A5221CA6678300BFDB57 /* YJTableViewFactory.h */,
+				8452A5231CA6678300BFDB57 /* YJTableViewFactory.m */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		8452A5251CA6729700BFDB57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8452A54E1CA6A72700BFDB57 /* YJFirstViewController.h */,
+				8452A54F1CA6A72700BFDB57 /* YJFirstViewController.m */,
+				8452A5511CA6A74500BFDB57 /* YJSecondViewController.h */,
+				8452A5521CA6A74500BFDB57 /* YJSecondViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		8452A5261CA672AE00BFDB57 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				8452A4DF1CA6511300BFDB57 /* Assets.xcassets */,
+				8452A4DC1CA6511300BFDB57 /* Main.storyboard */,
+				8452A4E11CA6511300BFDB57 /* LaunchScreen.storyboard */,
+			);
+			name = Recources;
+			sourceTree = "<group>";
+		};
+		8452A53B1CA6957B00BFDB57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8452A53C1CA6958500BFDB57 /* CellModel */,
+				8452A53D1CA6959A00BFDB57 /* CellObject */,
+				8452A5431CA6A48000BFDB57 /* YJTableViewCell.h */,
+				8452A5441CA6A48000BFDB57 /* YJTableViewCell.m */,
+				8452A5451CA6A48000BFDB57 /* YJTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		8452A53C1CA6958500BFDB57 /* CellModel */ = {
+			isa = PBXGroup;
+			children = (
+				8452A5481CA6A6D500BFDB57 /* YJTableViewCellModel.h */,
+				8452A5491CA6A6D500BFDB57 /* YJTableViewCellModel.m */,
+			);
+			name = CellModel;
+			sourceTree = "<group>";
+		};
+		8452A53D1CA6959A00BFDB57 /* CellObject */ = {
+			isa = PBXGroup;
+			children = (
+				8452A54B1CA6A70100BFDB57 /* YJTableViewCellObject.h */,
+				8452A54C1CA6A70100BFDB57 /* YJTableViewCellObject.m */,
+			);
+			name = CellObject;
+			sourceTree = "<group>";
+		};
+		8473F2F61CE2FDF400D99E7D /* Suspension */ = {
+			isa = PBXGroup;
+			children = (
+				8473F2F71CE2FE2C00D99E7D /* YJSuspensionCellView.h */,
+				8473F2F81CE2FE2C00D99E7D /* YJSuspensionCellView.m */,
+			);
+			path = Suspension;
+			sourceTree = "<group>";
+		};
+		847DBE9C1CA8E45C0006B71B /* CellObject */ = {
+			isa = PBXGroup;
+			children = (
+				847DBE9D1CA8E45C0006B71B /* YJCellObject.h */,
+				847DBE9E1CA8E45C0006B71B /* YJCellObject.m */,
+			);
+			path = CellObject;
+			sourceTree = "<group>";
+		};
+		847DBE9F1CA8E45C0006B71B /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				847DBEA01CA8E45C0006B71B /* YJTableViewDataSource.h */,
+				847DBEA11CA8E45C0006B71B /* YJTableViewDataSource.m */,
+				847DBEA21CA8E45C0006B71B /* YJTableViewDataSourceGrouped.h */,
+				847DBEA31CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m */,
+				847DBEA41CA8E45C0006B71B /* YJTableViewDataSourcePlain.h */,
+				847DBEA51CA8E45C0006B71B /* YJTableViewDataSourcePlain.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		847DBEA61CA8E45C0006B71B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				847DBEA71CA8E45C0006B71B /* YJTableViewDelegate.h */,
+				847DBEA81CA8E45C0006B71B /* YJTableViewDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		847DBEA91CA8E45C0006B71B /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				847DBEAA1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.h */,
+				847DBEAB1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m */,
+			);
+			path = Extend;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8452A4CF1CA6511300BFDB57 /* YJTableViewFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8452A4FD1CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactory" */;
+			buildPhases = (
+				E960180A198851DD68921148 /* Check Pods Manifest.lock */,
+				8452A4CC1CA6511300BFDB57 /* Sources */,
+				8452A4CD1CA6511300BFDB57 /* Frameworks */,
+				8452A4CE1CA6511300BFDB57 /* Resources */,
+				3AE84C865B8D109C6C06CE03 /* Embed Pods Frameworks */,
+				080A1F927ABA20A4ED1A1B31 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YJTableViewFactory;
+			productName = YJTableViewFactory;
+			productReference = 8452A4D01CA6511300BFDB57 /* YJTableViewFactory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8452A4E81CA6511300BFDB57 /* YJTableViewFactoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8452A5001CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactoryTests" */;
+			buildPhases = (
+				8452A4E51CA6511300BFDB57 /* Sources */,
+				8452A4E61CA6511300BFDB57 /* Frameworks */,
+				8452A4E71CA6511300BFDB57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8452A4EB1CA6511300BFDB57 /* PBXTargetDependency */,
+			);
+			name = YJTableViewFactoryTests;
+			productName = YJTableViewFactoryTests;
+			productReference = 8452A4E91CA6511300BFDB57 /* YJTableViewFactoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8452A4F31CA6511300BFDB57 /* YJTableViewFactoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8452A5031CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactoryUITests" */;
+			buildPhases = (
+				8452A4F01CA6511300BFDB57 /* Sources */,
+				8452A4F11CA6511300BFDB57 /* Frameworks */,
+				8452A4F21CA6511300BFDB57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8452A4F61CA6511300BFDB57 /* PBXTargetDependency */,
+			);
+			name = YJTableViewFactoryUITests;
+			productName = YJTableViewFactoryUITests;
+			productReference = 8452A4F41CA6511300BFDB57 /* YJTableViewFactoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8452A4C81CA6511300BFDB57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YJ;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YJFactory;
+				TargetAttributes = {
+					8452A4CF1CA6511300BFDB57 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					8452A4E81CA6511300BFDB57 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 8452A4CF1CA6511300BFDB57;
+					};
+					8452A4F31CA6511300BFDB57 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 8452A4CF1CA6511300BFDB57;
+					};
+				};
+			};
+			buildConfigurationList = 8452A4CB1CA6511300BFDB57 /* Build configuration list for PBXProject "YJTableViewFactory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8452A4C71CA6511300BFDB57;
+			productRefGroup = 8452A4D11CA6511300BFDB57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8452A4CF1CA6511300BFDB57 /* YJTableViewFactory */,
+				8452A4E81CA6511300BFDB57 /* YJTableViewFactoryTests */,
+				8452A4F31CA6511300BFDB57 /* YJTableViewFactoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8452A4CE1CA6511300BFDB57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */,
+				8452A4E01CA6511300BFDB57 /* Assets.xcassets in Resources */,
+				8452A5471CA6A48000BFDB57 /* YJTableViewCell.xib in Resources */,
+				8452A4DE1CA6511300BFDB57 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4E71CA6511300BFDB57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4F21CA6511300BFDB57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		080A1F927ABA20A4ED1A1B31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AE84C865B8D109C6C06CE03 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E960180A198851DD68921148 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8452A4CC1CA6511300BFDB57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847DBEAF1CA8E45C0006B71B /* YJTableViewDataSourcePlain.m in Sources */,
+				847DBEAE1CA8E45C0006B71B /* YJTableViewDataSourceGrouped.m in Sources */,
+				8452A54A1CA6A6D500BFDB57 /* YJTableViewCellModel.m in Sources */,
+				847DBEB01CA8E45C0006B71B /* YJTableViewDelegate.m in Sources */,
+				8452A5501CA6A72700BFDB57 /* YJFirstViewController.m in Sources */,
+				8452A5461CA6A48000BFDB57 /* YJTableViewCell.m in Sources */,
+				847DBEAD1CA8E45C0006B71B /* YJTableViewDataSource.m in Sources */,
+				847DBEB11CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m in Sources */,
+				847DBEAC1CA8E45C0006B71B /* YJCellObject.m in Sources */,
+				8452A5241CA6678300BFDB57 /* YJTableViewFactory.m in Sources */,
+				8452A4D81CA6511300BFDB57 /* AppDelegate.m in Sources */,
+				8452A5531CA6A74500BFDB57 /* YJSecondViewController.m in Sources */,
+				8452A54D1CA6A70100BFDB57 /* YJTableViewCellObject.m in Sources */,
+				8452A4D51CA6511300BFDB57 /* main.m in Sources */,
+				8473F2F91CE2FE2C00D99E7D /* YJSuspensionCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4E51CA6511300BFDB57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8452A4EE1CA6511300BFDB57 /* YJTableViewFactoryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8452A4F01CA6511300BFDB57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8452A4F91CA6511300BFDB57 /* YJTableViewFactoryUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8452A4EB1CA6511300BFDB57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8452A4CF1CA6511300BFDB57 /* YJTableViewFactory */;
+			targetProxy = 8452A4EA1CA6511300BFDB57 /* PBXContainerItemProxy */;
+		};
+		8452A4F61CA6511300BFDB57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8452A4CF1CA6511300BFDB57 /* YJTableViewFactory */;
+			targetProxy = 8452A4F51CA6511300BFDB57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8452A4DC1CA6511300BFDB57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8452A4DD1CA6511300BFDB57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8452A4E11CA6511300BFDB57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8452A4E21CA6511300BFDB57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8452A4FB1CA6511300BFDB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8452A4FC1CA6511300BFDB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8452A4FE1CA6511300BFDB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC0EA2F14ED9B86DD3C63BE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJTableViewFactory/PrefixHeader.pch";
+				INFOPLIST_FILE = YJTableViewFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8452A4FF1CA6511300BFDB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15F1B84DAA4D4791C125838 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJTableViewFactory/PrefixHeader.pch";
+				INFOPLIST_FILE = YJTableViewFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8452A5011CA6511300BFDB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YJTableViewFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YJTableViewFactory.app/YJTableViewFactory";
+			};
+			name = Debug;
+		};
+		8452A5021CA6511300BFDB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YJTableViewFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YJTableViewFactory.app/YJTableViewFactory";
+			};
+			name = Release;
+		};
+		8452A5041CA6511300BFDB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YJTableViewFactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YJTableViewFactory;
+			};
+			name = Debug;
+		};
+		8452A5051CA6511300BFDB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YJTableViewFactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.YJFactory.YJTableViewFactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YJTableViewFactory;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8452A4CB1CA6511300BFDB57 /* Build configuration list for PBXProject "YJTableViewFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8452A4FB1CA6511300BFDB57 /* Debug */,
+				8452A4FC1CA6511300BFDB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8452A4FD1CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8452A4FE1CA6511300BFDB57 /* Debug */,
+				8452A4FF1CA6511300BFDB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8452A5001CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8452A5011CA6511300BFDB57 /* Debug */,
+				8452A5021CA6511300BFDB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8452A5031CA6511300BFDB57 /* Build configuration list for PBXNativeTarget "YJTableViewFactoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8452A5041CA6511300BFDB57 /* Debug */,
+				8452A5051CA6511300BFDB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8452A4C81CA6511300BFDB57 /* Project object */;
+}

@@ -11,6 +11,14 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+/** 获取类名，兼容OC和Swift*/
+NSString *YJStringFromClass(Class aClass);
+
+/** Foundation Framework*/
 @interface YJFoundation : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END

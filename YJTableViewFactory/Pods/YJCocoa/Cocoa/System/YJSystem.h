@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-/** System库相关*/
+/** System Framework*/
 @interface YJSystem : NSObject
 
 @end

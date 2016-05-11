@@ -12,7 +12,6 @@
 #import "YJTableViewDelegate.h"
 #import "YJTableViewDataSourcePlain.h"
 #import "YJTableViewDataSourceGrouped.h"
-#import "YJTableViewUtils.h"
 #import "YJCellObject.h"
 
 @interface YJTableViewDelegate () {
