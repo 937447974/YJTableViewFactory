@@ -17,14 +17,14 @@
     "git": "https://github.com/937447974/YJTableViewFactory.git",
     "branch": "master"
   },
-  "source_files": "Classes/*.{h,m}",
-  "default_subspecs": "Core",
   "dependencies": {
     "YJCocoa": [
 
     ]
   },
   "prefix_header_contents": "#import \"YJCocoa.h\"",
+  "source_files": "Classes/*.{h,m}",
+  "default_subspecs": "Core",
   "frameworks": [
     "UIKit",
     "Foundation"

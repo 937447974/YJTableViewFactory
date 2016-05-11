@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 
     # ――― Source Code
     s.dependency 'YJCocoa'
-    s.prefix_header_contents = '#import "YJCocoa.h"'
+    s.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
     s.source_files  = "Classes/*.{h,m}"
     s.default_subspec = 'Core'
 
