@@ -1,0 +1,6 @@
+framework module YJCocoa {
+  umbrella header "YJCocoa-umbrella.h"
+
+  export *
+  module * { export * }
+}
