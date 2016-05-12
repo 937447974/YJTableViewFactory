@@ -33,8 +33,6 @@ Pod::Spec.new do |s|
     s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :branch => "master" }
 
     # ――― Source Code
-    s.dependency 'YJCocoa'
-    s.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
     s.source_files  = "Classes/*.{h,m}"
     s.default_subspec = 'Core'
 
@@ -56,6 +54,8 @@ Pod::Spec.new do |s|
 
     s.subspec 'CellObject' do |co|
         co.source_files = 'Classes/CellObject/*.{h,m}'
+        co.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
+        co.dependency 'YJCocoa'
     end
 
 end
