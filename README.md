@@ -294,6 +294,7 @@ YJ技术支持群：557445088
 | 2016-04-15 | 2.0 YJTableViewFactory重大升级：1.架构调整，YJTableViewCellProtocol和YJTableViewCellBlock从UITableViewCell+YJTableViewFactory.h移动到YJTableViewDelegate.h；2.pod导入后，会在项目中生成相关文件夹，便于查看；3.pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关开发文档。|
 | 2016-04-19 | 2.0.1 修复YJTableViewCacheHeightClassAndIndexPath引起的缓存高问题 |
 | 2016-05-09 | 2.0.2 架构优化，减少代码量 |
+| 2016-05-12 | 2.1.0 使用YJCocoa替代YJTableViewFactory/Utils |
 
 ##Copyright
 
