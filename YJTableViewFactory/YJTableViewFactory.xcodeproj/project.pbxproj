@@ -28,6 +28,7 @@
 		847DBEAF1CA8E45C0006B71B /* YJTableViewDataSourcePlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA51CA8E45C0006B71B /* YJTableViewDataSourcePlain.m */; };
 		847DBEB01CA8E45C0006B71B /* YJTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEA81CA8E45C0006B71B /* YJTableViewDelegate.m */; };
 		847DBEB11CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DBEAB1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m */; };
+		848AE2DA1CE4669F00903CB4 /* YJTableViewFactory.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 848AE2D91CE4669F00903CB4 /* YJTableViewFactory.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		847DBEA81CA8E45C0006B71B /* YJTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTableViewDelegate.m; sourceTree = "<group>"; };
 		847DBEAA1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YJTableViewFactory.h"; sourceTree = "<group>"; };
 		847DBEAB1CA8E45C0006B71B /* UITableViewCell+YJTableViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YJTableViewFactory.m"; sourceTree = "<group>"; };
+		848AE2D91CE4669F00903CB4 /* YJTableViewFactory.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YJTableViewFactory.podspec; path = ../../YJTableViewFactory.podspec; sourceTree = "<group>"; };
 		D15F1B84DAA4D4791C125838 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6C0D8FC27475C9B6C221013 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC0EA2F14ED9B86DD3C63BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		8452A4D21CA6511300BFDB57 /* YJTableViewFactory */ = {
 			isa = PBXGroup;
 			children = (
+				848AE2D91CE4669F00903CB4 /* YJTableViewFactory.podspec */,
 				8452A4D61CA6511300BFDB57 /* AppDelegate.h */,
 				8452A4D71CA6511300BFDB57 /* AppDelegate.m */,
 				8452A5251CA6729700BFDB57 /* ViewController */,
@@ -425,6 +428,7 @@
 				8452A4E31CA6511300BFDB57 /* LaunchScreen.storyboard in Resources */,
 				8452A4E01CA6511300BFDB57 /* Assets.xcassets in Resources */,
 				8452A5471CA6A48000BFDB57 /* YJTableViewCell.xib in Resources */,
+				848AE2DA1CE4669F00903CB4 /* YJTableViewFactory.podspec in Resources */,
 				8452A4DE1CA6511300BFDB57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
