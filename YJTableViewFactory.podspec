@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "6.0"
 
     # ――― Source Location
-    s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :branch => "developer" }
+    s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
 
     # ――― Source Code
     s.source_files  = "Classes/*.{h,m}"
@@ -54,8 +54,8 @@ Pod::Spec.new do |s|
 
     s.subspec 'CellObject' do |co|
         co.source_files = 'Classes/CellObject/*.{h,m}'
-        co.dependency 'YJCocoa', '~> 1.0'
-        co.prefix_header_contents = '#import "YJCocoa.h"'
+        co.dependency 'YJCocoa'
+        co.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
     end
 
 end
