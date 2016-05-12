@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
     # ―――  Spec Metadata
     s.name     = "YJTableViewFactory"
-    s.version  = "2.0.2"
+    s.version  = "2.1.0"
     s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
     s.homepage = "https://github.com/937447974/YJTableViewFactory"
 
@@ -54,8 +54,8 @@ Pod::Spec.new do |s|
 
     s.subspec 'CellObject' do |co|
         co.source_files = 'Classes/CellObject/*.{h,m}'
-        co.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
         co.dependency 'YJCocoa'
+        co.prefix_header_contents = '#import "YJCocoa.h"'
     end
 
 end

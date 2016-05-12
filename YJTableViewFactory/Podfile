@@ -3,7 +3,7 @@ platform :ios, '6.0'
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
-pod 'YJCocoa', :git => 'https://github.com/937447974/YJCocoa.git', :branch => 'master'
+pod 'YJCocoa', :git => 'https://github.com/937447974/YJCocoa.git', :branch => 'developer'
 
 target 'YJTableViewFactory' do
 
