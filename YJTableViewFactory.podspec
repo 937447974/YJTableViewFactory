@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'CellObject' do |co|
         co.source_files = 'Classes/CellObject/*.{h,m}'
-        co.dependency 'YJCocoa'
+        co.dependency 'YJCocoa', '~> 1.0'
         co.prefix_header_contents = '#import "YJCocoa.h"'
     end
 

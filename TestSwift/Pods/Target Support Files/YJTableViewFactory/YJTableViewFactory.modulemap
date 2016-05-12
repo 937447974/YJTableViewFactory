@@ -1,0 +1,6 @@
+framework module YJTableViewFactory {
+  umbrella header "YJTableViewFactory-umbrella.h"
+
+  export *
+  module * { export * }
+}

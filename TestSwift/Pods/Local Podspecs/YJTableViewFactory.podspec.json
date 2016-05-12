@@ -46,7 +46,7 @@
       "source_files": "Classes/CellObject/*.{h,m}",
       "dependencies": {
         "YJCocoa": [
-
+          "~> 1.0"
         ]
       },
       "prefix_header_contents": "#import \"YJCocoa.h\""
