@@ -91,8 +91,8 @@
 - (void)setContentOffsetY:(CGFloat)contentOffsetY {
     _baseY = _baseY == -1 ? contentOffsetY : _baseY;
     _contentOffsetY = contentOffsetY;
-    NSLog(@"%f", _contentOffsetY);
-    NSLog(@"%f", _baseY);
+//    NSLog(@"%f", _contentOffsetY);
+//    NSLog(@"%f", _baseY);
     /*
     
     static NSString *c ;
