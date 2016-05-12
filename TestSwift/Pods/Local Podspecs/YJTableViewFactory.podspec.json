@@ -1,6 +1,6 @@
 {
   "name": "YJTableViewFactory",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "summary": "UITableView工厂，可自动填充数据源，填充Cell，缓存高。",
   "homepage": "https://github.com/937447974/YJTableViewFactory",
   "license": {
@@ -15,14 +15,8 @@
   },
   "source": {
     "git": "https://github.com/937447974/YJTableViewFactory.git",
-    "branch": "master"
+    "branch": "developer"
   },
-  "dependencies": {
-    "YJCocoa": [
-
-    ]
-  },
-  "prefix_header_contents": "#import \"YJCocoa.h\"",
   "source_files": "Classes/*.{h,m}",
   "default_subspecs": "Core",
   "frameworks": [
@@ -49,7 +43,13 @@
     },
     {
       "name": "CellObject",
-      "source_files": "Classes/CellObject/*.{h,m}"
+      "source_files": "Classes/CellObject/*.{h,m}",
+      "dependencies": {
+        "YJCocoa": [
+
+        ]
+      },
+      "prefix_header_contents": "#import \"YJCocoa.h\""
     }
   ]
 }
