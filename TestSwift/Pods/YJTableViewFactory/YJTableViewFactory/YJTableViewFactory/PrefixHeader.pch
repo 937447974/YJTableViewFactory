@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  YJTableViewFactory
+//
+//  Created by admin on 16/5/11.
+//  Copyright © 2016年 YJFactory. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+//Core Services Layer
+#import "YJFoundation.h"
+
+//Core OS Layer
+#import "YJSystem.h"
+
+#endif
