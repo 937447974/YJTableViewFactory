@@ -120,7 +120,7 @@
         }
     }
     __weak YJTableViewDataSource *weakSelf = self;
-    dispatch_async_background(^{// UI加速
+    dispatch_async_UI(^{// UI加速
         [cell reloadCellWithCellObject:cellObject tableViewDelegate:weakSelf.tableViewDelegate];
     });
     return cell;

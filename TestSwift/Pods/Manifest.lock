@@ -1,30 +1,19 @@
 PODS:
   - YJCocoa/Foundation (1.1.0)
   - YJCocoa/System (1.1.0)
-  - YJTableViewFactory (3.0.0):
-    - YJTableViewFactory/Core (= 3.0.0)
-  - YJTableViewFactory/CellObject (3.0.0):
+  - YJTableViewFactory (3.0.1):
+    - YJTableViewFactory/Core (= 3.0.1)
+  - YJTableViewFactory/CellObject (3.0.1):
     - YJCocoa/Foundation
     - YJCocoa/System
-  - YJTableViewFactory/Core (3.0.0):
+  - YJTableViewFactory/Core (3.0.1):
     - YJTableViewFactory/CellObject
 
 DEPENDENCIES:
-  - YJTableViewFactory (from `https://github.com/937447974/YJTableViewFactory.git`,
-    branch `developer`)
-
-EXTERNAL SOURCES:
-  YJTableViewFactory:
-    :branch: developer
-    :git: https://github.com/937447974/YJTableViewFactory.git
-
-CHECKOUT OPTIONS:
-  YJTableViewFactory:
-    :commit: 93c405285c3017511b399de1ecd5812d542b759b
-    :git: https://github.com/937447974/YJTableViewFactory.git
+  - YJTableViewFactory
 
 SPEC CHECKSUMS:
   YJCocoa: 0e5b446cd51afa3109ab227d13efb20b4bdc9fc1
-  YJTableViewFactory: d63c124c8e7ef46f8c8be8732d71d239936d85a1
+  YJTableViewFactory: d4048de7d5ff47b2361ada824229f0cdaa8d70c6
 
 COCOAPODS: 0.39.0
