@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "YJTableViewFactory.h"
 
-@interface YJTableViewCellModel : NSObject <YJCellModelProtocol>
+@interface YJTableViewCellModel : NSObject <YJTableCellModelProtocol>
 
 @property (nonatomic, copy) NSString *userName; ///< 用户名
 

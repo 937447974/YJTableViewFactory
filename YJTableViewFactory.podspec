@@ -54,7 +54,8 @@ Pod::Spec.new do |s|
 
     s.subspec 'CellObject' do |co|
         co.source_files = 'Classes/CellObject/*.{h,m}'
-        co.dependency 'YJCocoa'
+        co.dependency 'YJCocoa/Foundation'
+        co.dependency 'YJCocoa/System'
         co.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
     end
 

@@ -295,6 +295,7 @@ YJ技术支持群：557445088
 | 2016-04-19 | 2.0.1 修复YJTableViewCacheHeightClassAndIndexPath引起的缓存高问题 |
 | 2016-05-09 | 2.0.2 架构优化，减少代码量 |
 | 2016-05-12 | 2.1.0 使用YJCocoa替代YJTableViewFactory/Utils |
+| 2016-05-13 | 3.0.0 因上线YJCollectionView库，YJTableViewFactory架构优化，删除YJTableViewDataSourceGrouped和YJTableViewDataSourcePlain，YJCellObject改为YJTableCellObject |
 
 ##Copyright
 

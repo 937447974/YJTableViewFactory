@@ -12,6 +12,13 @@
 #import "YJTableViewDataSource.h"
 #import "YJTableViewDelegate.h"
 
+@interface YJTableViewDataSource () {
+    NSMutableArray<YJTableCellObject *> *_dataSource;
+    NSMutableArray<NSMutableArray<YJTableCellObject *> *> *_dataSourceGrouped;
+}
+@end
+
+
 @implementation YJTableViewDataSource
 
 #pragma mark - init
@@ -28,7 +35,22 @@
     return self;
 }
 
-#pragma mark - setter
+#pragma mark - getter and setter
+- (NSMutableArray<YJTableCellObject *> *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+        [self.dataSourceGrouped addObject:_dataSource];
+    }
+    return _dataSource;
+}
+
+- (NSMutableArray<NSMutableArray<YJTableCellObject *> *> *)dataSourceGrouped {
+    if (!_dataSourceGrouped) {
+        _dataSourceGrouped = [NSMutableArray array];
+    }
+    return _dataSourceGrouped;
+}
+
 - (void)setCacheCellStrategy:(YJTableViewCacheCell)cacheCellStrategy {
     _cacheCellStrategy = cacheCellStrategy;
     switch (cacheCellStrategy) {
@@ -44,13 +66,27 @@
     }
 }
 
-#pragma mark - 根据YJCellObject生成UITableViewCell
-- (YJCellObject *)cellObjectWithIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"请不要使用YJTableViewDataSource抽象接口，请使用其子类YJTableViewDataSourceGrouped或YJTableViewDataSourcePlain");
-    return [[YJCellObject alloc] init];
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataSourceGrouped.count;
 }
 
-- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataSourceGrouped objectAtIndex:section].count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    YJTableCellObject *cellObject = self.dataSourceGrouped[indexPath.section][indexPath.row];
+    cellObject.indexPath = indexPath;
+    __weak YJTableViewDataSource *weakSelf = self;
+    dispatch_async_background(^{// 添加到悬浮cell层
+        [weakSelf.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
+    });
+    return [self dequeueReusableCellWithCellObject:cellObject];
+}
+
+#pragma mark 根据YJTableCellObject生成UITableViewCell
+- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJTableCellObject *)cellObject {
     
     NSString *identifier = @"identifier";
     switch (self.cacheCellStrategy) {
@@ -67,42 +103,25 @@
     // 读取缓存
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     // 未找到时，重新注入，再寻找
-    if (cell == nil) {        
+    if (cell == nil) {
         switch (cellObject.createCell) {
             case YJTableViewCellCreateDefault:
                 [self.tableView registerNib:[UINib nibWithNibName:cellObject.cellName bundle:nil] forCellReuseIdentifier:identifier];
-                 cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+                cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
                 break;
-                
             case YJTableViewCellCreateSoryboard:
                 NSLog(@"Soryboard中请使用%@设置cell的Identifier属性", cellObject.cellName);
                 break;
             case YJTableViewCellCreateClass:
-                 cell = [[cellObject.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+                cell = [[cellObject.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
                 break;
         }
     }
-    [cell reloadCellWithCellObject:cellObject tableViewDelegate:self.tableViewDelegate];
-    return cell;
-    
-}
-
-#pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"请不要使用YJTableViewDataSource抽象接口，请使用其子类YJTableViewDataSourceGrouped或YJTableViewDataSourcePlain");
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    YJCellObject *cellObject = [self cellObjectWithIndexPath:indexPath];
-    cellObject.indexPath = indexPath;
     __weak YJTableViewDataSource *weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        if (cellObject.suspension || cellObject.suspensionThroughout) { // 添加到悬浮cell层
-            [weakSelf.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
-        }
+    dispatch_async_background(^{// UI加速
+        [cell reloadCellWithCellObject:cellObject tableViewDelegate:weakSelf.tableViewDelegate];
     });
-    return [self dequeueReusableCellWithCellObject:cellObject];
+    return cell;
 }
 
 @end

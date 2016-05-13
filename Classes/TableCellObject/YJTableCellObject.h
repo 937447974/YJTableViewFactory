@@ -1,11 +1,11 @@
 //
-//  YJCellObject.h
+//  YJTableCellObject.h
 //  YJTableViewFactory
 //
 //  HomePage:https://github.com/937447974/YJTableViewFactory
 //  YJ技术支持群:557445088
 //
-//  Created by 阳君 on 16/3/26.
+//  Created by 阳君 on 16/5/13.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** cell模型协议*/
-@protocol YJCellModelProtocol <NSObject>
+@protocol YJTableCellModelProtocol <NSObject>
 
 @end
 
@@ -28,11 +28,10 @@ typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
     
 };
 
+/** TableCell对象*/
+@interface YJTableCellObject : NSObject
 
-/** Cell对象*/
-@interface YJCellObject : NSObject
-
-@property (nonatomic) id<YJCellModelProtocol> cellModel; ///< cell对应的VM
+@property (nonatomic) id<YJTableCellModelProtocol> cellModel; ///< cell对应的VM
 @property (nonatomic) YJTableViewCellCreate createCell;  ///< 创建cell的方式
 @property (nonatomic, strong, nullable) id userInfo;     ///< 携带的数据
 
@@ -41,11 +40,11 @@ typedef NS_ENUM(NSInteger, YJTableViewCellCreate) {
 
 @property (nonatomic, strong, nullable) NSIndexPath *indexPath; ///< cell所处位置，无须添加，自动填充
 
-@property (nonatomic, readonly) Class cellClass;          ///< UITableViewCell对应的类
-@property (nonatomic, copy, readonly) NSString *cellName; ///< UITableViewCell对应的类名
+@property (nonatomic, readonly) Class cellClass;            ///< UITableViewCell对应的类
+@property (nonatomic, copy, readonly) NSString *cellName;   ///< UITableViewCell对应的类名
 
 /**
- *  初始化YJCellObject，当不想创建子类时，可使用此方法创建对象
+ *  初始化YJTableCellObject，当不想创建子类时，可使用此方法创建对象
  *
  *  @param cellClass YJTableViewCell对应的类
  *

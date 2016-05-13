@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // 需要强引用
-@property (nonatomic, strong) YJTableViewDataSourceGrouped *dataSourceGrouped;
+@property (nonatomic, strong) YJTableViewDataSource *dataSourceGrouped;
 
 @end
 
@@ -24,9 +24,8 @@
     
     [super viewDidLoad];
     
-    self.dataSourceGrouped = [[YJTableViewDataSourceGrouped alloc] initWithTableView:self.tableView];
+    self.dataSourceGrouped = [[YJTableViewDataSource alloc] initWithTableView:self.tableView];
     self.tableView.delegate = self;
-
     // 测试数据
     for (int i=0; i<3; i++) {
         NSMutableArray *array = [NSMutableArray arrayWithCapacity:20];
@@ -40,7 +39,7 @@
             // 填充数据源
             [array addObject:cellObject];
         }
-        [self.dataSourceGrouped.dataSource addObject:array];
+        [self.dataSourceGrouped.dataSourceGrouped addObject:array];
     }
     
 }

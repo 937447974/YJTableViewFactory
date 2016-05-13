@@ -10,14 +10,12 @@
 //
 
 /**
- * UITableViewCell相关关系。YJTableViewCell、YJTableViewCellModel、YJTableViewCellObject。
+ * UITableViewCell相关关系。YJTableViewCell、YJTableCellModel、YJTableCellObject。
  */
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+YJTableViewFactory.h"
-#import "YJTableViewDataSourcePlain.h"
-#import "YJTableViewDataSourceGrouped.h"
-#import "YJCellObject.h"
+#import "YJTableCellObject.h"
 #import "YJTableViewDelegate.h"
 #import "YJSuspensionCellView.h"
