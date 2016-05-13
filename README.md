@@ -38,7 +38,7 @@ YJTableViewFactory具有多重优点：
 5. 自动将数据从UIViewController传输到UITableViewCell，支持任意数据类型的传输，如项目中常用的CellModel、Dictionary字典。
 6. 自动register注册UITableViewCell，自动显示UITableViewCell，自动缓存UITableViewCell。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存cell。
 7. 自动计算cell显示的高度或手动计算cell显示的高度，并缓存高度。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存高度。
-8. 自动解决UITableView滑动卡顿。
+8. 自动优化UITableView滑动卡顿。
 8. 支持多种点击cell的监听方式，可使用protocol或block。
 9. 支持多种创建UITableViewCell的方式，如纯代码、xib和storyboard。无须改变你写代码的习惯。
 
