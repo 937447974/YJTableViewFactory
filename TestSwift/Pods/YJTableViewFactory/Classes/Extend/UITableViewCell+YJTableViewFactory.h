@@ -10,7 +10,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YJCellObject.h"
+#import "YJTableCellObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,25 +20,25 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UITableViewCell (YJTableViewFactory)
 
 /*推荐存储数据的属性
-@property (nonatomic, weak) YJCellObject *cellObject;
+@property (nonatomic, weak) YJTableCellObject *cellObject;
 @property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate;
 */
 
 /**
- *  获取YJCellObject,子类重写可获取YJCellObject子类。
+ *  获取YJTableCellObject,子类重写可获取YJTableCellObject子类。
  *
- *  @return YJCellObject
+ *  @return YJTableCellObject
  */
 + (id)cellObject;
 
 /**
- *  获取YJCellObject并自动填充模型。
+ *  获取YJTableCellObject并自动填充模型。
  *
  *  @param cellModel 对应的Cell模型
  *
- *  @return YJCellObject
+ *  @return YJTableCellObject
  */
-+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel;
++ (id)cellObjectWithCellModel:(id<YJTableCellModelProtocol>)cellModel;
 
 /**
  *  获取cell的显示高。子类不实行时，会根据xib设置的高度自动计算高
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return CGFloat
  */
-+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject;
++ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJTableCellObject *)cellObject;
 
 /**
  *  根据模型刷新Cell
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return void
  */
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate;
+- (void)reloadCellWithCellObject:(YJTableCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate;
 
 @end
 

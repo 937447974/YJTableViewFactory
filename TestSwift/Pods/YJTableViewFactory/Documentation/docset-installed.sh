@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 路径声明
-docset_name=com.YJFactory.YJTableViewFactory.docset
+docset_name=com.YJ.YJTableViewFactory.docset
 docset_path=Documentation/${docset_name}
 docset_dest_dir=~/Library/Developer/Shared/Documentation/DocSets
 docset_dest_path=${docset_dest_dir}/${docset_name}
