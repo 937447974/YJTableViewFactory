@@ -38,6 +38,7 @@ YJTableViewFactory具有多重优点：
 5. 自动将数据从UIViewController传输到UITableViewCell，支持任意数据类型的传输，如项目中常用的CellModel、Dictionary字典。
 6. 自动register注册UITableViewCell，自动显示UITableViewCell，自动缓存UITableViewCell。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存cell。
 7. 自动计算cell显示的高度或手动计算cell显示的高度，并缓存高度。多种缓存策略，可根据创建UITableViewCell的类名或UITableViewCell在UITableView的显示位置缓存高度。
+8. 自动解决UITableView滑动卡顿。
 8. 支持多种点击cell的监听方式，可使用protocol或block。
 9. 支持多种创建UITableViewCell的方式，如纯代码、xib和storyboard。无须改变你写代码的习惯。
 
@@ -54,13 +55,6 @@ platform :ios, '6.0'
 pod 'YJTableViewFactory'
 ```
 
-或
-
-```pod
-platform :ios, '6.0'
-pod 'YJTableViewFactory', :git => 'https://github.com/937447974/YJTableViewFactory.git'
-```
-
 pod导入后即可在项目中看见相关文件。
 
 ![](https://raw.githubusercontent.com/937447974/Blog/master/Resources/2016041502.png)
@@ -75,8 +69,6 @@ pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看
 
 开发过程中只需导入YJTableViewFactory即可。
 
-这里有个方法`NSString *YJStringFromClass(Class aClass)`兼容swift或oc，获取相同的类名。
-
 ##<a id="2.2">2.2 [UITableViewCell扩展](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Extend/UITableViewCell%2BYJTableViewFactory.h)
 
 使用扩展的方式实现UITableViewCell，这样不用修改项目中已有基类。
@@ -87,7 +79,7 @@ pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看
 
 ##<a id="2.3">2.3 UITableViewCell封装
 
-###<a id="2.3.1">2.3.1 [YJCellObject](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/CellObject/YJCellObject.h)
+###<a id="2.3.1">2.3.1 [YJTableCellObject](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/CellObject/YJTableCellObject.h)
 
 YJCellObject为UITableViewCell关于模型的封装。
 
@@ -101,9 +93,9 @@ YJCellObject已支持大多数的功能，当然，我们也可以子类化YJCel
 YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
 ```
 
-###<a id="2.3.2">2.3.2 YJCellObject的子类化
+###<a id="2.3.2">2.3.2 YJTableCellObject的子类化
 
-YJCellObject子类化后，我们可携带更多的参数了。
+YJTableCellObject子类化后，我们可携带更多的参数了。
 
 此时命名规范会有点要求，如创建的Cell为YJTableViewCell，则其对应的CellObject为YJTableViewCellObject。这样可通过
 
@@ -113,25 +105,11 @@ YJTableViewCellObject *cellObject = [[YJTableViewCellObject alloc] init];
 
 创建。框架会自动通过YJTableViewCellObject类抓取YJTableViewCell类名。
 
-##<a id="2.4">2.4 UITableViewDataSource封装
+##<a id="2.4">2.4 [UITableViewDataSource封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSource.h)
 
-###<a id="2.4.1">2.4.1 [YJTableViewDataSource](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSource.h)
-
-YJTableViewDataSource是一个抽象接口，我们开发过程中不使用这个类，而是使用它的子类YJTableViewDataSourcePlain和YJTableViewDataSourceGrouped。
-
-初始化时通过`[[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView]`完成初始化，它会自动完成关于tableview的相关配置。
+初始化时通过`[[YJTableViewDataSource alloc] initWithTableView:self.tableView]`完成初始化，它会自动完成关于tableview的相关配置。
 
 这里可通过cacheCellStrategy修改缓存策略，通过tableViewDelegate修改其内部相关配置。
-
-###<a id="2.4.2">2.4.2 [YJTableViewDataSourcePlain](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSourcePlain.h)
-
-YJTableViewDataSourcePlain支持UITableViewStylePlain的显示样式，自带数据源dataSource。
-
-
-###<a id="2.4.3">2.4.3 [YJTableViewDataSourceGrouped](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSourceGrouped.h)
-
-YJTableViewDataSourceGrouped支持UITableViewStyleGrouped的显示样式，自带数据源dataSource。
-
 
 ##<a id="2.5">2.5 [UITableViewDelegate封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Delegate/YJTableViewDelegate.h)
 
@@ -152,11 +130,12 @@ cellDelegate和cellBlock主要用户监听点击cell。
 //  YJFirstViewController.m
 //  YJTableViewFactory
 //
-//  Created by admin on 16/3/26.
+//  Created by 阳君 on 16/3/26.
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
 #import "YJFirstViewController.h"
+#import "YJTableViewDataSource.h"
 #import "YJTableViewCell.h"
 
 @interface YJFirstViewController () <YJTableViewCellProtocol>
@@ -164,52 +143,47 @@ cellDelegate和cellBlock主要用户监听点击cell。
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // 需要强引用
-@property (nonatomic, strong) YJTableViewDataSourcePlain *dataSourcePlain;
+@property (nonatomic, strong) YJTableViewDataSource *dataSourcePlain;
 
 @end
 
 @implementation YJFirstViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
-    [self test1];
-//    [self test2];
-//    [self test3];
-//    [self test4];
+    self.dataSourcePlain = [[YJTableViewDataSource alloc] initWithTableView:self.tableView];
     
+    //    [self test1];
+    //    [self test2];
+    //    [self test3];
+    //    [self test4];
+    [self test5];
 }
 
 #pragma mark - 测试数据
 - (void)initTestData {
     
     // 测试数据
-    for (int i=0; i<20; i++) {
+    for (int i=0; i<10; i++) {
         // 封装模型
         YJTableViewCellModel *cellModel = [[YJTableViewCellModel alloc] init];
         cellModel.userName = [NSString stringWithFormat:@"阳君-%d", i];
         // 封装CellObject
-        YJCellObject *cellObject = [YJTableViewCell cellObjectWithCellModel:cellModel];
+        YJTableCellObject *cellObject = [YJTableViewCell cellObjectWithCellModel:cellModel];
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
     }
     
 }
 
-#pragma mark - 使用默认的YJCellObject
+#pragma mark - 使用默认的YJTableCellObject
 - (void)test1 {
-    
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
     [self initTestData];
-   
 }
 
 #pragma mark - 使用自定义的YJTableViewCellObject
 - (void)test2 {
-    
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
-    
     // 测试数据
     for (int i=0; i<20; i++) {
         // 封装模型
@@ -221,37 +195,26 @@ cellDelegate和cellBlock主要用户监听点击cell。
         // 填充数据源
         [self.dataSourcePlain.dataSource addObject:cellObject];
     }
-    
 }
 
 #pragma mark - 通过协议监听点击dell
 - (void)test3 {
-    
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
     self.dataSourcePlain.tableViewDelegate.cellDelegate = self;
     [self initTestData];
-    
 }
 
 #pragma mark YJTableViewDelegateProtocol
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(UITableViewCell *)cell {
-    
+- (void)tableViewDidSelectCellWithCellObject:(YJTableCellObject *)cellObject tableViewCell:(UITableViewCell *)cell {
     NSLog(@"%@", NSStringFromSelector(_cmd));
-    
 }
 
 #pragma mark - 通过block监听点击dell
 - (void)test4 {
-    
-    self.dataSourcePlain = [[YJTableViewDataSourcePlain alloc] initWithTableView:self.tableView];
-    self.dataSourcePlain.tableViewDelegate.cellBlock = ^(YJCellObject *cellObject, UITableViewCell *tableViewCell) {
+    self.dataSourcePlain.tableViewDelegate.cellBlock = ^(YJTableCellObject *cellObject, UITableViewCell *tableViewCell) {
         NSLog(@"%@", cellObject.indexPath);
     };
     [self initTestData];
-    
 }
-
-@end
 ```
 
 看完之后是不是感觉UIViewController很简洁，酸爽。
@@ -295,7 +258,7 @@ YJ技术支持群：557445088
 | 2016-04-19 | 2.0.1 修复YJTableViewCacheHeightClassAndIndexPath引起的缓存高问题 |
 | 2016-05-09 | 2.0.2 架构优化，减少代码量 |
 | 2016-05-12 | 2.1.0 使用YJCocoa替代YJTableViewFactory/Utils |
-| 2016-05-13 | 3.0.0 因上线YJCollectionView库，YJTableViewFactory架构优化，删除YJTableViewDataSourceGrouped和YJTableViewDataSourcePlain，YJCellObject改为YJTableCellObject |
+| 2016-05-13 | 3.0.0 因上线YJCollectionView库，YJTableViewFactory架构优化。删除YJTableViewDataSourceGrouped和YJTableViewDataSourcePlain、YJCellObject改为YJTableCellObject、UITableView加速滑动。 |
 
 ##Copyright
 
