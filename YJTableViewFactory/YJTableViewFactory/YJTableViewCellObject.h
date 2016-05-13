@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "YJTableViewFactory.h"
 
-@interface YJTableViewCellObject : YJCellObject
+@interface YJTableViewCellObject : YJTableCellObject
 
 @end

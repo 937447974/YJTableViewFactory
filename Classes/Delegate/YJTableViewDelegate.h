@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class YJCellObject, YJTableViewDataSource;
+@class YJTableCellObject, YJTableViewDataSource;
 
 
 /** 缓存高的策略*/
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheHeight) {
 
 
 /** 点击cell的block*/
-typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
+typedef void (^ YJTableViewCellBlock)(YJTableCellObject *cellObject, UITableViewCell  * __nullable tableViewCell);
 
 
 /** 点击cell的协议*/
@@ -40,7 +40,7 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
  *
  *  @return void
  */
-- (void)tableViewDidSelectCellWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
+- (void)tableViewDidSelectCellWithCellObject:(YJTableCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
 
 @end
 
@@ -74,7 +74,7 @@ typedef void (^ YJTableViewCellBlock)(YJCellObject *cellObject, UITableViewCell 
  *
  *  @return void
  */
-- (void)sendVCWithCellObject:(YJCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
+- (void)sendVCWithCellObject:(YJTableCellObject *)cellObject tableViewCell:(nullable UITableViewCell *)cell;
 
 /**
  *  清除所有缓存高

@@ -8,6 +8,10 @@
 
 #ifdef __OBJC__
 
-#import "YJCocoa.h"
+//Core Services Layer
+#import "YJFoundation.h"
+
+//Core OS Layer
+#import "YJSystem.h"
 
 #endif

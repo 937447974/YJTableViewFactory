@@ -15,7 +15,7 @@
     // Initialization code
 }
 
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
+- (void)reloadCellWithCellObject:(YJTableCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
     
     YJTableViewCellModel *celModel = cellObject.cellModel;
     self.label.text = celModel.userName;

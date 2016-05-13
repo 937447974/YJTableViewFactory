@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YJTableViewDataSource.h"
 #import "YJTableViewCellModel.h"
 #import "YJTableViewCellObject.h"
 

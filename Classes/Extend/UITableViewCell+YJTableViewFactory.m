@@ -16,19 +16,19 @@
 
 + (id)cellObject {
     
-    return [[YJCellObject alloc] initWithTableViewCellClass:self.class];
+    return [[YJTableCellObject alloc] initWithTableViewCellClass:self.class];
     
 }
 
-+ (id)cellObjectWithCellModel:(id<YJCellModelProtocol>)cellModel {
++ (id)cellObjectWithCellModel:(id<YJTableCellModelProtocol>)cellModel {
     
-    YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:self.class];
+    YJTableCellObject *cellObject = [[YJTableCellObject alloc] initWithTableViewCellClass:self.class];
     cellObject.cellModel = cellModel;
     return cellObject;
     
 }
 
-+ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJCellObject *)cellObject {
++ (CGFloat)tableView:(UITableView *)tableView heightForCellObject:(YJTableCellObject *)cellObject {
     
     if (cellObject.createCell == YJTableViewCellCreateClass) {
         NSLog(@"自动获取高度时，UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
@@ -45,7 +45,7 @@
     
 }
 
-- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
+- (void)reloadCellWithCellObject:(YJTableCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate {
     
      NSLog(@"UITableViewCell子类%@请实现方法：%@", YJStringFromClass(self.class), NSStringFromSelector(_cmd));
     

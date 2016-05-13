@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "YJCellObject.h"
+#import "YJTableCellObject.h"
 #import "UITableViewCell+YJTableViewFactory.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,7 +29,11 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
 /** UITableViewDataSource抽象接口*/
 @interface YJTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic) YJTableViewCacheCell cacheCellStrategy;                   ///< 缓存Cell的策略
+@property (nonatomic) YJTableViewCacheCell cacheCellStrategy; ///< 缓存Cell的策略
+
+@property (nonatomic, strong, readonly) NSMutableArray<YJTableCellObject *> *dataSource; ///< 数据源UITableViewStylePlain
+@property (nonatomic, strong, readonly) NSMutableArray<NSMutableArray<YJTableCellObject *> *> *dataSourceGrouped; ///< 数据源UITableViewStyleGrouped
+
 @property (nonatomic, weak) UITableView *tableView;                             ///< tableView
 @property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate; ///< YJTableViewDelegate,无须赋值，自动化创建
 
@@ -45,20 +49,11 @@ typedef NS_ENUM(NSInteger, YJTableViewCacheCell) {
 /**
  *  根据cellObject创建UITableViewCell
  *
- *  @param cellObject YJCellObject
+ *  @param cellObject YJTableCellObject
  *
  *  @return UITableViewCell
  */
-- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)cellObject;
-
-/**
- *  根据NSIndexPath位置获取YJCellObject
- *
- *  @param indexPath 位置
- *
- *  @return void
- */
-- (YJCellObject *)cellObjectWithIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJTableCellObject *)cellObject;
 
 @end
 
