@@ -78,10 +78,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YJTableCellObject *cellObject = self.dataSourceGrouped[indexPath.section][indexPath.row];
     cellObject.indexPath = indexPath;
+    /*
     __weak YJTableViewDataSource *weakSelf = self;
     dispatch_async_background(^{// 添加到悬浮cell层
         [weakSelf.tableViewDelegate.suspensionCellView addIndexPath:indexPath];
     });
+     */
     return [self dequeueReusableCellWithCellObject:cellObject];
 }
 
