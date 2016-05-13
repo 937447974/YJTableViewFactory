@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>YJTableViewDataSource Class Reference</title>
+	<title>YJSuspensionCellView Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,7 +56,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/cacheCellStrategy">cacheCellStrategy</option>
+		<option value="//api/name/contentOffsetY">contentOffsetY</option>
+		
+		<option value="//api/name/indexPaths">indexPaths</option>
+		
+		<option value="//api/name/suspensionCells">suspensionCells</option>
 		
 		<option value="//api/name/tableView">tableView</option>
 		
@@ -70,9 +74,7 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/dequeueReusableCellWithCellObject:">- dequeueReusableCellWithCellObject:</option>
-		
-		<option value="//api/name/initWithTableView:">- initWithTableView:</option>
+		<option value="//api/name/addIndexPath:">- addIndexPath:</option>
 		
 	</optgroup>
 	
@@ -89,19 +91,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">YJTableViewDataSource Class Reference</h1>
+					<h1 class="title">YJSuspensionCellView Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Conforms to</th>
-	<td>UITableViewDataSource</td>
+	<td>UIView</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>YJTableViewDataSource.h<br />YJTableViewDataSource.m</td>
+	<td>YJSuspensionCellView.h<br />YJSuspensionCellView.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -111,7 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>UITableViewDataSource抽象接口</p>
+						<p>///&lt; 悬浮的cell层</p>
 					</div>
 					
 					
@@ -123,12 +122,12 @@
 						
 
 						
-						
+						<h2 class="task-title">Other Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/cacheCellStrategy" title="cacheCellStrategy"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cacheCellStrategy">&nbsp;&nbsp;cacheCellStrategy</a></code>
+	<a name="//api/name/tableViewDelegate" title="tableViewDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableViewDelegate">&nbsp;&nbsp;tableViewDelegate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -138,12 +137,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>缓存Cell的策略</p>
+				<p><a href="../Classes/YJTableViewDelegate.html">YJTableViewDelegate</a></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) YJTableViewCacheCell cacheCellStrategy</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) YJTableViewDelegate *tableViewDelegate</code></div>
 
 		    
 			
@@ -155,7 +154,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>缓存Cell的策略</p>
+				<p><a href="../Classes/YJTableViewDelegate.html">YJTableViewDelegate</a></p>
 			</div>
 			
 
@@ -166,13 +165,130 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">YJTableViewDataSource.h</code></p>
+				<p><code class="declared-in-ref">YJSuspensionCellView.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/contentOffsetY" title="contentOffsetY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/contentOffsetY">&nbsp;&nbsp;contentOffsetY</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>偏移Y</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat contentOffsetY</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>偏移Y</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">YJSuspensionCellView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addIndexPath:" title="addIndexPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addIndexPath:">&ndash;&nbsp;addIndexPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>添加悬浮Cell的位置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>NSIndexPath</code></th>
+						<td><p>indexPath</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>void</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>添加悬浮Cell的位置</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">YJSuspensionCellView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Extension Methods" name="task_Extension Methods"></a>
+						<h2 class="task-title">Extension Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/tableView" title="tableView"></a>
 	<h3 class="method-title"><code><a href="#//api/name/tableView">&nbsp;&nbsp;tableView</a></code>
 </h3>
@@ -184,7 +300,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>tableView</p>
+				<p>UITableView</p>
 			</div>
 			
 		    
@@ -201,7 +317,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>tableView</p>
+				<p>UITableView</p>
 			</div>
 			
 
@@ -212,15 +328,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">YJTableViewDataSource.h</code></p>
+				<p><code class="declared-in-ref">YJSuspensionCellView.m</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tableViewDelegate" title="tableViewDelegate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tableViewDelegate">&nbsp;&nbsp;tableViewDelegate</a></code>
+	<a name="//api/name/indexPaths" title="indexPaths"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indexPaths">&nbsp;&nbsp;indexPaths</a></code>
 </h3>
 
 	<div class="method-info">
@@ -230,12 +346,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>YJTableViewDelegate,无须赋值，自动化创建</p>
+				<p>悬浮的Cell位置</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) YJTableViewDelegate *tableViewDelegate</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray&lt;NSIndexPath*&gt; *indexPaths</code></div>
 
 		    
 			
@@ -247,7 +363,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>YJTableViewDelegate,无须赋值，自动化创建</p>
+				<p>悬浮的Cell位置</p>
 			</div>
 			
 
@@ -258,15 +374,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">YJTableViewDataSource.h</code></p>
+				<p><code class="declared-in-ref">YJSuspensionCellView.m</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithTableView:" title="initWithTableView:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithTableView:">&ndash;&nbsp;initWithTableView:</a></code>
+	<a name="//api/name/suspensionCells" title="suspensionCells"></a>
+	<h3 class="method-title"><code><a href="#//api/name/suspensionCells">&nbsp;&nbsp;suspensionCells</a></code>
 </h3>
 
 	<div class="method-info">
@@ -276,33 +392,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>抽象的初始化接口,会自动填充设置<a href="#//api/name/tableView">tableView</a>.dataSource = self;<a href="#//api/name/tableView">tableView</a>.delegate = self.<a href="#//api/name/tableViewDelegate">tableViewDelegate</a>;</p>
+				<p>悬浮的Cell队列</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithTableView:(UITableView *)<em>tableView</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray&lt;UIView*&gt; *suspensionCells</code></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>tableView</code></th>
-						<td><p>UITableView</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p><a href="../Classes/YJTableViewDataSourceGrouped.html">YJTableViewDataSourceGrouped</a> 或 <a href="../Classes/YJTableViewDataSourcePlain.html">YJTableViewDataSourcePlain</a></p>
-			</div>
 			
 
 			
@@ -310,7 +409,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>抽象的初始化接口,会自动填充设置<a href="#//api/name/tableView">tableView</a>.dataSource = self;<a href="#//api/name/tableView">tableView</a>.delegate = self.<a href="#//api/name/tableViewDelegate">tableViewDelegate</a>;</p>
+				<p>悬浮的Cell队列</p>
 			</div>
 			
 
@@ -321,70 +420,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">YJTableViewDataSource.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/dequeueReusableCellWithCellObject:" title="dequeueReusableCellWithCellObject:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dequeueReusableCellWithCellObject:">&ndash;&nbsp;dequeueReusableCellWithCellObject:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>根据cellObject创建UITableViewCell</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (UITableViewCell *)dequeueReusableCellWithCellObject:(YJCellObject *)<em>cellObject</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>cellObject</code></th>
-						<td><p><a href="../Classes/YJCellObject.html">YJCellObject</a></p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>UITableViewCell</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>根据cellObject创建UITableViewCell</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">YJTableViewDataSource.h</code></p>
+				<p><code class="declared-in-ref">YJSuspensionCellView.m</code></p>
 			</div>
 			
 			
@@ -405,7 +441,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 阳君. All rights reserved. Updated: 2016-04-15</p>
+						<p class="copyright">Copyright &copy; 2016 阳君. All rights reserved. Updated: 2016-05-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
