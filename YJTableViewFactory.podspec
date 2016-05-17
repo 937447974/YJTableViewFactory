@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
     # ―――  Spec Metadata
     s.name     = "YJTableViewFactory"
-    s.version  = "3.0.2"
+    s.version  = "3.0.3"
     s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
     s.homepage = "https://github.com/937447974/YJTableViewFactory"
     s.license  = { :type => "MIT", :file => "LICENSE" }

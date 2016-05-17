@@ -26,8 +26,8 @@
 }
 
 #pragma mark 相等
-- (BOOL)isEqual:(NSIndexPath *)indexPath {
-    return self.section == indexPath.section && self.row == indexPath.row;
+- (BOOL)equal:(NSIndexPath *)indexPath {
+    return indexPath && self.section == indexPath.section && self.row == indexPath.row;
 }
 
 @end
@@ -62,7 +62,7 @@
         if ([indexPath lessThan:index]) {
             [self.indexPaths insertObject:indexPath atIndex:i];
             return;
-        } else if ([index isEqual:indexPath]) {
+        } else if ([index equal:indexPath]) {
             return;
         }
     }

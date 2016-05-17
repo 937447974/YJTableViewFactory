@@ -261,6 +261,7 @@ YJ技术支持群：557445088
 | 2016-05-13 | 3.0.0 因上线YJCollectionView库，YJTableViewFactory架构优化。删除YJTableViewDataSourceGrouped和YJTableViewDataSourcePlain、YJCellObject改为YJTableCellObject、UITableView加速滑动。 |
 | 2016-05-13 | 3.0.1 YJTableViewFactory.h增加引用#import "YJTableViewDataSource.h" |
 | 2016-05-16 | 3.0.2 YJCocoa架构更新 |
+| 2016-05-17 | 3.0.3 修复 NSIndexPath (YJSuspensionCellView)引起的和系统方法冲突 |
 
 ##Copyright
 
