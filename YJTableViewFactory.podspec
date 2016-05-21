@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
     # ―――  Spec Metadata
     s.name     = "YJTableViewFactory"
-    s.version  = "3.0.3"
+    s.version  = "3.1.0"
     s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
     s.homepage = "https://github.com/937447974/YJTableViewFactory"
     s.license  = { :type => "MIT", :file => "LICENSE" }
@@ -33,18 +33,6 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
     # ――― Source Code
-    s.source_files  = "Classes/*.{h,m}"
-    s.default_subspec = 'Core'
-
-    # ——— Subspecs
-    s.subspec 'Core' do |core|
-        core.source_files = 'Classes/DataSource/*.{h,m}', 'Classes/Delegate/*.{h,m}', 'Classes/Extend/*.{h,m}', 'Classes/Suspension/*.{h,m}'
-        core.dependency 'YJTableViewFactory/CellObject'
-    end
-    s.subspec 'CellObject' do |co|
-        co.source_files = 'Classes/CellObject/*.{h,m}'
-        co.dependency 'YJCocoa'
-        co.prefix_header_file = 'YJTableViewFactory/YJTableViewFactory/PrefixHeader.pch'
-    end
+    s.dependency 'YJCocoa/CocoaTouchLayer/UIKit/TableView'
 
 end

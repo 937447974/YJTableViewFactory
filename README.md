@@ -262,6 +262,7 @@ YJ技术支持群：557445088
 | 2016-05-13 | 3.0.1 YJTableViewFactory.h增加引用#import "YJTableViewDataSource.h" |
 | 2016-05-16 | 3.0.2 YJCocoa架构更新 |
 | 2016-05-17 | 3.0.3 修复 NSIndexPath (YJSuspensionCellView)引起的和系统方法冲突 |
+| 2016-05-21 | 3.1.0 YJTableViewFactory转入'YJCocoa/CocoaTouchLayer/UIKit/TableView' |
 
 ##Copyright
 
