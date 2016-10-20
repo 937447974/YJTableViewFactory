@@ -15,16 +15,12 @@ Pod::Spec.new do |s|
 
     # ―――  Spec Metadata
     s.name     = "YJTableViewFactory"
-    s.version  = "3.1.0"
+    s.version  = "3.1.1"
     s.summary  = "UITableView工厂，可自动填充数据源，填充Cell，缓存高。"
     s.homepage = "https://github.com/937447974/YJTableViewFactory"
     s.license  = { :type => "MIT", :file => "LICENSE" }
     s.author   = { "阳君" => "937447974@qq.com" }
     s.source = { :git => "https://github.com/937447974/YJTableViewFactory.git", :tag => "v#{s.version}" }
-
-    # ——— Documentation And API Reference
-    s.preserve_paths = 'Documentation/*.*'
-    s.prepare_command = 'sh Documentation/docset-installed.sh'
 
     # ――― Build settings
     s.platform = :ios
@@ -33,6 +29,8 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
     # ――― Source Code
-    s.dependency 'YJCocoa/CocoaTouchLayer/UIKit/TableView'
+    s.dependency 'YJCocoa'
+    s.deprecated = true
+    s.deprecated_in_favor_of = "YJCocoa"
 
 end
