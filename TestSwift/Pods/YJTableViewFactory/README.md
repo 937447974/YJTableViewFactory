@@ -23,11 +23,11 @@
 
 ----
 
-#<a id="1">1 YJTableViewFactory
+# <a id="1">1 YJTableViewFactory
 
 YJTableViewFactory是一个关于UITableView的开源库，它能使我们的开发工作变得越来越简单。它能使我们的项目架构的可维护性越来越高。
 
-##<a id="1.1">1.1 YJTableViewFactory的优点
+## <a id="1.1">1.1 YJTableViewFactory的优点
 
 YJTableViewFactory具有多重优点：
 
@@ -42,11 +42,11 @@ YJTableViewFactory具有多重优点：
 8. 支持多种点击cell的监听方式，可使用protocol或block。
 9. 支持多种创建UITableViewCell的方式，如纯代码、xib和storyboard。无须改变你写代码的习惯。
 
-##<a id="1.2">1.2 YJTableViewFactory的缺点
+## <a id="1.2">1.2 YJTableViewFactory的缺点
 
 1. 程序员将变的越来越懒！
 
-##<a id="1.3">1.3 导入YJTableViewFactory
+## <a id="1.3">1.3 导入YJTableViewFactory
 
 导入YJTableViewFactory可使用pod导入，相关命令：
 
@@ -59,17 +59,17 @@ pod导入后即可在项目中看见相关文件。
 
 ![](https://raw.githubusercontent.com/937447974/Blog/master/Resources/2016041502.png)
 
-#<a id="2">2 相关API
+# <a id="2">2 相关API
 
 pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看相关文档，如图所示。
 
 ![](https://raw.githubusercontent.com/937447974/Blog/master/Resources/2016041501.png)
 
-##<a id="2.1">2.1 核心[YJTableViewFactory](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/YJTableViewFactory.h)
+## <a id="2.1">2.1 核心[YJTableViewFactory](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/YJTableViewFactory.h)
 
 开发过程中只需导入YJTableViewFactory即可。
 
-##<a id="2.2">2.2 [UITableViewCell扩展](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Extend/UITableViewCell%2BYJTableViewFactory.h)
+## <a id="2.2">2.2 [UITableViewCell扩展](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Extend/UITableViewCell%2BYJTableViewFactory.h)
 
 使用扩展的方式实现UITableViewCell，这样不用修改项目中已有基类。
 
@@ -77,9 +77,9 @@ pod导入后重启Xcode即可在Xcode的Documentation And API Reference中查看
 
 `- (void)reloadCellWithCellObject:(YJCellObject *)cellObject tableViewDelegate:(YJTableViewDelegate *)tableViewDelegate`在UITableViewCell将要显示的时候，框架会自动调用此方法通知Cell。
 
-##<a id="2.3">2.3 UITableViewCell封装
+## <a id="2.3">2.3 UITableViewCell封装
 
-###<a id="2.3.1">2.3.1 [YJTableCellObject](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/CellObject/YJTableCellObject.h)
+### <a id="2.3.1">2.3.1 [YJTableCellObject](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/CellObject/YJTableCellObject.h)
 
 YJCellObject为UITableViewCell关于模型的封装。
 
@@ -93,7 +93,7 @@ YJCellObject已支持大多数的功能，当然，我们也可以子类化YJCel
 YJCellObject *cellObject = [[YJCellObject alloc] initWithTableViewCellClass:[YJTableViewCell class]];
 ```
 
-###<a id="2.3.2">2.3.2 YJTableCellObject的子类化
+### <a id="2.3.2">2.3.2 YJTableCellObject的子类化
 
 YJTableCellObject子类化后，我们可携带更多的参数了。
 
@@ -105,13 +105,13 @@ YJTableViewCellObject *cellObject = [[YJTableViewCellObject alloc] init];
 
 创建。框架会自动通过YJTableViewCellObject类抓取YJTableViewCell类名。
 
-##<a id="2.4">2.4 [UITableViewDataSource封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSource.h)
+## <a id="2.4">2.4 [UITableViewDataSource封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/DataSource/YJTableViewDataSource.h)
 
 初始化时通过`[[YJTableViewDataSource alloc] initWithTableView:self.tableView]`完成初始化，它会自动完成关于tableview的相关配置。
 
 这里可通过cacheCellStrategy修改缓存策略，通过tableViewDelegate修改其内部相关配置。
 
-##<a id="2.5">2.5 [UITableViewDelegate封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Delegate/YJTableViewDelegate.h)
+## <a id="2.5">2.5 [UITableViewDelegate封装](https://github.com/937447974/YJTableViewFactory/blob/master/Classes/Delegate/YJTableViewDelegate.h)
 
 YJTableViewCellProtocol是内部传输的一个数据协议，当我们想在UITableViewCell通知UIViewController就可以通过它，用户点击cell时，框架也会自动调用这个协议通知UIViewController。同时我们也可以是使用YJTableViewCellBlock监听点击cell。
 
@@ -121,7 +121,7 @@ cellDelegate和cellBlock主要用户监听点击cell。
 
 还有大量清除缓存高的方法，让cell的高度缓存更灵活。
 
-#<a id="3">3 实战演练
+# <a id="3">3 实战演练
 
 相关详细代码可查看demo，这里为大家展示一个极简的UIViewController。
 
@@ -134,9 +134,9 @@ cellDelegate和cellBlock主要用户监听点击cell。
 //  Copyright © 2016年 YJFactory. All rights reserved.
 //
 
-#import "YJFirstViewController.h"
-#import "YJTableViewDataSource.h"
-#import "YJTableViewCell.h"
+# import "YJFirstViewController.h"
+# import "YJTableViewDataSource.h"
+# import "YJTableViewCell.h"
 
 @interface YJFirstViewController () <YJTableViewCellProtocol>
 
@@ -223,9 +223,9 @@ cellDelegate和cellBlock主要用户监听点击cell。
 
 ----------
 
-#<a id="Appendix">Appendix
+# <a id="Appendix">Appendix
 
-##Author
+## Author
 
 姓名：阳君
 
@@ -239,7 +239,7 @@ YJ技术支持群：557445088
 
 如果你也想来和我们一起在聚美优品(北京)从事iOS研发工作，欢迎投递简历到937447974@qq.com。
 
-##Revision History
+## Revision History
 
 | 时间 | 描述 |
 | ---- | ---- |
@@ -260,7 +260,7 @@ YJ技术支持群：557445088
 | 2016-05-12 | 2.1.0 使用YJCocoa替代YJTableViewFactory/Utils |
 | 2016-05-13 | 3.0.0 因上线YJCollectionView库，YJTableViewFactory架构优化。删除YJTableViewDataSourceGrouped和YJTableViewDataSourcePlain、YJCellObject改为YJTableCellObject、UITableView加速滑动。 |
 
-##Copyright
+## Copyright
 
 CSDN：http://blog.csdn.net/y550918116j
 

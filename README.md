@@ -4,9 +4,9 @@
 
 ----------
 
-#<a id="Appendix">Appendix
+# <a id="Appendix">Appendix
 
-##Author
+## Author
 
 姓名：阳君
 
@@ -20,7 +20,7 @@ YJ技术支持群：557445088
 
 如果你也想来和我们一起在聚美优品(北京)从事iOS研发工作，欢迎投递简历到937447974@qq.com。
 
-##Revision History
+## Revision History
 
 | 时间 | 描述 |
 | ---- | ---- |
@@ -46,7 +46,7 @@ YJ技术支持群：557445088
 | 2016-05-21 | 3.1.0 YJTableViewFactory转入'YJCocoa/CocoaTouchLayer/UIKit/TableView' |
 | 2016-10-20 | 3.1.1 YJTableViewFactory转入'YJCocoa' |
 
-##Copyright
+## Copyright
 
 CSDN：http://blog.csdn.net/y550918116j
 
